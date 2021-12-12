@@ -1,0 +1,135 @@
+body {
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  margin: auto;
+}
+
+p {
+  color: #8f8f8f;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* Headings */
+.big-heading {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+  padding: 3% 0 2% 0;
+}
+
+/* Containers */
+
+.container-fluid {
+  padding: 5% 15%;
+}
+
+/* Sections */
+
+.colored-section {
+  background-color: #5C7AEA;
+  color: #fff;
+}
+
+.center {
+  margin-left: auto;
+}
+
+/* Navigation bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 0 18px 18px;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Buttons */
+.cta-button {
+  margin: 5% 0;
+}
+
+.btn {
+  border-radius: 15px;
+}
+
+/* Title section */
+
+#title .container-fluid {
+  padding: 3% 15% 5%;
+  text-align: left;
+}
+
+/* Problem Sections */
+
+.problem-title, .feature-title {
+  font-size: 1.5rem;
+  padding-bottom: 5%;
+}
+
+.problem-text {
+  width: 50%;
+}
+
+.icon {
+  color: #63B4B8;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #5C7AEA;
+}
+
+/* Features section */
+
+#midrow {
+  padding-bottom: 7%;
+}
+
+/* Testimonial section */
+#testimonials {
+  background-color: #63B4B8;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+  padding-bottom: 3%;
+}
+
+/* Call to action section */
+
+.cta-heading {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+#cta .container-fluid {
+  padding-bottom: 0;
+}
+
+/* Footer section */
+.copyright {
+  color: #8f8f8f;
+}
