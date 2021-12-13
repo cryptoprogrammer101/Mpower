@@ -28,13 +28,11 @@ p {
 }
 
 /* Containers */
-
 .container-fluid {
   padding: 5% 15%;
 }
 
 /* Sections */
-
 .colored-section {
   background-color: #5C7AEA;
   color: #fff;
@@ -74,14 +72,12 @@ p {
 }
 
 /* Title section */
-
 #title .container-fluid {
   padding: 3% 15% 5%;
   text-align: left;
 }
 
 /* Problem Sections */
-
 .problem-title, .feature-title {
   font-size: 1.5rem;
   padding-bottom: 5%;
@@ -101,7 +97,6 @@ p {
 }
 
 /* Features section */
-
 #midrow {
   padding-bottom: 7%;
 }
@@ -118,7 +113,6 @@ p {
 }
 
 /* Call to action section */
-
 .cta-heading {
   font-weight: 900;
   font-size: 3.5rem;
