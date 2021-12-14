@@ -76,6 +76,12 @@ p {
   padding: 3% 15% 5%;
   text-align: left;
 }
+/* Title image */
+
+.helping-img {
+  width: 80%;
+  margin-left: 20%;
+}
 
 /* Problem Sections */
 .problem-title, .feature-title {
