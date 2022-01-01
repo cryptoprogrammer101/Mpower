@@ -1,3 +1,5 @@
+/* General */
+
 body {
   font-family: 'Montserrat';
   text-align: center;
@@ -15,6 +17,7 @@ p {
 }
 
 /* Headings */
+
 .big-heading {
   font-weight: 900;
   font-size: 3.5rem;
@@ -28,17 +31,20 @@ p {
 }
 
 /* Containers */
+
 .container-fluid {
   padding: 5% 15%;
 }
 
 /* Sections */
+
 .colored-section {
   background-color: #5C7AEA;
   color: #fff;
 }
 
-/* Navigation bar */
+/* Navigation Bar */
+
 .navbar {
   padding: 0 0 4.5rem;
 }
@@ -67,68 +73,68 @@ p {
 }
 
 /* Buttons */
+
 .btn {
   border-radius: 15px;
   margin: 5% 0;
 }
 
-/* Title section */
+/* Title Section */
+
 #title .container-fluid {
   padding: 3% 15% 5%;
   text-align: left;
 }
 
-/* Title image */
+/* Title Image */
 .title-img {
   width: 80%;
   margin-left: 20%;
 }
 
-/* Problem Sections */
-.problem-heading, .feature-title {
+/* Problem Section */
+
+.head, .feature-title {
   font-size: 1.75rem;
   padding-bottom: 5%;
 }
 
-.problem-title {
+.blurb {
   width: 50%;
 }
 
-.problem-img {
+.img {
   width: 40%;
 }
 
-.problem-heading {
+.head {
   margin-top: 8%;
   color: #63B4B8;
 }
 
-.problem-row {
+.row {
   margin-bottom: 2rem;
 }
 
-.problem-row-1, .problem-row-3 {
+.row-l {
   text-align: left;
 }
 
-.problem-row-2 {
+.row-r {
   text-align: right;
 }
 
-.problem-img-1, .problem-img-3 {
+.img-l {
   margin-left: 50%;
 }
 
-.problem-img-2 {
+.img-r {
   margin-right: 50%;
 }
 
-/* Features section */
-#midrow {
-  padding-bottom: 7%;
-}
+/* Features Section */
 
-/* Testimonial section */
+/* Testimonial Section */
 #testimonials {
   background-color: #63B4B8;
 }
@@ -139,7 +145,7 @@ p {
   padding-bottom: 3%;
 }
 
-/* Call to action section */
+/* Call-to-action Section */
 .cta-heading {
   font-weight: 900;
   font-size: 3.5rem;
@@ -150,7 +156,7 @@ p {
   padding-bottom: 0;
 }
 
-/* Footer section */
+/* Footer Section */
 .copyright {
   color: #8f8f8f;
 }
