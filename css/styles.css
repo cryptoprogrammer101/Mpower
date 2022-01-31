@@ -53,6 +53,7 @@ p {
   font-family: "Ubuntu";
   font-size: 2.5rem;
   font-weight: bold;
+  margin-bottom: 1%;
 }
 
 .nav-item {
@@ -77,6 +78,10 @@ p {
 .btn {
   border-radius: 15px;
   margin: 5% 0;
+}
+
+.btn-login, .btn-signup {
+  margin-left: 2%;
 }
 
 /* Title Section */
@@ -143,6 +148,13 @@ p {
   font-size: 3rem;
   line-height: 1.5;
   padding-bottom: 3%;
+}
+
+/* Text box */
+
+.textbox {
+  width: 50%;
+  border-radius: 10px;
 }
 
 /* Call-to-action Section */
