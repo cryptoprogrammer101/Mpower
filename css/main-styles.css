@@ -3,6 +3,7 @@
 body {
   font-family: 'Montserrat';
   text-align: center;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,27 +14,23 @@ h1, h2, h3, h4, h5, h6 {
 p {
   color: #8f8f8f;
   margin: auto;
-  font-size: 1.1rem;
 }
 
 /* Headings */
 
 .big-heading {
-  font-weight: 900;
   font-size: 3.5rem;
-  line-height: 1.5;
 }
 
 .section-heading {
   font-size: 3rem;
-  line-height: 1.5;
-  padding: 3% 0 2% 0;
+  padding: 2% 0 2% 0;
 }
 
 /* Containers */
 
 .container-fluid {
-  padding: 5% 15%;
+  padding: 3% 15%;
 }
 
 /* Sections */
@@ -53,24 +50,19 @@ p {
   font-family: "Ubuntu";
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 
 .nav-item {
   padding: 0 0 20px 30px;
 }
 
-.down {
-  margin-top: 1%;
-}
-
 .nav-link {
   font-size: 1.5rem;
-  font-weight: 400;
 }
 
 #nav-btn {
-  margin: 0;
+  margin-top: 0;
 }
 
 /* Buttons */
@@ -80,14 +72,10 @@ p {
   margin: 5% 0;
 }
 
-.btn-login, .btn-signup {
-  margin-left: 2%;
-}
-
 /* Title Section */
 
 #title .container-fluid {
-  padding: 3% 15% 5%;
+  padding: 3% 15% 3%;
   text-align: left;
 }
 
@@ -99,7 +87,7 @@ p {
 
 /* Problem Section */
 
-.head, .feature-title {
+.header .feature-title {
   font-size: 1.75rem;
   padding-bottom: 5%;
 }
@@ -112,8 +100,8 @@ p {
   width: 40%;
 }
 
-.head {
-  margin-top: 8%;
+.header {
+  margin: 8% 0 3%;
   color: #63B4B8;
 }
 
@@ -137,8 +125,6 @@ p {
   margin-right: 50%;
 }
 
-/* Features Section */
-
 /* Testimonial Section */
 #testimonials {
   background-color: #63B4B8;
@@ -146,23 +132,10 @@ p {
 
 .testimonial-text {
   font-size: 3rem;
-  line-height: 1.5;
   padding-bottom: 3%;
 }
 
-/* Text box */
-
-.textbox {
-  width: 50%;
-  border-radius: 10px;
-}
-
 /* Call-to-action Section */
-.cta-heading {
-  font-weight: 900;
-  font-size: 3.5rem;
-  line-height: 1.5;
-}
 
 #cta .container-fluid {
   padding-bottom: 0;
