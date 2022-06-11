@@ -1,47 +1,44 @@
 /* General */
-
 body {
   font-family: 'Montserrat';
   text-align: center;
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-weight: 900;
   margin: auto;
 }
 
-p {
-  color: #8f8f8f;
+p, h4 {
+  color: #5f5f5f;
   margin: auto;
 }
 
 /* Headings */
-
 .big-heading {
   font-size: 3.5rem;
+  margin-bottom: 7%;
 }
 
-.section-heading {
+.section-heading, li::marker {
+  font-weight: bold;
   font-size: 3rem;
-  padding: 2% 0 2% 0;
+  padding: 4% 0 2% 0;
 }
 
 /* Containers */
-
 .container-fluid {
   padding: 3% 15%;
 }
 
 /* Sections */
-
 .colored-section {
-  background-color: #5C7AEA;
+  background-color: #516BEB;
   color: #fff;
 }
 
 /* Navigation Bar */
-
 .navbar {
   padding: 0 0 4.5rem;
 }
@@ -50,11 +47,11 @@ p {
   font-family: "Ubuntu";
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 
 .nav-item {
-  padding: 0 0 20px 30px;
+  padding: 0 0 6% 30px;
 }
 
 .nav-link {
@@ -62,18 +59,16 @@ p {
 }
 
 #nav-btn {
-  margin-top: 0;
+  margin: 0;
 }
 
 /* Buttons */
-
 .btn {
   border-radius: 15px;
-  margin: 5% 0;
+  margin: 0 0 4% 0;
 }
 
 /* Title Section */
-
 #title .container-fluid {
   padding: 3% 15% 3%;
   text-align: left;
@@ -86,12 +81,6 @@ p {
 }
 
 /* Problem Section */
-
-.header .feature-title {
-  font-size: 1.75rem;
-  padding-bottom: 5%;
-}
-
 .blurb {
   width: 50%;
 }
@@ -102,7 +91,7 @@ p {
 
 .header {
   margin: 8% 0 3%;
-  color: #63B4B8;
+  color: #516BEB;
 }
 
 .row {
@@ -125,23 +114,52 @@ p {
   margin-right: 50%;
 }
 
+/* Solution Section */
+hr {
+  width: 50%;
+  border: 10px dotted #516BEB;
+  border-top: none;
+}
+
+ol {
+  display: inline-block;
+  text-align: left;
+  margin: 2% auto;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+li::marker {
+  color: #516BEB;
+}
+
+li p {
+  margin-top: 3%;
+  font-size: 1rem;
+}
+
+ol li {
+  margin-bottom: 6%;
+}
+
 /* Testimonial Section */
 #testimonials {
-  background-color: #63B4B8;
+  background-color: #3DB2FF;
 }
 
 .testimonial-text {
-  font-size: 3rem;
-  padding-bottom: 3%;
+  font-size: 2rem;
+  padding-bottom: 2%;
 }
 
 /* Call-to-action Section */
-
 #cta .container-fluid {
   padding-bottom: 0;
 }
 
 /* Footer Section */
 .copyright {
-  color: #8f8f8f;
+  color: #5f5f5f;
 }
