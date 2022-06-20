@@ -3,6 +3,7 @@ body {
   font-family: 'Montserrat';
   text-align: center;
   line-height: 1.5;
+  color: #3f3f3f;
 }
 
 h1, h2, h3 {
@@ -15,19 +16,10 @@ p {
   margin: auto;
 }
 
-/* Headings */
-.section-heading {
-  font-weight: bold;
-  font-size: 3rem;
-  padding: 4% 0 2% 0;
-}
-
-/* Containers */
 .container-fluid {
   padding: 3% 15%;
 }
 
-/* Sections */
 .colored-section {
   background-color: #516BEB;
   color: #fff;
@@ -35,7 +27,7 @@ p {
 
 /* Navigation Bar */
 .navbar {
-  padding: 0 0 4.5rem;
+  padding: 0 0 2rem;
 }
 
 .navbar-brand {
@@ -55,6 +47,13 @@ p {
 
 #nav-btn {
   margin: 0;
+}
+
+/* Headings */
+.section-heading {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 4% 0 2% 0;
 }
 
 /* Buttons */
