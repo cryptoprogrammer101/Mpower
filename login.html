@@ -75,36 +75,44 @@
 
       </nav>
 
-      <form action="home.html">
+  </section>
 
-        <div class="form-group">
+  <main class="colored-section">
 
-          <label for="inpEmail">Email address</label>
-          <input type="email" class="form-control textbox" textbox id="inpEmail" aria-describedby="emailHelp" placeholder="Enter email">
+    <h2>Log In</h2>
 
-        </div>
+    <br><br>
 
-        <br>
+    <form action="home.html">
 
-        <div class="form-group">
+      <div class="form-group">
 
-          <label for="inpPass">Password</label>
-          <input type="password" class="form-control textbox" textbox id="inpPass" placeholder="Enter password">
+        <label for="inpEmail">Email address:</label>
+        <input type="email" class="form-control textbox" id="inpEmail" aria-describedby="emailHelp" placeholder="Enter email" minlength="7" maxlength="40" required>
 
-        </div>
+      </div>
 
-        <div>
+      <br>
 
-          <button type="submit" class="btn btn-dark btn-lg">Log In</button>
-          <a class="btn btn-outline-light btn-lg btn-signup" href="signup.html">Sign Up</a>
+      <div class="form-group">
 
-        </div>
+        <label for="inpPass">Password:</label>
+        <input type="password" class="form-control textbox" id="inpPass" placeholder="Enter password" minlength="7" maxlength="20" required>
 
-      </form>
+      </div>
+
+      <div>
+
+        <button type="submit" class="btn btn-dark btn-lg">Log In</button>
+        <a class="btn btn-outline-light btn-lg btn-signup" href="signup.html">Sign Up</a>
+
+      </div>
+
+    </form>
 
     </div>
 
-  </section>
+  </main>
 
   <footer class="white-section" id="footer">
 

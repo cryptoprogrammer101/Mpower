@@ -26,8 +26,12 @@ p {
 }
 
 /* Navigation Bar */
+#title .container-fluid {
+  padding-top: 1%;
+}
+
 .navbar {
-  padding: 0 0 2rem;
+  padding: 0 0 4rem;
 }
 
 .navbar-brand {
@@ -52,7 +56,6 @@ p {
 /* Headings */
 .big-heading {
   font-size: 3.5rem;
-  margin-bottom: 6%;
 }
 
 .section-heading {
@@ -64,7 +67,7 @@ p {
 /* Buttons */
 .btn {
   border-radius: 15px;
-  margin: 0 0 4% 0;
+  margin: 5% 0 4% 0;
 }
 
 /* Title Section */
@@ -79,7 +82,6 @@ p {
 }
 
 /* Problem Section */
-
 #problem .section-heading {
   color: #516BEB;
 }
@@ -166,9 +168,4 @@ ol li {
 /* Call-to-action Section */
 #cta .container-fluid {
   padding-bottom: 0;
-}
-
-/* Footer Section */
-.copyright {
-  color: #5f5f5f;
 }

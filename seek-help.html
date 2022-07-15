@@ -54,10 +54,6 @@
               <a class="nav-link" href="resources.html">Resources</a>
             </li>
 
-            <li class="nav-item down">
-              <a class="nav-link" href="faq.html">FAQs</a>
-            </li>
-
             <li class="nav-item">
 
               <a class="nav-link" href="seek-help.html">
@@ -78,12 +74,12 @@
 
   <h3>Prompts:</h3><br>
 
-  <form action="">
+  <form action="" method="GET">
 
     <div class="form-group">
 
-      <label>What is something you like?</label>
-      <input type="text" class="form-control textbox" placeholder="Answer prompt">
+      <label for="like">What is something you like?</label>
+      <input id="like" type="text" class="form-control textbox" placeholder="Answer prompt" name="user-like" minlength="1" maxlength="300">
 
     </div>
 
