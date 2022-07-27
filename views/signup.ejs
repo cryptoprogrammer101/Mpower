@@ -1,0 +1,48 @@
+<%- include("partials/header") -%>
+
+    </div>
+
+    </section>
+
+    <main class="colored-section">
+
+        <h1>Sign Up</h1>
+
+        <br><br>
+
+        <form action="home">
+
+            <div class="form-group">
+
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control textbox" id="email" aria-describedby="emailHelp"
+                    placeholder="Enter email" minlength="7" maxlength="40" required autofocus>
+
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+
+                <label for="pass">Password:</label>
+                <input type="password" class="form-control textbox" id="pass" placeholder="Enter password" minlength="7"
+                    maxlength="20" required>
+
+            </div>
+
+            <br><br>
+
+            <div>
+
+                <button type="submit" class="btn btn-dark btn-lg signup-btn">Sign Up</button>
+                <a class="btn btn-outline-light btn-lg" href="login">Log In</a>
+
+            </div>
+
+        </form>
+
+        <br><br>
+
+    </main>
+
+    <%- include("partials/footer") -%>

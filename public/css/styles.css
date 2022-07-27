@@ -12,12 +12,11 @@ h1, h2, h3 {
 }
 
 p {
-  color: #5f5f5f;
   margin: auto;
 }
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 10%;
 }
 
 .colored-section {
@@ -31,7 +30,7 @@ p {
 }
 
 .navbar {
-  padding: 0 0 4rem;
+  padding: 0;
 }
 
 .navbar-brand {
@@ -43,14 +42,7 @@ p {
 
 .nav-item {
   padding: 0 0 6% 30px;
-}
-
-.nav-link {
   font-size: 1.5rem;
-}
-
-#nav-btn {
-  margin: 0;
 }
 
 /* Headings */
@@ -60,32 +52,31 @@ p {
 
 .section-heading {
   font-weight: bold;
+  color: #516BEB;
   font-size: 3rem;
-  padding: 4% 0 2% 0;
 }
 
 /* Buttons */
 .btn {
   border-radius: 15px;
-  margin: 5% 0 4% 0;
+  margin: 0;
 }
 
-/* Title Section */
+.signup-btn, .login-btn {
+  margin-right: 1%;
+}
+
+/* Title Section & Image */
 #title {
   text-align: left;
 }
 
-/* Title Image */
 .title-img {
   width: 80%;
   margin-left: 20%;
 }
 
 /* Problem Section */
-#problem .section-heading {
-  color: #516BEB;
-}
-
 .blurb {
   width: 50%;
 }
@@ -125,10 +116,6 @@ hr {
   border-top: none;
 }
 
-#solution .section-heading {
-  color: #516BEB;
-}
-
 ol {
   display: inline-block;
   text-align: left;
@@ -141,31 +128,30 @@ li::marker {
 }
 
 li p {
-  margin-top: 3%;
   font-size: 1.3rem;
-  color: #5f5f5f;
-}
-
-ol li {
-  margin-bottom: 6%;
 }
 
 /* Testimonial Section */
 #testimonials {
   background-color: #3DB2FF;
+  color: #fff;
 }
 
-.testimonial-text {
-  font-size: 2rem;
-  padding-bottom: 3%;
+#testimonials .section-heading {
+  color: #fff;
 }
 
 .carousel-item p {
-  color: #fff;
   font-size: 1.2rem;
 }
 
-/* Call-to-action Section */
-#cta .container-fluid {
-  padding-bottom: 0;
+/* Copyright */
+.copyright {
+  color: #3f3f3f;
+}
+
+/* Textbox */
+.textbox {
+  margin: auto;
+  width: 50%;
 }
