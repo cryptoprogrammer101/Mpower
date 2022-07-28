@@ -4,7 +4,7 @@
 
     <main>
 
-        <h1>Prompts:</h1>
+        <h1>Prompts</h1>
 
         <br><br>
 
@@ -20,14 +20,35 @@
 
                 <input type="hidden" name="promptTitle" value="<%= promptTitle %>">
 
-                <input type="text" class="form-control textbox" placeholder="Answer prompt" name="prompt" minlength="5" required autofocus>
-
-                <br><br>
+                <input type="text" class="form-control textbox" placeholder="Enter prompt" name="prompt" minlength="5"
+                    required autofocus>
 
             </div>
 
-            <button type="submit" class="btn btn-dark btn-lg save-btn">Save prompt</button>
-            <a href="prompts" class="btn btn-outline-primary btn-lg" role="button">Load prompts</a>
+            <br>
+
+            <% if (promptEntered) { %>
+
+                <div class="alert alert-success alert-dismissible fade show">
+                    
+                    Saved prompt! View it <a href="prompts#<%= promptID %>" class="alert-link">here</a>
+                    
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    
+                        <span aria-hidden="true">&times;</span>
+                    
+                    </button>
+
+                </div>
+
+                <br>
+
+                <% } %>
+
+                    <br>
+
+                    <button type="submit" class="btn btn-dark btn-lg save-btn">Save prompt</button>
+                    <a href="prompts" class="btn btn-outline-primary btn-lg" role="button">Load prompts</a>
 
         </form>
 

@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
 
-        <h1>Saved prompts:</h1>
+        <h1>Saved prompts</h1>
 
         <br><br>
 
@@ -19,7 +19,7 @@
                 <ul class="prompts-ul">
                     <% prompts.forEach(prompt=> { %>
 
-                        <li class="prompt-title">
+                        <li class="prompt-title" id="<%= prompt._id %>">
                             <%= prompt.title %>
 
                                 <br><br>

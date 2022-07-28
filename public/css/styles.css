@@ -1,18 +1,21 @@
 /* General */
 body {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-align: center;
   line-height: 1.5;
   color: #3f3f3f;
   margin: auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 900;
   margin: auto;
 }
 
 p {
+  font-size: 1.2rem;
   margin: auto;
 }
 
@@ -34,10 +37,12 @@ p {
   padding: 0;
 }
 
+.navbar-nav {
+  margin-top: 1%;
+}
+
 .navbar-brand {
-  font-family: "Ubuntu";
   font-size: 2.5rem;
-  font-weight: bold;
   margin-bottom: 5%;
 }
 
@@ -63,7 +68,9 @@ p {
   margin: 0;
 }
 
-.signup-btn, .login-btn, .save-btn {
+.signup-btn,
+.login-btn,
+.save-btn {
   margin-right: 1%;
 }
 
@@ -130,10 +137,6 @@ ol {
   font-size: 3.5rem;
 }
 
-.features li p {
-  font-size: 1.3rem;
-}
-
 /* Testimonial Section */
 #testimonials {
   background-color: #3DB2FF;
@@ -149,10 +152,9 @@ ol {
 }
 
 /* Copyright */
-
 hr {
   margin: 0;
-  
+
 }
 
 .copyright {
@@ -166,6 +168,10 @@ hr {
 }
 
 /* Prompts */
+input {
+  text-align: center;
+}
+
 .prompts-ul {
   text-align: left;
 }
@@ -178,4 +184,9 @@ hr {
 #prompt-content {
   font-weight: normal;
   font-size: 1.3rem;
+}
+
+.alert {
+  width: 50%;
+  margin: auto;
 }
