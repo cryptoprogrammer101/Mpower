@@ -4,6 +4,7 @@ body {
   text-align: center;
   line-height: 1.5;
   color: #3f3f3f;
+  margin: auto;
 }
 
 h1, h2, h3 {
@@ -25,7 +26,7 @@ p {
 }
 
 /* Navigation Bar */
-#title .container-fluid {
+.nav-div {
   padding-top: 1%;
 }
 
@@ -62,12 +63,13 @@ p {
   margin: 0;
 }
 
-.signup-btn, .login-btn {
+.signup-btn, .login-btn, .save-btn {
   margin-right: 1%;
 }
 
 /* Title Section & Image */
 #title {
+  padding-top: 0;
   text-align: left;
 }
 
@@ -109,8 +111,9 @@ p {
   margin-right: 50%;
 }
 
-/* Solution Section */
-hr {
+/* Features Section */
+#features-hr {
+  margin: auto;
   width: 50%;
   border: 10px dotted #3DB2FF;
   border-top: none;
@@ -121,13 +124,13 @@ ol {
   text-align: left;
 }
 
-li::marker {
+.features li::marker {
   font-weight: bold;
   color: #516BEB;
   font-size: 3.5rem;
 }
 
-li p {
+.features li p {
   font-size: 1.3rem;
 }
 
@@ -146,6 +149,12 @@ li p {
 }
 
 /* Copyright */
+
+hr {
+  margin: 0;
+  
+}
+
 .copyright {
   color: #3f3f3f;
 }
@@ -154,4 +163,19 @@ li p {
 .textbox {
   margin: auto;
   width: 50%;
+}
+
+/* Prompts */
+.prompts-ul {
+  text-align: left;
+}
+
+.prompt-title {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+#prompt-content {
+  font-weight: normal;
+  font-size: 1.3rem;
 }

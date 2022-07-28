@@ -1,66 +1,38 @@
 <%- include("partials/header-2") -%>
 
-    </div>
-
-    </section>
-
-    <h3>Prompts:</h3><br>
-
-    <form action="" method="GET">
-
-        <div class="form-group">
-
-            <label for="like">What is something you like?</label>
-            <input id="like" type="text" class="form-control textbox" placeholder="Answer prompt" name="user-like"
-                minlength="5" maxlength="300" required>
-
-        </div>
-
-        <div>
-            <button type="submit" class="btn btn-dark btn-lg">Save prompt</button>
-        </div>
-
-    </form>
-
-    <h3>Tips:</h3><br>
-
-    <a href="https://www.helpguide.org/articles/addictions/substance-abuse-and-mental-health.htm#loved-one">Tips on
-        substance abuse and mental health</a><br><br>
-
-    <h3>Quotes:</h3><br>
-
-    <p>“When you have a dream, you’ve got to grab it and never let go.”</p><br>
-
-    <h3>Compliments:</h3><br>
-
-    <p>You're stronger than you give yourself credit for.</p>
-
     <br><br>
 
-    <h3>To do:</h3>
-    <ul>
-        <li>Talk to someone</li>
-        <li>Call a center</li>
-        <li>Book an appointment</li>
-    </ul>
+    <main>
 
-    <br><br>
+        <h1>Prompts:</h1>
 
-    <h3>Booking:</h3><br>
+        <br><br>
 
-    <form action="">
+        <form action="help" method="post">
 
-        <div class="form-group">
+            <div class="form-group">
 
-            <label>Do you want to book an appointment?</label>
-            <input type="text" class="form-control textbox" placeholder="Enter email">
+                <h4>
+                    <%= promptTitle %>
+                </h4>
 
-        </div>
+                <br><br>
 
-        <div>
-            <button type="submit" class="btn btn-dark btn-lg">Book</button>
-        </div>
+                <input type="hidden" name="promptTitle" value="<%= promptTitle %>">
 
-    </form>
+                <input type="text" class="form-control textbox" placeholder="Answer prompt" name="prompt" minlength="5" required autofocus>
+
+                <br><br>
+
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-lg save-btn">Save prompt</button>
+            <a href="prompts" class="btn btn-outline-primary btn-lg" role="button">Load prompts</a>
+
+        </form>
+
+    </main>
+
+    <br><br><br>
 
     <%- include("partials/footer") -%>
