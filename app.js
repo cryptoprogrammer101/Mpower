@@ -31,40 +31,45 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.get("/:page", (req, res) => {
-    const page = req.params.page
+app.get("/about", (req, res) => {
+    res.render("about")
+})
 
-    if (page === "help") {
+app.get("/contact", (req, res) => {
+    res.render("contact")
+})
 
-        res.render(page, { promptTitle: getPromptTitle(), promptEntered: false })
+app.get("/help", (req, res) => {
+    res.render("help", { promptTitle: getPromptTitle(), promptEntered: false })
+})
 
-    } else if (page === "prompts") {
+app.get("/home", (req, res) => {
+    res.render("home")
+})
 
-        const prompts = Prompt.find((err, savedPrompts) => {
-            res.render(page, { prompts: savedPrompts })
-        })
+app.get("/login", (req, res) => {
+    res.render("login")
+})
 
-    } else {
-        res.render(page, (err, html) => {
-            if (err) {
-                res.redirect("/")
-            } else {
-                res.send(html)
-            }
-        })
+app.get("/prompts", (req, res) => {
+    const prompts = Prompt.find((err, savedPrompts) => {
+        res.render("prompts", { prompts: savedPrompts })
+    })
+})
 
-    }
+app.get("/resources", (req, res) => {
+    res.render("resources")
+})
 
+app.get("/signup", (req, res) => {
+    res.render("signup")
 })
 
 app.post("/help", (req, res) => {
 
-    const promptTitle = req.body.promptTitle
-    const promptText = req.body.prompt
-
     const newPrompt = new Prompt({
-        title: promptTitle,
-        content: promptText
+        title: req.body.promptTitle,
+        content: req.body.prompt
     })
 
     newPrompt.save()
