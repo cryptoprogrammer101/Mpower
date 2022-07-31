@@ -6,13 +6,13 @@
 
         <br><br>
 
-        <form action="home">
+        <form action="signup" method="post">
 
             <div class="form-group">
 
-                <label for="email">Email address:</label>
-                <input type="email" class="form-control textbox" id="email" aria-describedby="emailHelp"
-                    placeholder="Enter email" minlength="7" maxlength="40" required autofocus>
+                <label>Username:</label>
+                <input class="form-control textbox" name="username" placeholder="Enter username" minlength="3"
+                    maxlength="40" required autofocus>
 
             </div>
 
@@ -20,16 +20,35 @@
 
             <div class="form-group">
 
-                <label for="pass">Password:</label>
-                <input type="password" class="form-control textbox" id="pass" placeholder="Enter password" minlength="7"
-                    maxlength="20" required>
+                <label>Password:</label>
+                <input type="password" class="form-control textbox" name="password" placeholder="Enter password"
+                    minlength="5" maxlength="20" required>
 
             </div>
 
-            <br><br>
+            <% if (err) { %>
 
-            <button type="submit" class="btn btn-dark btn-lg signup-btn">Sign Up</button>
-            <a class="btn btn-outline-light btn-lg" href="login">Log In</a>
+                <br>
+
+                <div class="alert alert-danger alert-dismissible fade show">
+
+                    User with username "<%= err %>" already exists. Please enter a new username or click <a href="login"
+                        class="alert-link">here</a> to log in.
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                        <span aria-hidden="true">&times;</span>
+
+                    </button>
+
+                </div>
+
+                <% } %>
+
+                    <br>
+
+                    <button type="submit" class="btn btn-dark btn-lg signup-btn">Sign Up</button>
+                    <a class="btn btn-outline-light btn-lg" href="login">Log In</a>
 
         </form>
 

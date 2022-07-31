@@ -44,6 +44,7 @@ p {
 .navbar-brand {
   font-size: 2.5rem;
   margin-bottom: 5%;
+  font-family: "Lato";
 }
 
 .nav-item {
@@ -71,11 +72,11 @@ p {
 .signup-btn,
 .login-btn,
 .save-btn {
-  margin-right: 1%;
+  margin-right: 2%;
 }
 
 /* Title Section & Image */
-#title {
+.title {
   padding-top: 0;
   text-align: left;
 }
@@ -119,7 +120,7 @@ p {
 }
 
 /* Features Section */
-#features-hr {
+.features-hr {
   margin: auto;
   width: 50%;
   border: 10px dotted #3DB2FF;

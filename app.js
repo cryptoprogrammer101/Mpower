@@ -1,13 +1,28 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
+const uniqueValidator = require("mongoose-unique-validator")
+const session = require("express-session")
+const passport = require("passport")
+const passportLocalMongoose = require("passport-local-mongoose")
+// const bcrypt = require("bcrypt")
+// const saltRounds = 10
 
 const app = express()
 
-app.set('view engine', 'ejs')
+app.set("view engine", "ejs")
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"))
+
+app.use(session({
+    secret: "My little secret.",
+    resave: false,
+    saveUninitialized: false
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 mongoose.connect("mongodb://localhost:27017/websiteDB")
 
@@ -17,6 +32,22 @@ const promptSchema = new mongoose.Schema({
 })
 
 const Prompt = mongoose.model("Prompt", promptSchema)
+
+const userSchema = new mongoose.Schema({
+    username: { type: String, required: true, unique: true },
+    password: String,
+    prompts: [promptSchema]
+})
+
+userSchema.plugin(uniqueValidator)
+userSchema.plugin(passportLocalMongoose)
+
+const User = mongoose.model("User", userSchema)
+
+passport.use(User.createStrategy())
+
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
 
 const promptTitles = ["What is something you like?",
     "Describe one significant childhood memory.",
@@ -28,7 +59,11 @@ function getPromptTitle() {
 }
 
 app.get("/", (req, res) => {
-    res.render("index")
+    if (req.isAuthenticated()) {
+        res.redirect("/home")
+    } else {
+        res.render("index")
+    }
 })
 
 app.get("/about", (req, res) => {
@@ -40,29 +75,91 @@ app.get("/contact", (req, res) => {
 })
 
 app.get("/help", (req, res) => {
-    res.render("help", { promptTitle: getPromptTitle(), promptEntered: false })
+    if (req.isAuthenticated()) {
+        res.render("help", { promptTitle: getPromptTitle(), promptEntered: false })
+    } else {
+        res.redirect("/signup")
+    }
 })
-
-app.get("/home", (req, res) => {
-    res.render("home")
-})
-
 app.get("/login", (req, res) => {
-    res.render("login")
+    if (req.isAuthenticated()) {
+        res.redirect("/home")
+    } else {
+        res.render("login", { err: "" })
+    }
+})
+
+app.post("/login", (req, res) => {
+
+    const user = new User({
+        username: req.body.username,
+        password: req.body.password
+    })
+
+    req.login(user, (err) => {
+        if (err) {
+           res.render("login", {err: err}) 
+        } else {
+            passport.authenticate("local", (err, user, info) => {
+                if (user) {
+                    res.redirect("/home")
+                } else {
+                    res.render("login", {err: true})
+                }
+            })(req, res, () => {})
+
+        }
+    })
+
 })
 
 app.get("/prompts", (req, res) => {
-    const prompts = Prompt.find((err, savedPrompts) => {
-        res.render("prompts", { prompts: savedPrompts })
-    })
+    if (req.isAuthenticated()) {
+        const prompts = Prompt.find((err, savedPrompts) => {
+            res.render("prompts", { prompts: savedPrompts })
+        })
+    } else {
+        res.redirect("/signup")
+    }
+    
 })
 
 app.get("/resources", (req, res) => {
-    res.render("resources")
+    if (req.isAuthenticated()) {
+        res.render("resources")
+    } else {
+        res.redirect("/signup")
+    }
+})
+
+app.get("/home", (req, res) => {
+    if (req.isAuthenticated()) {
+        res.render("home")
+    } else {
+        res.redirect("/signup")
+    }
 })
 
 app.get("/signup", (req, res) => {
-    res.render("signup")
+    if (req.isAuthenticated()) {
+        res.redirect("/home")
+    } else {
+        res.render("signup", { err: "" })
+    }
+})
+
+app.post("/signup", (req, res) => {
+
+    User.register({ username: req.body.username }, req.body.password, (err, user) => {
+        if (err) {
+            res.render("signup", { err: req.body.username })
+        } else {
+            passport.authenticate("local")(req, res, () => {
+                res.redirect("/home")
+            })
+        }
+    })
+
 })
 
 app.post("/help", (req, res) => {
