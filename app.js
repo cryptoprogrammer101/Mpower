@@ -5,8 +5,6 @@ const uniqueValidator = require("mongoose-unique-validator")
 const session = require("express-session")
 const passport = require("passport")
 const passportLocalMongoose = require("passport-local-mongoose")
-// const bcrypt = require("bcrypt")
-// const saltRounds = 10
 
 const app = express()
 
@@ -66,79 +64,6 @@ app.get("/", (req, res) => {
     }
 })
 
-app.get("/about", (req, res) => {
-    res.render("about")
-})
-
-app.get("/contact", (req, res) => {
-    res.render("contact")
-})
-
-app.get("/help", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("help", { promptTitle: getPromptTitle(), promptEntered: false })
-    } else {
-        res.redirect("/signup")
-    }
-})
-app.get("/login", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.redirect("/home")
-    } else {
-        res.render("login", { err: "" })
-    }
-})
-
-app.post("/login", (req, res) => {
-
-    const user = new User({
-        username: req.body.username,
-        password: req.body.password
-    })
-
-    req.login(user, (err) => {
-        if (err) {
-           res.render("login", {err: err}) 
-        } else {
-            passport.authenticate("local", (err, user, info) => {
-                if (user) {
-                    res.redirect("/home")
-                } else {
-                    res.render("login", {err: true})
-                }
-            })(req, res, () => {})
-
-        }
-    })
-
-})
-
-app.get("/prompts", (req, res) => {
-    if (req.isAuthenticated()) {
-        const prompts = Prompt.find((err, savedPrompts) => {
-            res.render("prompts", { prompts: savedPrompts })
-        })
-    } else {
-        res.redirect("/signup")
-    }
-    
-})
-
-app.get("/resources", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("resources")
-    } else {
-        res.redirect("/signup")
-    }
-})
-
-app.get("/home", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("home")
-    } else {
-        res.redirect("/signup")
-    }
-})
 
 app.get("/signup", (req, res) => {
     if (req.isAuthenticated()) {
@@ -161,6 +86,45 @@ app.post("/signup", (req, res) => {
     })
 
 })
+app.get("/login", (req, res) => {
+    if (req.isAuthenticated()) {
+        res.redirect("/home")
+    } else {
+        res.render("login", { err: "" })
+    }
+})
+
+app.post("/login", (req, res) => {
+
+    const user = new User({
+        username: req.body.username,
+        password: req.body.password
+    })
+
+    req.login(user, (err) => {
+        if (err) {
+            res.render("login", { err: err })
+        } else {
+            passport.authenticate("local", (err, user, info) => {
+                if (user) {
+                    res.redirect("/home")
+                } else {
+                    res.render("login", { err: true })
+                }
+            })(req, res, () => { })
+
+        }
+    })
+
+})
+
+app.get("/help", (req, res) => {
+    if (req.isAuthenticated()) {
+        res.render("help", { promptTitle: getPromptTitle(), promptEntered: false })
+    } else {
+        res.redirect("/signup")
+    }
+})
 
 app.post("/help", (req, res) => {
 
@@ -169,10 +133,66 @@ app.post("/help", (req, res) => {
         content: req.body.prompt
     })
 
-    newPrompt.save()
+    User.findById(req.user._id, (err, user) => {
+        if (err) {
+            console.log(err)
+            res.redirect("/help")
+        } else {
+            user.prompts.push(newPrompt)
+            user.save()
+            res.render("help", { promptTitle: getPromptTitle(), promptEntered: true, promptID: newPrompt._id })
+        }
+    })
 
-    res.render("help", { promptTitle: getPromptTitle(), promptEntered: true, promptID: newPrompt._id })
+})
 
+app.get("/prompts", (req, res) => {
+    if (req.isAuthenticated()) {
+        User.findById(req.user._id, (err, user) => {
+            if (err) {
+                console.log(err)
+            } else {
+                const prompts = user.prompts
+                res.render("prompts", { prompts: prompts })
+            }
+        })
+    } else {
+        res.redirect("/signup")
+    }
+
+})
+
+app.get("/home", (req, res) => {
+    if (req.isAuthenticated()) {
+        res.render("home")
+    } else {
+        res.redirect("/signup")
+    }
+})
+
+app.get("/logout", (req, res) => {
+    req.logout((err) => {
+        if (err) {
+            console.log(err)
+        }
+    })
+    res.redirect("/")
+})
+
+app.get("/resources", (req, res) => {
+    if (req.isAuthenticated()) {
+        res.render("resources")
+    } else {
+        res.redirect("/signup")
+    }
+})
+
+app.get("/about", (req, res) => {
+    res.render("about")
+})
+
+app.get("/contact", (req, res) => {
+    res.render("contact")
 })
 
 app.listen(3000, () => {
