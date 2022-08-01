@@ -1,0 +1,49 @@
+<%- include("partials/header-2") -%>
+
+    <div class="container-fluid">
+
+        <h1>Saved prompts</h1>
+
+        <br><br>
+
+        <% if (prompts.length < 1) { %>
+
+            <h4>No saved prompts. Click the button below to enter new prompt.</h4>
+
+            <br>
+
+            <% } else { %>
+
+                <br><br>
+
+                <ul class="prompts-ul">
+                    <% prompts.forEach(prompt=> { %>
+
+                        <li class="prompt-title" id="<%= prompt._id %>">
+                            <%= prompt.title %>
+
+                                <br><br>
+
+                                <ul>
+                                    <li id="prompt-content">
+                                        <%= prompt.content %>
+                                    </li>
+                                </ul>
+
+                        </li>
+
+                        <br><br>
+
+                        <% }) %>
+
+                </ul>
+
+                <% } %>
+
+                    <br>
+
+                    <a href="prompts" class="btn btn-dark btn-lg">Enter prompt</a>
+
+    </div>
+
+    <%- include("partials/footer") -%>

@@ -5,6 +5,7 @@ const uniqueValidator = require("mongoose-unique-validator")
 const session = require("express-session")
 const passport = require("passport")
 const passportLocalMongoose = require("passport-local-mongoose")
+const { render } = require("ejs")
 
 const app = express()
 
@@ -56,6 +57,14 @@ function getPromptTitle() {
     return promptTitle
 }
 
+function renderRoute(req, res, route) {
+    if (req.isAuthenticated()) {
+        res.render(route)
+    } else {
+        res.redirect("/signup")
+    }
+}
+
 app.get("/", (req, res) => {
     if (req.isAuthenticated()) {
         res.redirect("/home")
@@ -63,7 +72,6 @@ app.get("/", (req, res) => {
         res.render("index")
     }
 })
-
 
 app.get("/signup", (req, res) => {
     if (req.isAuthenticated()) {
@@ -86,6 +94,7 @@ app.post("/signup", (req, res) => {
     })
 
 })
+
 app.get("/login", (req, res) => {
     if (req.isAuthenticated()) {
         res.redirect("/home")
@@ -118,15 +127,15 @@ app.post("/login", (req, res) => {
 
 })
 
-app.get("/help", (req, res) => {
+app.get("/prompts", (req, res) => {
     if (req.isAuthenticated()) {
-        res.render("help", { promptTitle: getPromptTitle(), promptEntered: false })
+        res.render("prompts", { promptTitle: getPromptTitle(), promptEntered: false })
     } else {
         res.redirect("/signup")
     }
 })
 
-app.post("/help", (req, res) => {
+app.post("/prompts", (req, res) => {
 
     const newPrompt = new Prompt({
         title: req.body.promptTitle,
@@ -136,24 +145,24 @@ app.post("/help", (req, res) => {
     User.findById(req.user._id, (err, user) => {
         if (err) {
             console.log(err)
-            res.redirect("/help")
+            res.redirect("/prompts")
         } else {
             user.prompts.push(newPrompt)
             user.save()
-            res.render("help", { promptTitle: getPromptTitle(), promptEntered: true, promptID: newPrompt._id })
+            res.render("prompts", { promptTitle: getPromptTitle(), promptEntered: true, promptID: newPrompt._id })
         }
     })
 
 })
 
-app.get("/prompts", (req, res) => {
+app.get("/saved", (req, res) => {
     if (req.isAuthenticated()) {
         User.findById(req.user._id, (err, user) => {
             if (err) {
                 console.log(err)
             } else {
                 const prompts = user.prompts
-                res.render("prompts", { prompts: prompts })
+                res.render("saved", { prompts: prompts })
             }
         })
     } else {
@@ -163,11 +172,7 @@ app.get("/prompts", (req, res) => {
 })
 
 app.get("/home", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("home")
-    } else {
-        res.redirect("/signup")
-    }
+    renderRoute(req, res, "home")
 })
 
 app.get("/logout", (req, res) => {
@@ -180,11 +185,27 @@ app.get("/logout", (req, res) => {
 })
 
 app.get("/resources", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("resources")
-    } else {
-        res.redirect("/signup")
-    }
+   renderRoute(req, res, "resources")
+})
+
+app.get("/quotes", (req, res) => {
+   renderRoute(req, res, "quotes")
+})
+
+app.get("/todo", (req, res) => {
+   renderRoute(req, res, "todo")
+})
+
+app.post("/todo", (req, res) => {
+    res.render("todo")
+ })
+
+app.get("/appointment", (req, res) => {
+   renderRoute(req, res, "appointment")
+})
+
+app.post("/appointment", (req, res) => {
+    res.render("appointment")
 })
 
 app.get("/about", (req, res) => {

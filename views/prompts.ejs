@@ -1,49 +1,59 @@
 <%- include("partials/header-2") -%>
 
-    <div class="container-fluid">
+    <br><br>
 
-        <h1>Saved prompts</h1>
+    <main>
+
+        <h1>Prompts:</h1>
 
         <br><br>
 
-        <% if (prompts.length < 1) { %>
+        <form action="prompts" method="post">
 
-            <h4>No saved prompts. Click the button below to enter new prompt.</h4>
+            <div class="form-group">
 
-            <br>
-
-            <% } else { %>
+                <h4>
+                    <%= promptTitle %>
+                </h4>
 
                 <br><br>
 
-                <ul class="prompts-ul">
-                    <% prompts.forEach(prompt=> { %>
+                <input type="hidden" name="promptTitle" value="<%= promptTitle %>">
 
-                        <li class="prompt-title" id="<%= prompt._id %>">
-                            <%= prompt.title %>
+                <input type="text" class="form-control textbox" placeholder="Enter prompt" name="prompt" minlength="5"
+                    required autofocus>
 
-                                <br><br>
+            </div>
 
-                                <ul>
-                                    <li id="prompt-content">
-                                        <%= prompt.content %>
-                                    </li>
-                                </ul>
+            <br>
 
-                        </li>
+            <% if (promptEntered) { %>
 
-                        <br><br>
+                <div class="alert alert-success alert-dismissible fade show">
 
-                        <% }) %>
+                    Saved prompt! View it <a href="saved#<%= promptID %>" class="alert-link">here</a>
 
-                </ul>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                        <span aria-hidden="true">&times;</span>
+
+                    </button>
+
+                </div>
+
+                <br>
 
                 <% } %>
 
-                <br>
-                
-                <a href="help" class="btn btn-dark btn-lg">Enter prompt</a>
+                    <br>
 
-    </div>
+                    <button type="submit" class="btn btn-dark btn-lg save-btn">Save prompt</button>
+                    <a href="saved" class="btn btn-outline-primary btn-lg">Load prompts</a>
+
+        </form>
+
+    </main>
+
+    <br><br><br>
 
     <%- include("partials/footer") -%>

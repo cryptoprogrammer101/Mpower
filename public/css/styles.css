@@ -24,7 +24,7 @@ p {
 }
 
 .colored-section {
-  background-color: #516BEB;
+  background-color: #1363DF;
   color: #fff;
 }
 
@@ -43,7 +43,7 @@ p {
 
 .navbar-brand {
   font-size: 2.5rem;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
   font-family: "Lato";
 }
 
@@ -59,7 +59,7 @@ p {
 
 .section-heading {
   font-weight: bold;
-  color: #516BEB;
+  color: #1363DF;
   font-size: 3rem;
 }
 
@@ -73,6 +73,10 @@ p {
 .login-btn,
 .save-btn {
   margin-right: 2%;
+}
+
+i {
+  margin-left: 4%;
 }
 
 /* Title Section & Image */
@@ -123,8 +127,7 @@ p {
 .features-hr {
   margin: auto;
   width: 50%;
-  border: 10px dotted #3DB2FF;
-  border-top: none;
+  border-top: 10px dotted #2FA4FF;
 }
 
 ol {
@@ -134,13 +137,13 @@ ol {
 
 .features li::marker {
   font-weight: bold;
-  color: #516BEB;
+  color: #1363DF;
   font-size: 3.5rem;
 }
 
 /* Testimonial Section */
 #testimonials {
-  background-color: #3DB2FF;
+  background-color: #2FA4FF;
   color: #fff;
 }
 
@@ -190,4 +193,64 @@ input {
 .alert {
   width: 50%;
   margin: auto;
+}
+
+/* Todo */
+
+.box {
+  width: 30%;
+  margin: auto;
+  border-radius: 20px;
+  border: 2px #9f9f9f solid;
+}
+
+.todo-cell {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #F2F2F2;
+}
+
+.todo-cell:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #1363DF;
+}
+
+.checkbox {
+  margin: 20px;
+}
+
+.todo-item {
+  margin: 0;
+  padding: 20px;
+}
+
+#add-todo {
+  margin-left: 20px;
+}
+
+.todo-btn {
+  width: 50px;
+  border-radius: 100%;
+  background-color: #2FA4FF;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+}
+
+.todo-input {
+  height: 60px;
+  border: none;
+  font-size: 20px;
+}
+
+.todo-input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: grey;
 }

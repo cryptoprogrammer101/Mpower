@@ -1,0 +1,27 @@
+<%- include("partials/header-2") -%>
+
+  <br><br>
+
+  <main>
+
+    <h1>Todo:</h1>
+
+    <br><br>
+
+    <div class="box">
+        <div class="todo-cell">
+          <input class="checkbox" type="checkbox" name="checkbox">
+          <p class="todo-item">Talk to someone</p>
+        </div>
+
+      <form class="todo-cell" action="/todo" method="post" id="add-todo">
+        <input class="todo-input" type="text" placeholder="New Task" autofocus required>
+        <button class="todo-btn" type="submit">+</button>
+      </form>
+    </div>
+
+  </main>
+
+  <br><br><br>
+
+  <%- include("partials/footer") -%>
