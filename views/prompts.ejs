@@ -1,20 +1,17 @@
+<!-- Saved prompt! View it <a href="saved#<%= promptID %>" class="alert-link">here</a> -->
 <%- include("partials/header-2") -%>
 
     <br><br>
 
     <main>
 
-        <h1>Prompts:</h1>
-
-        <br><br>
-
         <form action="prompts" method="post">
 
             <div class="form-group">
 
-                <h4>
+                <h2>
                     <%= promptTitle %>
-                </h4>
+                </h2>
 
                 <br><br>
 
@@ -31,7 +28,7 @@
 
                 <div class="alert alert-success alert-dismissible fade show">
 
-                    Saved prompt! View it <a href="saved#<%= promptID %>" class="alert-link">here</a>
+                    Saved prompt! View it <a href="prompts#<%= promptID %>" class="alert-link">here</a>
 
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 
@@ -45,15 +42,57 @@
 
                 <% } %>
 
-                    <br>
-
-                    <button type="submit" class="btn btn-dark btn-lg save-btn">Save prompt</button>
-                    <a href="saved" class="btn btn-outline-primary btn-lg">Load prompts</a>
+                    <button type="submit" class="btn btn-dark btn-lg">Save prompt</button>
 
         </form>
 
+        <br><br><br>
+
+        <div class="container-fluid">
+
+            <h2>Saved prompts:</h2>
+
+            <br>
+
+            <% if (prompts.length < 1) { %>
+
+                <h4>No saved prompts. Click the button above to enter new prompt.</h4>
+
+                <br>
+
+                <% } else { %>
+
+                    <br><br>
+
+                    <ul class="prompts-ul">
+                        <% prompts.forEach(prompt=> { %>
+
+                            <li class="prompt-title" id="<%= prompt._id %>">
+                                <h4>
+                                    <%= prompt.title %>
+
+                                        <br><br>
+
+                                        <ul>
+                                            <li id="prompt-content">
+                                                <%= prompt.content %>
+                                            </li>
+                                        </ul>
+                                </h4>
+                            </li>
+
+                            <br><br>
+
+                            <% }) %>
+
+                    </ul>
+
+                    <% } %>
+
+        </div>
+
     </main>
 
-    <br><br><br>
+    <br><br>
 
     <%- include("partials/footer") -%>

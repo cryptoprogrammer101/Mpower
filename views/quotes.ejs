@@ -2,13 +2,42 @@
 
     <br><br>
 
-    <main>
+    <main class="quotes">
 
         <h1>Quotes:</h1>
 
-        <br><br>
+        <br>
 
-        <h4>"When you have a dream, you've got to grab it and never let go."</h4>
+        <div class="carousel slide" id="quote-carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active container-fluid">
+                    <h4 class="quote">
+                        <%= firstQuote %>
+                    </h4>
+                </div>
+
+                <% quotes.forEach(quote=> { %>
+
+                    <div class="carousel-item container-fluid">
+
+                        <h4 class="quote">
+                            <%= quote %>
+                        </h4>
+
+                    </div>
+
+                    <% }) %>
+
+            </div>
+
+            <a class="carousel-control-prev quote-arrow" href="#quote-carousel" data-slide="prev"><span
+                    class="carousel-control-prev-icon"></span></a>
+            <a class="carousel-control-next quote-arrow" href="#quote-carousel" data-slide="next"><span
+                    class="carousel-control-next-icon"></span></a>
+
+        </div>
 
     </main>
 

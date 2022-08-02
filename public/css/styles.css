@@ -1,4 +1,5 @@
 /* General */
+
 body {
   font-family: "Montserrat";
   text-align: center;
@@ -29,8 +30,10 @@ p {
 }
 
 /* Navigation Bar */
+
 .nav-div {
   padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .navbar {
@@ -43,27 +46,26 @@ p {
 
 .navbar-brand {
   font-size: 2.5rem;
-  margin-bottom: 4%;
-  font-family: "Lato";
+  margin-bottom: 10px;
 }
 
 .nav-item {
-  padding: 0 0 6% 30px;
+  padding: 0 0 20px 30px;
   font-size: 1.5rem;
 }
 
 /* Headings */
+
 .big-heading {
   font-size: 3.5rem;
 }
 
 .section-heading {
-  font-weight: bold;
-  color: #1363DF;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 /* Buttons */
+
 .btn {
   border-radius: 15px;
   margin: 0;
@@ -76,10 +78,11 @@ p {
 }
 
 i {
-  margin-left: 4%;
+  margin-left: 3%;
 }
 
-/* Title Section & Image */
+/* Title & Title Image */
+
 .title {
   padding-top: 0;
   text-align: left;
@@ -90,7 +93,8 @@ i {
   margin-left: 20%;
 }
 
-/* Problem Section */
+/* Problem */
+
 .blurb {
   width: 50%;
 }
@@ -123,7 +127,8 @@ i {
   margin-right: 50%;
 }
 
-/* Features Section */
+/* Features */
+
 .features-hr {
   margin: auto;
   width: 50%;
@@ -141,7 +146,8 @@ ol {
   font-size: 3.5rem;
 }
 
-/* Testimonial Section */
+/* Testimonials */
+
 #testimonials {
   background-color: #2FA4FF;
   color: #fff;
@@ -156,6 +162,7 @@ ol {
 }
 
 /* Copyright */
+
 hr {
   margin: 0;
 
@@ -166,18 +173,21 @@ hr {
 }
 
 /* Textbox */
+
 .textbox {
   margin: auto;
   width: 50%;
 }
 
 /* Prompts */
+
 input {
   text-align: center;
 }
 
 .prompts-ul {
   text-align: left;
+  margin-left: 3%;
 }
 
 .prompt-title {
@@ -228,7 +238,7 @@ input:checked+p {
   padding: 20px;
 }
 
-#add-todo {
+form.todo-cell {
   margin-left: 20px;
 }
 
@@ -245,12 +255,45 @@ input:checked+p {
   height: 60px;
   border: none;
   font-size: 20px;
+  width: 350px;
 }
 
 .todo-input:focus {
   outline: none;
+  box-shadow: inset 0 -3px 0 0 #1363DF;
 }
 
 ::placeholder {
   color: grey;
+}
+
+/* Quotes */
+
+.quote {
+  font-style: italic;
+}
+
+.quote-arrow {
+  filter: invert(100%);
+}
+
+/* Contact */
+
+.contact {
+  text-align: right;
+  padding-right: 3%;
+}
+
+.iframe-container {
+  padding-top: 60%;
+  position: relative;
+}
+
+.iframe-container iframe {
+  margin-left: 3%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }

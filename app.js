@@ -32,10 +32,17 @@ const promptSchema = new mongoose.Schema({
 
 const Prompt = mongoose.model("Prompt", promptSchema)
 
+const todoSchema = new mongoose.Schema({
+    title: String,
+})
+
+const Todo = mongoose.model("Todo", todoSchema)
+
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: String,
-    prompts: [promptSchema]
+    prompts: [promptSchema],
+    todo: [todoSchema]
 })
 
 userSchema.plugin(uniqueValidator)
@@ -52,9 +59,24 @@ const promptTitles = ["What is something you like?",
     "Describe one significant childhood memory.",
     "Who are the most important people in your life?"]
 
+const quotes = ["When you have a dream, you've got to grab it and never let go.",
+    "Be the change that you wish to see in the world.",
+    "Darkness cannot drive out darkness: only light can do that."]
+
+const todo1 = new Todo({ title: "Talk to a friend" })
+const todo2 = new Todo({ title: "Call a help center" })
+const todo3 = new Todo({ title: "Book an appointment" })
+
+const todoStart = [todo1, todo2, todo3]
+
 function getPromptTitle() {
     const promptTitle = promptTitles[Math.floor(Math.random() * promptTitles.length)]
     return promptTitle
+}
+
+function getQuote() {
+    const quote = quotes[Math.floor(Math.random() * quotes.length)]
+    return quote
 }
 
 function renderRoute(req, res, route) {
@@ -129,7 +151,13 @@ app.post("/login", (req, res) => {
 
 app.get("/prompts", (req, res) => {
     if (req.isAuthenticated()) {
-        res.render("prompts", { promptTitle: getPromptTitle(), promptEntered: false })
+        User.findById(req.user._id, (err, user) => {
+            if (err) {
+                console.log(err)
+            } else {
+                res.render("prompts", { promptTitle: getPromptTitle(), promptEntered: false, promptID: "", prompts: user.prompts })
+            }
+        })
     } else {
         res.redirect("/signup")
     }
@@ -149,26 +177,45 @@ app.post("/prompts", (req, res) => {
         } else {
             user.prompts.push(newPrompt)
             user.save()
-            res.render("prompts", { promptTitle: getPromptTitle(), promptEntered: true, promptID: newPrompt._id })
+            res.render("prompts", { promptTitle: getPromptTitle(), promptEntered: true, promptID: newPrompt._id, prompts: user.prompts })
         }
     })
 
 })
 
-app.get("/saved", (req, res) => {
+app.get("/todo", (req, res) => {
     if (req.isAuthenticated()) {
         User.findById(req.user._id, (err, user) => {
             if (err) {
                 console.log(err)
             } else {
-                const prompts = user.prompts
-                res.render("saved", { prompts: prompts })
+                if (user.todo.length < 3) {
+                    user.todo.push(...todoStart)
+                    user.save()
+                }
+                res.render("todo", { todoList: user.todo })
             }
         })
     } else {
         res.redirect("/signup")
     }
+})
 
+app.post("/todo", (req, res) => {
+
+    const newTodo = new Todo({
+        title: req.body.todoTitle,
+    })
+
+    User.findById(req.user._id, (err, user) => {
+        if (err) {
+            console.log(err)
+        } else {
+            user.todo.push(newTodo)
+            user.save()
+            res.render("todo", { todoList: user.todo })
+        }
+    })
 })
 
 app.get("/home", (req, res) => {
@@ -185,27 +232,15 @@ app.get("/logout", (req, res) => {
 })
 
 app.get("/resources", (req, res) => {
-   renderRoute(req, res, "resources")
+    renderRoute(req, res, "resources")
 })
 
 app.get("/quotes", (req, res) => {
-   renderRoute(req, res, "quotes")
-})
-
-app.get("/todo", (req, res) => {
-   renderRoute(req, res, "todo")
-})
-
-app.post("/todo", (req, res) => {
-    res.render("todo")
- })
-
-app.get("/appointment", (req, res) => {
-   renderRoute(req, res, "appointment")
-})
-
-app.post("/appointment", (req, res) => {
-    res.render("appointment")
+    if (req.isAuthenticated()) {
+        res.render("quotes", { firstQuote: quotes[0], quotes: quotes.slice(1) })
+    } else {
+        res.redirect("/signup")
+    }
 })
 
 app.get("/about", (req, res) => {
