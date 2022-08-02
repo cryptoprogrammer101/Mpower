@@ -30,25 +30,18 @@ const promptSchema = new mongoose.Schema({
     content: String
 })
 
-const Prompt = mongoose.model("Prompt", promptSchema)
-
-const todoSchema = new mongoose.Schema({
-    title: String,
-})
-
-const Todo = mongoose.model("Todo", todoSchema)
-
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: String,
     prompts: [promptSchema],
-    todo: [todoSchema]
+    todo: [String]
 })
 
 userSchema.plugin(uniqueValidator)
 userSchema.plugin(passportLocalMongoose)
 
 const User = mongoose.model("User", userSchema)
+const Prompt = mongoose.model("Prompt", promptSchema)
 
 passport.use(User.createStrategy())
 
@@ -63,20 +56,15 @@ const quotes = ["When you have a dream, you've got to grab it and never let go."
     "Be the change that you wish to see in the world.",
     "Darkness cannot drive out darkness: only light can do that."]
 
-const todo1 = new Todo({ title: "Talk to a friend" })
-const todo2 = new Todo({ title: "Call a help center" })
-const todo3 = new Todo({ title: "Book an appointment" })
+const todo1 = "Talk to a friend"
+const todo2 = "Call a help center"
+const todo3 = "Book an appointment"
 
 const todoStart = [todo1, todo2, todo3]
 
 function getPromptTitle() {
     const promptTitle = promptTitles[Math.floor(Math.random() * promptTitles.length)]
     return promptTitle
-}
-
-function getQuote() {
-    const quote = quotes[Math.floor(Math.random() * quotes.length)]
-    return quote
 }
 
 function renderRoute(req, res, route) {
@@ -203,9 +191,7 @@ app.get("/todo", (req, res) => {
 
 app.post("/todo", (req, res) => {
 
-    const newTodo = new Todo({
-        title: req.body.todoTitle,
-    })
+    const newTodo = req.body.todoTitle
 
     User.findById(req.user._id, (err, user) => {
         if (err) {
