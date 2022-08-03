@@ -23,7 +23,9 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-mongoose.connect("mongodb://localhost:27017/websiteDB")
+// mongoose.connect("mongodb://localhost:27017/websiteDB")
+mongoose.connect("mongodb+srv://admin-narayan:test123@website.d1i0s.mongodb.net/websiteDB")
+
 
 const promptSchema = new mongoose.Schema({
     title: String,
