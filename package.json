@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "body-parser": "^1.20.0",
     "ejs": "^3.1.8",

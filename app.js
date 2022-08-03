@@ -5,7 +5,6 @@ const uniqueValidator = require("mongoose-unique-validator")
 const session = require("express-session")
 const passport = require("passport")
 const passportLocalMongoose = require("passport-local-mongoose")
-const { render } = require("ejs")
 
 const app = express()
 
@@ -239,6 +238,13 @@ app.get("/contact", (req, res) => {
     res.render("contact")
 })
 
-app.listen(3000, () => {
+let port = process.env.PORT;
+
+if (port == null || port == "") {
+    port = 3000;
+}
+
+// app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server started successfully")
 })
