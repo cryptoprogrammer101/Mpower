@@ -242,6 +242,10 @@ app.get("/contact", (req, res) => {
     res.render("contact")
 })
 
+app.get("/:page", (req, res) => {
+    res.redirect("/")
+})
+
 let port = process.env.PORT;
 
 if (port == null || port == "") {
