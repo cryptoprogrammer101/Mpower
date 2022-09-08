@@ -9,7 +9,7 @@
 
             <div class="form-group">
 
-                <h2>
+                <h2 class="prompt-title">
                     <%= promptTitle %>
                 </h2>
 
@@ -46,15 +46,15 @@
 
         </form>
 
-        <br><br><br>
+        <br><br>
 
         <div class="container-fluid">
 
             <h2>Saved prompts:</h2>
 
-            <br>
-
             <% if (prompts.length < 1) { %>
+
+                <br><br>
 
                 <h4>No saved prompts. Click the button above to enter new prompt.</h4>
 
@@ -74,7 +74,7 @@
                                         <br><br>
 
                                         <ul>
-                                            <li id="prompt-content">
+                                            <li class="prompt-content">
                                                 <%= prompt.content %>
                                             </li>
                                         </ul>
