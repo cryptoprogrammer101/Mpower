@@ -317,21 +317,18 @@ form.todo-cell {
 @media (max-width: 1000px) {
 
   /* Font sizes */
-
-  .big-heading {
-    font-size: 6rem;
-  }
   
-  .section-heading {
-    font-size: 4rem;
+  .section-heading, h4 {
+    font-size: 5rem;
+    margin: 5% 0 5%;
   }
 
   p {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .carousel-item p {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   /* Navbar */
@@ -352,8 +349,19 @@ form.todo-cell {
 
   /* Title section */
 
+  .big-heading {
+    font-size: 6rem;
+    margin-top: 10%;
+  }
+
   .title-img {
-    margin: 7% 0 3%;
+    margin: 7% 0 7%;
+  }
+
+  /* Buttons */
+
+  .btn {
+    font-size: 3rem;
   }
 
   /* Problem section */
@@ -369,11 +377,13 @@ form.todo-cell {
   }
 
   .problem-img {
-    width: 40%;
+    margin-top: 10%;
+    width: 80%;
   }
 
   .header {
     margin: 7% 0 5%;
+    font-size: 3rem;
   }
 
   .hidden {
