@@ -319,7 +319,7 @@ form.todo-cell {
 
   .section-heading {
     font-size: 5rem;
-    margin: 5% 0 5%;
+    margin: 10% 0 10%;
   }
 
   p {
@@ -355,6 +355,7 @@ form.todo-cell {
   .big-heading {
     font-size: 7rem;
     margin-top: 10%;
+    line-height: 2;
   }
 
   .title-img {
@@ -364,6 +365,7 @@ form.todo-cell {
   /* Buttons */
 
   .btn {
+    border-radius: 30px;
     font-size: 3rem;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -421,7 +423,7 @@ form.todo-cell {
 
   .problem-text {
     width: 90%;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
   }
 
   /* Features */
@@ -430,6 +432,13 @@ form.todo-cell {
     margin: auto;
     width: 70%;
     border-top: 20px dotted #2FA4FF;
+  }
+
+  /* Carousel */
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    visibility: hidden;
   }
 
   /* About */
