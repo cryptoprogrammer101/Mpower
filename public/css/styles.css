@@ -317,18 +317,22 @@ form.todo-cell {
 @media (max-width: 1000px) {
 
   /* Font sizes */
-  
-  .section-heading, h4 {
+
+  .section-heading {
     font-size: 5rem;
     margin: 5% 0 5%;
   }
 
   p {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 4rem;
   }
 
   .carousel-item p {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   /* Navbar */
@@ -350,18 +354,19 @@ form.todo-cell {
   /* Title section */
 
   .big-heading {
-    font-size: 6rem;
+    font-size: 7rem;
     margin-top: 10%;
   }
 
   .title-img {
-    margin: 7% 0 7%;
+    margin: 10% 0 7%;
   }
 
   /* Buttons */
 
   .btn {
     font-size: 3rem;
+    margin-top: 5%;
   }
 
   /* Problem section */
@@ -378,7 +383,7 @@ form.todo-cell {
 
   .problem-img {
     margin-top: 10%;
-    width: 80%;
+    width: 70%;
   }
 
   .header {
@@ -409,14 +414,8 @@ form.todo-cell {
   }
 
   .problem-text {
-    width: 80%;
+    width: 90%;
     margin-bottom: 10%;
-  }
-
-  /* CTA */
-
-  .cta-btn {
-    margin-top: 3%;
   }
 
   /* About */
