@@ -83,6 +83,10 @@ i {
   margin-left: 3%;
 }
 
+button {
+  padding: 5rem;
+}
+
 /* Title & Title Image */
 
 .title {
@@ -102,6 +106,7 @@ i {
 
 .blurb {
   width: 50%;
+  margin-bottom: 10%;
 }
 
 .hidden {
@@ -318,7 +323,7 @@ form.todo-cell {
 
   .section-heading {
     font-size: 5rem;
-    margin: 10% 0 10%;
+    margin: 7% 0 7%;
   }
 
   p {
@@ -354,7 +359,8 @@ form.todo-cell {
   .big-heading {
     font-size: 7rem;
     margin-top: 10%;
-    line-height: 1.4;
+    margin-bottom: 1%;
+    line-height: 1.3;
   }
 
   .title-img {
@@ -423,9 +429,16 @@ form.todo-cell {
   /* Features */
 
   .features-hr {
-    margin: auto;
     width: 70%;
     border-top: 20px dotted #2FA4FF;
+  }
+
+  .features li::marker {
+    font-size: 6rem;
+  }
+
+  .features p {
+    margin-bottom: 10%;
   }
 
   /* Carousel */
