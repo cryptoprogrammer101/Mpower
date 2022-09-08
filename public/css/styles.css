@@ -83,10 +83,6 @@ i {
   margin-left: 3%;
 }
 
-button {
-  padding: 5rem;
-}
-
 /* Title & Title Image */
 
 .title {
@@ -374,7 +370,7 @@ form.todo-cell {
     font-size: 3rem;
     margin-top: 1%;
     margin-bottom: 6%;
-    padding: 3rem;
+    padding: 1rem;
   }
 
   .signup-btn,
@@ -396,7 +392,7 @@ form.todo-cell {
   }
 
   .header {
-    margin: 7% 0 5%;
+    margin: 10% 0 5%;
     font-size: 4rem;
   }
 
@@ -439,7 +435,7 @@ form.todo-cell {
   }
 
   .features p {
-    margin-bottom: 10%;
+    margin-bottom: 15%;
   }
 
   /* Carousel */
@@ -447,6 +443,10 @@ form.todo-cell {
   .carousel-control-prev,
   .carousel-control-next {
     visibility: hidden;
+  }
+
+  .carousel p {
+    margin-bottom: 10%;
   }
 
   /* About */
