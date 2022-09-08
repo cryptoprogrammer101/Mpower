@@ -9,8 +9,7 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-weight: 900;
   margin: auto;
 }
@@ -319,7 +318,7 @@ form.todo-cell {
 
   .section-heading {
     font-size: 5rem;
-    margin: 20% 0 20%;
+    margin: 10% 0 10%;
   }
 
   p {
@@ -355,11 +354,11 @@ form.todo-cell {
   .big-heading {
     font-size: 7rem;
     margin-top: 10%;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   .title-img {
-    margin: 7% 0 7%;
+    margin: 7% 0 10%;
   }
 
   /* Buttons */
@@ -367,8 +366,8 @@ form.todo-cell {
   .btn {
     border-radius: 30px;
     font-size: 3rem;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 4%;
+    margin-bottom: 6%;
   }
 
   .signup-btn,
@@ -378,11 +377,6 @@ form.todo-cell {
   }
 
   /* Problem section */
-
-  .section-heading {
-    margin-top: 3%;
-    margin-bottom: 5%;
-  }
 
   .blurb {
     width: 80%;
