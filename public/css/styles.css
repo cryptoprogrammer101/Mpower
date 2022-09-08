@@ -177,7 +177,6 @@ ol {
 
 hr {
   margin: 0;
-
 }
 
 .copyright {
@@ -324,7 +323,7 @@ form.todo-cell {
   }
 
   p {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   h4 {
@@ -359,7 +358,7 @@ form.todo-cell {
   }
 
   .title-img {
-    margin: 10% 0 7%;
+    margin: 7% 0 7%;
   }
 
   /* Buttons */
@@ -367,6 +366,13 @@ form.todo-cell {
   .btn {
     font-size: 3rem;
     margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .signup-btn,
+  .login-btn,
+  .save-btn {
+    margin-right: 5%;
   }
 
   /* Problem section */
@@ -388,7 +394,7 @@ form.todo-cell {
 
   .header {
     margin: 7% 0 5%;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .hidden {
@@ -416,6 +422,14 @@ form.todo-cell {
   .problem-text {
     width: 90%;
     margin-bottom: 10%;
+  }
+
+  /* Features */
+
+  .features-hr {
+    margin: auto;
+    width: 70%;
+    border-top: 20px dotted #2FA4FF;
   }
 
   /* About */
@@ -446,17 +460,17 @@ form.todo-cell {
   .box {
     width: 70%;
   }
-  
+
   .todo-input {
     width: 100%;
-  }  
+  }
 
   /* Prompts */
 
   .prompt-title {
     width: 80%;
   }
-  
+
   .prompts-ul {
     text-align: left;
     margin-left: 0;
