@@ -316,14 +316,34 @@ form.todo-cell {
 
 @media (max-width: 1000px) {
 
+  /* Font sizes */
+
+  .big-heading {
+    font-size: 5rem;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .carousel-item p {
+    font-size: 2rem;
+  }
+
   /* Navbar */
 
   .navbar-brand {
+    font-size: 4rem;
     margin-bottom: 0;
   }
 
   .nav-item {
     text-align: left;
+    font-size: 3rem;
   }
 
   .navbar-toggler {
@@ -333,7 +353,7 @@ form.todo-cell {
   /* Title section */
 
   .title-img {
-    margin: 10% 0 0;
+    margin: 7% 0 3%;
   }
 
   /* Problem section */
