@@ -19,6 +19,8 @@ p {
   margin: auto;
 }
 
+/* Containers */
+
 .container-fluid {
   padding: 3% 10%;
 }
@@ -58,6 +60,10 @@ p {
 .big-heading {
   margin: 0 0 5%;
   font-size: 3.5rem;
+}
+
+.future-heading {
+  margin: 0 0 3%;
 }
 
 .section-heading {
@@ -304,12 +310,16 @@ form.todo-cell {
   /* Font sizes */
 
   .section-heading {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 10% 0 10%;
   }
 
   p {
     font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
   }
 
   h3 {
@@ -318,6 +328,16 @@ form.todo-cell {
 
   .carousel-item p {
     font-size: 3rem;
+  }
+
+  /* Headings */
+
+  .big-heading,
+  .future-heading {
+    font-size: 5rem;
+    margin-top: 7%;
+    margin-bottom: 9%;
+    line-height: 1.3;
   }
 
   /* Navbar */
@@ -337,13 +357,6 @@ form.todo-cell {
   }
 
   /* Title section */
-
-  .big-heading {
-    font-size: 5rem;
-    margin-top: 7%;
-    margin-bottom: 9%;
-    line-height: 1.3;
-  }
 
   .title-img {
     margin: 9% 0 10%;
@@ -388,7 +401,7 @@ form.todo-cell {
 
   .header {
     margin: 10% 0 5%;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .hidden {
