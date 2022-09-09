@@ -369,6 +369,11 @@ form.todo-cell {
     margin-right: 5%;
   }
 
+  .navbar-toggler {
+    padding: 30px !important;
+    font-size: 30px !important;
+  }
+
   /* Problem section */
 
   .blurb {
