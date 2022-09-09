@@ -45,7 +45,7 @@ p {
 
 .navbar-brand {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 1%;
 }
 
 .nav-item {
@@ -69,7 +69,6 @@ p {
 
 .btn {
   border-radius: 15px;
-  margin: 0;
 }
 
 .signup-btn,
@@ -79,7 +78,7 @@ p {
 }
 
 i {
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 /* Title & Title Image */
@@ -90,18 +89,14 @@ i {
 
 .title-img {
   width: 80%;
-  margin-left: 20%;
-}
-
-.title .row {
-  margin-bottom: 3%;
+  margin: 0 0 3% 20%;
 }
 
 /* Problem */
 
 .blurb {
   width: 50%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 
 .hidden {
@@ -113,12 +108,12 @@ i {
 }
 
 .header {
-  margin: 8% 0 3%;
+  margin: 5% 0 3%;
 }
 
 .row-l,
 .row-r {
-  margin-bottom: 7%;
+  margin-bottom: 9%;
 }
 
 .row-l {
@@ -146,7 +141,6 @@ i {
 }
 
 ol {
-  display: inline-block;
   text-align: left;
 }
 
@@ -157,7 +151,7 @@ ol {
 }
 
 .features p {
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 /* Testimonials */
@@ -173,7 +167,6 @@ ol {
 
 .carousel-item p {
   font-size: 1.2rem;
-  margin-bottom: 1%;
 }
 
 /* Copyright */
@@ -209,11 +202,6 @@ input {
   font-size: 1.7rem;
 }
 
-#prompt-content {
-  font-weight: normal;
-  font-size: 1.3rem;
-}
-
 .alert {
   width: 50%;
   margin: auto;
@@ -244,31 +232,31 @@ input:checked+p {
 }
 
 .checkbox {
-  margin: 20px;
+  margin: 7%;
 }
 
 .todo-item {
   margin: 0;
-  padding: 20px;
+  padding: 5%;
 }
 
 form.todo-cell {
-  margin-left: 20px;
+  margin-left: 5%;
 }
 
 .todo-btn {
-  width: 50px;
+  width: 12%;
   border-radius: 100%;
   background-color: #2FA4FF;
   color: #fff;
-  font-size: 30px;
+  font-size: 2rem;
   border-width: 0;
 }
 
 .todo-input {
   height: 60px;
   border: none;
-  font-size: 20px;
+  font-size: 1.5rem;
   width: 350px;
 }
 
