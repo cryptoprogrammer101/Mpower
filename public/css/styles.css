@@ -256,7 +256,7 @@ form.todo-cell {
 }
 
 .todo-input {
-  height: 60px;
+  height: 4rem;
   border: none;
   font-size: 1.5rem;
   width: 350px;
@@ -455,13 +455,14 @@ form.todo-cell {
   }
 
   .textbox {
-    border-radius: 20px;
+    border-radius: 30px;
     width: 80%;
     height: 6rem;
   }
 
   .alert {
     margin: 7% auto 7%;
+    width: 80%;
   }
 
   .alert p {
@@ -491,6 +492,7 @@ form.todo-cell {
 
   .todo-input {
     width: 100%;
+    height: 5rem;
   }
 
   /* Prompts */
@@ -500,7 +502,6 @@ form.todo-cell {
   }
 
   .prompts-ul {
-    text-align: left;
     margin-left: 0;
   }
 
