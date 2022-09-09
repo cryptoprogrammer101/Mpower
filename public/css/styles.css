@@ -461,7 +461,11 @@ form.todo-cell {
 
   .textbox {
     width: 80%;
-    height: 30%
+    height: 6rem;
+  }
+
+  ::placeholder {
+    font-size: 3rem;
   }
 
   /* Contact */
