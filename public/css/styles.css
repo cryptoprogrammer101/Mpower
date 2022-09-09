@@ -63,7 +63,7 @@ p {
 }
 
 .future-heading {
-  margin: 0 0 3%;
+  margin: 0 0 4%;
 }
 
 .section-heading {
@@ -309,9 +309,9 @@ form.todo-cell {
 
   /* Font sizes */
 
-  .section-heading {
+  .section-heading, .future-sec-heading {
     font-size: 4rem;
-    margin: 10% 0 10%;
+    margin: 10% 0 8%;
   }
 
   p {
@@ -329,8 +329,6 @@ form.todo-cell {
   .carousel-item p {
     font-size: 3rem;
   }
-
-  /* Headings */
 
   .big-heading,
   .future-heading {
