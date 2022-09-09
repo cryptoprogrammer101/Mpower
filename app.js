@@ -22,7 +22,6 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-// mongoose.connect("mongodb://localhost:27017/websiteDB")
 mongoose.connect("mongodb+srv://admin-narayan:test123@website.d1i0s.mongodb.net/websiteDB")
 
 const promptSchema = new mongoose.Schema({
@@ -56,23 +55,11 @@ const quotes = ["When you have a dream, you've got to grab it and never let go."
     "Be the change that you wish to see in the world.",
     "Darkness cannot drive out darkness: only light can do that."]
 
-const todo1 = "Talk to a friend"
-const todo2 = "Call a help center"
-const todo3 = "Book an appointment"
-
-const todoStart = [todo1, todo2, todo3]
+const todoStart = ["Talk to a friend", "Call a help center", "Book an appointment"]
 
 function getPromptTitle() {
     const promptTitle = promptTitles[Math.floor(Math.random() * promptTitles.length)]
     return promptTitle
-}
-
-function renderRoute(req, res, route) {
-    if (req.isAuthenticated()) {
-        res.render(route)
-    } else {
-        res.redirect("/signup")
-    }
 }
 
 app.get("/", (req, res) => {
@@ -210,7 +197,12 @@ app.post("/todo", (req, res) => {
 })
 
 app.get("/home", (req, res) => {
-    renderRoute(req, res, "home")
+    if (req.isAuthenticated()) {
+        res.render("home")
+    } else {
+        res.redirect("/signup")
+    }
+
 })
 
 app.get("/logout", (req, res) => {
@@ -223,7 +215,11 @@ app.get("/logout", (req, res) => {
 })
 
 app.get("/resources", (req, res) => {
-    renderRoute(req, res, "resources")
+    if (req.isAuthenticated()) {
+        res.render("resources")
+    } else {
+        res.redirect("/signup")
+    }
 })
 
 app.get("/quotes", (req, res) => {
@@ -252,7 +248,6 @@ if (port == null || port == "") {
     port = 3000;
 }
 
-// app.listen(3000, () => {
 app.listen(port, () => {
     console.log("Server started successfully")
 })
