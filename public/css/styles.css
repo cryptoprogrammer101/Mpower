@@ -186,13 +186,18 @@ hr {
 .textbox {
   margin: auto;
   width: 50%;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+::placeholder,
+.form-group input {
+  color: grey;
+  font-size: 1rem;
 }
 
 /* Prompts */
-
-input {
-  text-align: center;
-}
 
 .prompts-ul {
   text-align: left;
@@ -265,10 +270,6 @@ form.todo-cell {
 .todo-input:focus {
   outline: none;
   box-shadow: inset 0 -3px 0 0 #1363DF;
-}
-
-::placeholder, input {
-  color: grey;
 }
 
 /* Quotes */
@@ -460,16 +461,17 @@ form.todo-cell {
     height: 6rem;
   }
 
+  ::placeholder,
+  .form-group input {
+    font-size: 2rem;
+  }
+
   .alert {
     margin: 7% auto 7%;
     width: 80%;
   }
 
   .alert p {
-    font-size: 2rem;
-  }
-
-  ::placeholder, .form-group input {
     font-size: 2rem;
   }
 
