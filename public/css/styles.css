@@ -357,18 +357,14 @@ form.todo-cell {
   /* Buttons */
 
   .btn {
-    border-radius: 50px;
+    border-radius: 40px;
     font-size: 3rem;
     margin-bottom: 6%;
-    padding: 5% 6%;
-  }
-
-  .fa {
-    display: none;
+    padding: 3%;
   }
 
   .hide-btn {
-    visibility: hidden;
+    display: none;
   }
 
   .signup-btn,
@@ -402,13 +398,10 @@ form.todo-cell {
     display: none;
   }
 
-  .row {
-    /* margin-bottom: 0; */
-  }
-
   .row-l,
   .row-r {
     text-align: center;
+    margin-bottom: 0;
   }
 
   .img-l,
@@ -429,8 +422,7 @@ form.todo-cell {
   }
 
   .features li::marker {
-    font-size: 6rem;
-    margin-left: 20%;
+    display: none;
   }
 
   .features p {
@@ -441,7 +433,7 @@ form.todo-cell {
 
   .carousel-control-prev,
   .carousel-control-next {
-    visibility: hidden;
+    display: none;
   }
 
   .carousel p {
