@@ -267,7 +267,7 @@ form.todo-cell {
   box-shadow: inset 0 -3px 0 0 #1363DF;
 }
 
-::placeholder {
+::placeholder, input {
   color: grey;
 }
 
@@ -407,7 +407,7 @@ form.todo-cell {
     display: block;
   }
 
-  .show {
+  .display {
     display: none;
   }
 
@@ -444,11 +444,6 @@ form.todo-cell {
 
   /* Carousel */
 
-  .carousel-control-prev,
-  .carousel-control-next {
-    display: none;
-  }
-
   .carousel p {
     margin-bottom: 10%;
   }
@@ -460,12 +455,21 @@ form.todo-cell {
   }
 
   .textbox {
+    border-radius: 20px;
     width: 80%;
     height: 6rem;
   }
 
-  ::placeholder {
-    font-size: 3rem;
+  .alert {
+    margin: 7% auto 7%;
+  }
+
+  .alert p {
+    font-size: 2rem;
+  }
+
+  ::placeholder, .form-group input {
+    font-size: 2rem;
   }
 
   /* Contact */
@@ -498,6 +502,12 @@ form.todo-cell {
   .prompts-ul {
     text-align: left;
     margin-left: 0;
+  }
+
+  /* Footer */
+
+  .copyright {
+    font-size: 1.5rem;
   }
 
 }
