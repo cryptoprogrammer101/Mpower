@@ -149,7 +149,7 @@ ol {
 .features li::marker {
   font-weight: bold;
   color: #1363DF;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
 }
 
 .features p {
@@ -318,7 +318,7 @@ form.todo-cell {
   }
 
   p {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 
   h2 {
@@ -335,7 +335,7 @@ form.todo-cell {
 
   .big-heading,
   .future-heading {
-    font-size: 6rem;
+    font-size: 7rem;
     margin-top: 7%;
     margin-bottom: 9%;
     line-height: 1.3;
