@@ -195,6 +195,7 @@ hr {
 .form-group input {
   color: grey;
   font-size: 1rem;
+  text-align: center;
 }
 
 /* Prompts */
