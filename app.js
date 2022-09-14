@@ -24,7 +24,7 @@ app.use(passport.session())
 
 mongoose.connect("mongodb+srv://admin-narayan:test123@website.d1i0s.mongodb.net/websiteDB")
 
-const promptSchema = new mongoose.Schema({
+const journalSchema = new mongoose.Schema({
     title: String,
     content: String
 })
@@ -32,7 +32,7 @@ const promptSchema = new mongoose.Schema({
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: String,
-    prompts: [promptSchema],
+    journals: [journalSchema],
     todo: [String]
 })
 
@@ -40,14 +40,14 @@ userSchema.plugin(uniqueValidator)
 userSchema.plugin(passportLocalMongoose)
 
 const User = mongoose.model("User", userSchema)
-const Prompt = mongoose.model("Prompt", promptSchema)
+const Journal = mongoose.model("Journal", journalSchema)
 
 passport.use(User.createStrategy())
 
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
-const promptTitles = ["What is something you like?",
+const journalTitles = ["What is something you like?",
     "Describe one significant childhood memory.",
     "Who are the most important people in your life?"]
 
@@ -57,9 +57,9 @@ const quotes = ["When you have a dream, you've got to grab it and never let go."
 
 const todoStart = ["Talk to a friend", "Call a help center", "Book an appointment"]
 
-function getPromptTitle() {
-    const promptTitle = promptTitles[Math.floor(Math.random() * promptTitles.length)]
-    return promptTitle
+function getJournalTitle() {
+    const journalTitle = journalTitles[Math.floor(Math.random() * journalTitles.length)]
+    return journalTitle
 }
 
 app.get("/", (req, res) => {
@@ -129,13 +129,13 @@ app.post("/login", (req, res) => {
 
 })
 
-app.get("/prompts", (req, res) => {
+app.get("/journals", (req, res) => {
     if (req.isAuthenticated()) {
         User.findById(req.user._id, (err, user) => {
             if (err) {
                 console.log(err)
             } else {
-                res.render("prompts", { promptTitle: getPromptTitle(), promptEntered: false, promptID: "", prompts: user.prompts })
+                res.render("journals", { journalTitle: getJournalTitle(), journalEntered: false, journalID: "", journals: user.journals })
             }
         })
     } else {
@@ -143,21 +143,21 @@ app.get("/prompts", (req, res) => {
     }
 })
 
-app.post("/prompts", (req, res) => {
+app.post("/journals", (req, res) => {
 
-    const newPrompt = new Prompt({
-        title: req.body.promptTitle,
-        content: req.body.prompt
+    const newJournal = new Journal({
+        title: req.body.journalTitle,
+        content: req.body.journal
     })
 
     User.findById(req.user._id, (err, user) => {
         if (err) {
             console.log(err)
-            res.redirect("/prompts")
+            res.redirect("/journals")
         } else {
-            user.prompts.push(newPrompt)
+            user.journals.push(newJournal)
             user.save()
-            res.render("prompts", { promptTitle: getPromptTitle(), promptEntered: true, promptID: newPrompt._id, prompts: user.prompts })
+            res.render("journals", { journalTitle: getJournalTitle(), journalEntered: true, journalID: newJournal._id, journals: user.journals })
         }
     })
 

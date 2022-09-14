@@ -2,30 +2,30 @@
 
     <main class="container-fluid">
 
-        <form action="prompts" method="post">
+        <form action="journals" method="post">
 
             <div class="form-group">
 
                 <h2 class="future-sec-heading">
-                    <%= promptTitle %>
+                    <%= journalTitle %>
                 </h2>
 
                 <br><br>
 
-                <input type="hidden" name="promptTitle" value="<%= promptTitle %>">
+                <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
 
-                <input type="text" class="form-control textbox" placeholder="Enter prompt" name="prompt" minlength="5"
+                <input type="text" class="form-control textbox" placeholder="Enter journal" name="journal" minlength="5"
                     required autofocus>
 
             </div>
 
             <br>
 
-            <% if (promptEntered) { %>
+            <% if (journalEntered) { %>
 
                 <div class="alert alert-success alert-dismissible fade show">
 
-                    <p>Saved prompt! View it <a href="prompts#<%= promptID %>" class="alert-link">here</a></p>
+                    <p>Saved journal! View it <a href="journals#<%= journalID %>" class="alert-link">here</a></p>
 
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 
@@ -39,19 +39,19 @@
 
                 <% } %>
 
-                    <button type="submit" class="btn btn-dark btn-lg">Save prompt</button>
+                    <button type="submit" class="btn btn-dark btn-lg">Save journal</button>
 
         </form>
 
         <br><br>
 
-        <h2 class="future-sec-heading">Saved prompts:</h2>
+        <h2 class="future-sec-heading">Saved journals:</h2>
 
-        <% if (prompts.length < 1) { %>
+        <% if (journals.length < 1) { %>
 
             <br><br>
 
-            <h3>No saved prompts. Click the button above to enter new prompt.</h3>
+            <h3>No saved journals. Click the button above to enter new journal.</h3>
 
             <br>
 
@@ -59,18 +59,18 @@
 
                 <br><br>
 
-                <ul class="prompts-ul">
-                    <% prompts.forEach(prompt=> { %>
+                <ul class="journals-ul">
+                    <% journals.forEach(journal=> { %>
 
-                        <li class="prompt-title" id="<%= prompt._id %>">
+                        <li class="journal-title" id="<%= journal._id %>">
                             <h3>
-                                <%= prompt.title %>
+                                <%= journal.title %>
 
                                     <br><br>
 
                                     <ul>
                                         <li>
-                                            <%= prompt.content %>
+                                            <%= journal.content %>
                                         </li>
                                     </ul>
                             </h3>

@@ -225,14 +225,14 @@ hr {
   text-align: center;
 }
 
-/* Prompts */
+/* Journals */
 
-.prompts-ul {
+.journals-ul {
   text-align: left;
   margin-left: 3%;
 }
 
-.prompt-title {
+.journal-title {
   font-weight: bold;
   font-size: 1.7rem;
 }
@@ -531,13 +531,13 @@ form.todo-cell {
     height: 5rem;
   }
 
-  /* Prompts */
+  /* Journals */
 
-  .prompt-title {
+  .journal-title {
     width: 80%;
   }
 
-  .prompts-ul {
+  .journals-ul {
     margin-left: 0;
   }
 
