@@ -34,7 +34,7 @@ p {
 
 .nav-div {
   padding-top: 1%;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
 }
 
 .navbar {
@@ -51,7 +51,7 @@ p {
 }
 
 .navbar-brand {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 0;
   padding: 0;
 }
@@ -59,6 +59,8 @@ p {
 .tagline {
   text-align: left;
   color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .nav-item {
@@ -78,11 +80,12 @@ p {
 
 .big-heading {
   margin: 0 0 3%;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .title .big-heading {
-  margin: 0 0 5%;
+  margin-bottom: 6%;
+  font-weight: 700;
 }
 
 .future-heading {
@@ -95,7 +98,8 @@ p {
 }
 
 .title .section-heading {
-  margin: 0 0 6%;
+  margin: 0 0 8%;
+  font-size: 1.8rem;
 }
 
 /* Buttons */
@@ -116,9 +120,13 @@ p {
   text-align: left;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .title-img {
   width: 80%;
-  margin: 0 0 3% 20%;
+  margin: 2% 0 10% 20%;
 }
 
 /* Problem */
