@@ -183,13 +183,13 @@ app.get("/tasks", (req, res) => {
 
 app.post("/tasks", (req, res) => {
 
-    const newTodo = req.body.taskTitle
+    const newTask = req.body.taskTitle
 
     User.findById(req.user._id, (err, user) => {
         if (err) {
             console.log(err)
         } else {
-            user.tasks.push(newTodo)
+            user.tasks.push(newTask)
             user.save()
             res.render("tasks", { tasksList: user.tasks })
         }
