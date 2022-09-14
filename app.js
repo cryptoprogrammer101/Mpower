@@ -222,9 +222,9 @@ app.get("/resources", (req, res) => {
     }
 })
 
-app.get("/quotes", (req, res) => {
+app.get("/motivation", (req, res) => {
     if (req.isAuthenticated()) {
-        res.render("quotes", { firstQuote: quotes[0], quotes: quotes.slice(1) })
+        res.render("motivation", { firstQuote: quotes[0], quotes: quotes.slice(1) })
     } else {
         res.redirect("/signup")
     }
