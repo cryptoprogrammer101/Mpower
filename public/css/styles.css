@@ -77,8 +77,12 @@ p {
 /* Headings */
 
 .big-heading {
-  margin: 0 0 5%;
+  margin: 0 0 3%;
   font-size: 3.5rem;
+}
+
+.title .big-heading {
+  margin: 0 0 5%;
 }
 
 .future-heading {
@@ -86,8 +90,12 @@ p {
 }
 
 .section-heading {
-  margin: 3% 0 2%;
+  margin: 2% 0 2%;
   font-size: 2.5rem;
+}
+
+.title .section-heading {
+  margin: 0 0 6%;
 }
 
 /* Buttons */

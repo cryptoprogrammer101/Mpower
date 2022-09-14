@@ -238,6 +238,14 @@ app.get("/contact", (req, res) => {
     res.render("contact")
 })
 
+app.get("/solution", (req, res) => {
+    res.render("solution")
+})
+
+app.get("/testimonials", (req, res) => {
+    res.render("testimonials")
+})
+
 app.get("/:page", (req, res) => {
     res.redirect("/")
 })
