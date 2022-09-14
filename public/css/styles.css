@@ -10,7 +10,7 @@ body {
 
 h1,
 h2 {
-  font-weight: 900;
+  font-weight: 700;
   margin: auto;
 }
 
@@ -85,7 +85,6 @@ p {
 
 .title .big-heading {
   margin-bottom: 6%;
-  font-weight: 700;
 }
 
 .future-heading {
@@ -97,9 +96,10 @@ p {
   font-size: 2.5rem;
 }
 
-.title .section-heading {
+.subtitle {
   margin: 0 0 8%;
   font-size: 1.8rem;
+  font-weight: 400;
 }
 
 /* Buttons */
@@ -348,14 +348,8 @@ form.task-cell {
 
   /* Font sizes */
 
-  .section-heading,
-  .future-sec-heading {
-    font-size: 5rem;
-    margin: 10% 0 8%;
-  }
-
   p {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   h2 {
@@ -370,12 +364,22 @@ form.task-cell {
     font-size: 3rem;
   }
 
+  .section-heading,
+  .future-sec-heading {
+    font-size: 5rem;
+    margin: 10% 0 8%;
+  }
+
   .big-heading,
   .future-heading {
     font-size: 7rem;
     margin-top: 7%;
     margin-bottom: 9%;
     line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 5rem;
   }
 
   /* Navbar */
@@ -404,6 +408,10 @@ form.task-cell {
   .title-img {
     margin: 9% 0 10%;
     width: 90%;
+  }
+
+  .tagline {
+    font-size: 3rem;
   }
 
   /* Buttons */
@@ -439,7 +447,7 @@ form.task-cell {
 
   .problem-img {
     margin-top: 10%;
-    width: 70%;
+    width: 60%;
   }
 
   .header {
@@ -468,7 +476,7 @@ form.task-cell {
 
   .problem-text {
     width: 90%;
-    margin-bottom: 25%;
+    margin-bottom: 20%;
   }
 
   /* Features */
@@ -553,6 +561,7 @@ form.task-cell {
   /* Footer */
 
   .copyright {
+    margin: 5%;
     font-size: 2.5rem;
   }
 
