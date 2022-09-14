@@ -4,23 +4,23 @@
 
   <main>
 
-    <h1 class="future-heading">Todo:</h1>
+    <h1 class="future-heading">Tasks:</h1>
 
     <div class="box">
 
-      <% todoList.forEach(todo=> { %>
-        <div class="todo-cell">
+      <% tasksList.forEach(task=> { %>
+        <div class="task-cell">
           <input class="checkbox" type="checkbox">
-          <p class="todo-item">
-            <%= todo %>
+          <p class="task">
+            <%= task %>
           </p>
         </div>
 
         <% }) %>
 
-          <form class="todo-cell" action="/todo" method="post">
-            <input class="todo-input" type="text" placeholder="New Task" name="todoTitle" autofocus required>
-            <button class="todo-btn" type="submit">+</button>
+          <form class="task-cell" action="/tasks" method="post">
+            <input class="task-input" type="text" placeholder="New Task" name="taskTitle" autofocus required>
+            <button class="add-btn" type="submit">+</button>
           </form>
     </div>
 

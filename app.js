@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: String,
     journals: [journalSchema],
-    todo: [String]
+    tasks: [String]
 })
 
 userSchema.plugin(uniqueValidator)
@@ -55,7 +55,7 @@ const quotes = ["When you have a dream, you've got to grab it and never let go."
     "Be the change that you wish to see in the world.",
     "Darkness cannot drive out darkness: only light can do that."]
 
-const todoStart = ["Talk to a friend", "Call a help center", "Book an appointment"]
+const tasksStart = ["Talk to a friend", "Call a help center", "Book an appointment"]
 
 function getJournalTitle() {
     const journalTitle = journalTitles[Math.floor(Math.random() * journalTitles.length)]
@@ -163,17 +163,17 @@ app.post("/journals", (req, res) => {
 
 })
 
-app.get("/todo", (req, res) => {
+app.get("/tasks", (req, res) => {
     if (req.isAuthenticated()) {
         User.findById(req.user._id, (err, user) => {
             if (err) {
                 console.log(err)
             } else {
-                if (user.todo.length < 3) {
-                    user.todo.push(...todoStart)
+                if (user.tasks.length < 3) {
+                    user.tasks.push(...tasksStart)
                     user.save()
                 }
-                res.render("todo", { todoList: user.todo })
+                res.render("tasks", { tasksList: user.tasks })
             }
         })
     } else {
@@ -181,17 +181,17 @@ app.get("/todo", (req, res) => {
     }
 })
 
-app.post("/todo", (req, res) => {
+app.post("/tasks", (req, res) => {
 
-    const newTodo = req.body.todoTitle
+    const newTodo = req.body.taskTitle
 
     User.findById(req.user._id, (err, user) => {
         if (err) {
             console.log(err)
         } else {
-            user.todo.push(newTodo)
+            user.tasks.push(newTodo)
             user.save()
-            res.render("todo", { todoList: user.todo })
+            res.render("tasks", { tasksList: user.tasks })
         }
     })
 })
