@@ -378,8 +378,14 @@ form.task-cell {
     line-height: 1.3;
   }
 
+  .tagline {
+    font-size: 2rem;
+    margin-bottom: 2%;
+  }
+
   .subtitle {
-    font-size: 5rem;
+    font-size: 4.5rem;
+    margin-bottom: 5%;
   }
 
   /* Navbar */
@@ -397,6 +403,7 @@ form.task-cell {
   .nav-item {
     text-align: left;
     font-size: 4rem;
+    margin-bottom: 5%;
   }
 
   .navbar-toggler {
@@ -410,10 +417,6 @@ form.task-cell {
     width: 90%;
   }
 
-  .tagline {
-    font-size: 3rem;
-  }
-
   /* Buttons */
 
   .btn {
@@ -421,6 +424,7 @@ form.task-cell {
     font-size: 3rem;
     margin-bottom: 6%;
     padding: 3%;
+    margin-top: 2%;
   }
 
   .hide-btn {
@@ -491,7 +495,7 @@ form.task-cell {
   }
 
   .features p {
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
 
   /* Carousel */
