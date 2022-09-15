@@ -214,9 +214,9 @@ app.get("/logout", (req, res) => {
     res.redirect("/")
 })
 
-app.get("/resources", (req, res) => {
+app.get("/resources-2", (req, res) => {
     if (req.isAuthenticated()) {
-        res.render("resources")
+        res.render("resources-2")
     } else {
         res.redirect("/signup")
     }
@@ -242,8 +242,8 @@ app.get("/solution", (req, res) => {
     res.render("solution")
 })
 
-app.get("/testimonials", (req, res) => {
-    res.render("testimonials")
+app.get("/resources-1", (req, res) => {
+    res.render("resources-1")
 })
 
 app.get("/:page", (req, res) => {

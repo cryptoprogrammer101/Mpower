@@ -227,14 +227,14 @@ hr {
   text-align: center;
 }
 
-::placeholder, input, textarea {
-  color: grey;
+::placeholder {
   font-size: 1.5rem;
   text-align: center;
+  color: gray;
 }
 
 .form-group input, .form-group textarea {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 /* Journals */
@@ -310,6 +310,7 @@ form.task-cell {
   border: none;
   font-size: 1.5rem;
   width: 350px;
+  text-align: center;
 }
 
 .task-input:focus {
