@@ -431,7 +431,7 @@ form.task-cell {
     font-size: 3rem;
     margin-bottom: 6%;
     padding: 3%;
-    margin-top: 8%;
+    margin-top: 5%;
   }
 
   .hide-btn {
@@ -537,6 +537,10 @@ form.task-cell {
     font-size: 3rem;
   }
 
+  .pass-box {
+    margin-bottom: 8%;
+  }
+
   /* Contact */
 
   .contact {
@@ -576,6 +580,7 @@ form.task-cell {
     width: 5rem;
     height: 5rem;
     margin-left: 10%;
+    font-size: 3rem;
   }
 
   /* Journals */
@@ -588,7 +593,15 @@ form.task-cell {
     margin-left: 0;
   }
 
+  .journal-content {
+    word-wrap: break-word;
+  }
+
   /* Footer */
+
+  footer hr {
+    margin-top: 5%;
+  }
 
   .copyright {
     margin: 5%;
