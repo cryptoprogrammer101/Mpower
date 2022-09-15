@@ -14,8 +14,8 @@
 
                 <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
 
-                <input type="text" class="form-control textbox" placeholder="Enter journal" name="journal" minlength="5"
-                    required autofocus>
+                <textarea class="form-control textbox" placeholder="Enter journal" name="journal" minlength="5"
+                    required autofocus></textarea>
 
             </div>
 
@@ -69,7 +69,7 @@
                                     <br><br>
 
                                     <ul>
-                                        <li>
+                                        <li class="journal-content">
                                             <%= journal.content %>
                                         </li>
                                     </ul>

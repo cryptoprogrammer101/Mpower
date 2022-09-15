@@ -10,7 +10,7 @@ body {
 
 h1,
 h2 {
-  font-weight: 700;
+  font-weight: bold;
   margin: auto;
 }
 
@@ -227,11 +227,14 @@ hr {
   text-align: center;
 }
 
-::placeholder,
-.form-group input {
+::placeholder, input, textarea {
   color: grey;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
+}
+
+.form-group input, .form-group textarea {
+  font-size: 2.5rem;
 }
 
 /* Journals */
@@ -241,9 +244,13 @@ hr {
   margin-left: 3%;
 }
 
-.journal-title {
+.journal-content {
+  margin-left: 5%;
+  font-weight: 400;
+}
+
+.journal-title h3 {
   font-weight: bold;
-  font-size: 1.7rem;
 }
 
 .alert {
@@ -424,7 +431,7 @@ form.task-cell {
     font-size: 3rem;
     margin-bottom: 6%;
     padding: 3%;
-    margin-top: 2%;
+    margin-top: 8%;
   }
 
   .hide-btn {
@@ -547,9 +554,28 @@ form.task-cell {
     width: 70%;
   }
 
-  .tasks-input {
-    width: 100%;
+  .task {
+    font-size: 3rem;
+  }
+
+  .task-cell:last-child {
+    height: 10rem;
+  }
+
+  .checkbox {
+    margin: 7%;
+    height: 4rem;
+    width: 4rem;
+  }
+
+  form.task-cell {
+    margin-left: 15%;
+  }
+
+  .add-btn {
+    width: 5rem;
     height: 5rem;
+    margin-left: 10%;
   }
 
   /* Journals */
