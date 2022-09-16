@@ -207,12 +207,14 @@ app.get("/journals", (req, res) => {
                 // if no error
             } else {
                 // display journals page
-                res.render("journals", { journalTitle: getJournalTitle(), 
-                    journalEntered: false, journalID: "", journals: user.journals })
+                res.render("journals", {
+                    journalTitle: getJournalTitle(),
+                    journalEntered: false, journalID: "", journals: user.journals
+                })
             }
         })
 
-    // if user is not logged in
+        // if user is not logged in
     } else {
         // send to signup page
         res.redirect("/signup")
@@ -243,16 +245,18 @@ app.post("/journals", (req, res) => {
             console.log(err)
             // refresh page
             res.redirect("/journals")
-        
-        // if no error
+
+            // if no error
         } else {
             // append new journal to journal array
             user.journals.push(newJournal)
             // save user
             user.save()
             // reload page
-            res.render("journals", { journalTitle: getJournalTitle(), 
-                journalEntered: true, journalID: newJournal._id, journals: user.journals })
+            res.render("journals", {
+                journalTitle: getJournalTitle(),
+                journalEntered: true, journalID: newJournal._id, journals: user.journals
+            })
         }
     })
 
@@ -268,7 +272,7 @@ app.get("/tasks", (req, res) => {
             if (err) {
                 // print error
                 console.log(err)
-            // if no error
+                // if no error
             } else {
                 // if user has no tasks
                 if (user.tasks.length < 3) {
@@ -281,7 +285,7 @@ app.get("/tasks", (req, res) => {
                 res.render("tasks", { tasksList: user.tasks })
             }
         })
-    // if not logged in
+        // if not logged in
     } else {
         // send to signup page
         res.redirect("/signup")
@@ -300,7 +304,7 @@ app.post("/tasks", (req, res) => {
         if (err) {
             // print error
             console.log(err)
-        // if no error
+            // if no error
         } else {
             // append new task to user's tasks
             user.tasks.push(newTask)
@@ -314,11 +318,27 @@ app.post("/tasks", (req, res) => {
 
 // define home route
 app.get("/home", (req, res) => {
+
     // if logged in
     if (req.isAuthenticated()) {
-        // display home page
-        res.render("home")
-    // otherwise
+
+        // find user
+        User.findById(req.user._id, (err, user) => {
+
+            // if error
+            if (err) {
+                // print error
+                console.log(err)
+
+                // if no error
+            } else {
+                // display home page with username
+                res.render("home", { username: user.username })
+            }
+
+        })
+
+        // otherwise
     } else {
         // send to signup page
         res.redirect("/signup")
@@ -347,7 +367,7 @@ app.get("/resources-2", (req, res) => {
         // display page
         res.render("resources-2")
 
-    // otherwise
+        // otherwise
     } else {
         // send to signup page
         res.redirect("/signup")
@@ -360,8 +380,8 @@ app.get("/motivation", (req, res) => {
     if (req.isAuthenticated()) {
         // display motivation page
         res.render("motivation", { firstQuote: quotes[0], quotes: quotes.slice(1) })
-    
-    // otherwise
+
+        // otherwise
     } else {
         // send to signup page
         res.redirect("/signup")
