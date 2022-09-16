@@ -377,7 +377,7 @@ form.task-cell {
   }
 
   h3 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .carousel-item p {
@@ -386,7 +386,7 @@ form.task-cell {
 
   .section-heading,
   .future-sec-heading {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 10% 0 8%;
   }
 
@@ -423,7 +423,7 @@ form.task-cell {
   .nav-item {
     text-align: left;
     font-size: 4rem;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
   }
 
   .navbar-toggler {
@@ -443,7 +443,7 @@ form.task-cell {
     border-radius: 40px;
     font-size: 3rem;
     margin-bottom: 6%;
-    padding: 3%;
+    padding: 5%;
     margin-top: 5%;
   }
 
