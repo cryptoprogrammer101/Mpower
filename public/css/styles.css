@@ -233,7 +233,8 @@ hr {
   color: gray;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   font-size: 1.5rem;
 }
 
@@ -525,7 +526,8 @@ form.task-cell {
   }
 
   ::placeholder,
-  .form-group input {
+  .form-group input,
+  .form-group textarea {
     font-size: 3rem;
   }
 
@@ -538,8 +540,12 @@ form.task-cell {
     font-size: 3rem;
   }
 
+  .username-box {
+    margin-bottom: 3%;
+  }
+
   .pass-box {
-    margin-bottom: 8%;
+    margin-bottom: 5%;
   }
 
   /* Contact */
@@ -557,10 +563,15 @@ form.task-cell {
 
   .box {
     width: 70%;
+    border-radius: 30px;
   }
 
   .task {
     font-size: 3rem;
+  }
+
+  .task-cell {
+    border-bottom: 2px solid #d0d0d0;
   }
 
   .task-cell:last-child {
@@ -569,8 +580,8 @@ form.task-cell {
 
   .checkbox {
     margin: 7%;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
   }
 
   form.task-cell {
@@ -582,6 +593,17 @@ form.task-cell {
     height: 5rem;
     margin-left: 10%;
     font-size: 3rem;
+    text-align: center;
+  }
+  
+  .task-input {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  .task-input:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #1363DF;
   }
 
   /* Journals */
