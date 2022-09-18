@@ -254,6 +254,10 @@ hr {
   font-weight: bold;
 }
 
+.inline-form {
+  display: inline;
+}
+
 .alert {
   width: 50%;
   margin: auto;
@@ -291,6 +295,7 @@ input:checked+p {
   margin: 0;
   padding: 5%;
   font-size: 1.5rem;
+  text-align: left;
 }
 
 form.task-cell {
@@ -578,7 +583,7 @@ form.task-cell {
   }
 
   .task {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .task-cell {

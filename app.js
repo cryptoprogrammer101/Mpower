@@ -209,7 +209,7 @@ app.get("/journals", (req, res) => {
                 // display journals page
                 res.render("journals", {
                     journalTitle: getJournalTitle(),
-                    journalEntered: false, journalID: "", journals: user.journals
+                    journalEntered: false, journalID: "", journals: user.journals, showEmailBtn: false
                 })
             }
         })
@@ -255,7 +255,7 @@ app.post("/journals", (req, res) => {
             // reload page
             res.render("journals", {
                 journalTitle: getJournalTitle(),
-                journalEntered: true, journalID: newJournal._id, journals: user.journals
+                journalEntered: true, journalID: newJournal._id, journals: user.journals, showEmailBtn: true
             })
         }
     })
