@@ -68,7 +68,8 @@ passport.deserializeUser(User.deserializeUser())
 // define journal titles
 const journalTitles = ["What is something you like?",
     "Describe one significant childhood memory.",
-    "Who are the most important people in your life?"]
+    "Who are the most important people in your life?",
+    "Write about anything."]
 
 // define quotes
 const quotes = ["When you have a dream, you've got to grab it and never let go.",
@@ -76,7 +77,11 @@ const quotes = ["When you have a dream, you've got to grab it and never let go."
     "Darkness cannot drive out darkness: only light can do that."]
 
 // define initial tasks
-const tasksStart = ["Talk to a friend", "Call a help center", "Book an appointment"]
+const tasksStart = ["Talk to a friend",
+    "Call a help center",
+    "Book an appointment",
+    "Go for a walk",
+    "Draw a picture of someone who you care about"]
 
 // retrieve random journal title
 function getJournalTitle() {
@@ -275,7 +280,7 @@ app.get("/tasks", (req, res) => {
                 // if no error
             } else {
                 // if user has no tasks
-                if (user.tasks.length < 3) {
+                if (user.tasks.length < tasksStart.length) {
                     // add initial tasks to user's tasks
                     user.tasks.push(...tasksStart)
                     // save user
@@ -360,20 +365,6 @@ app.get("/logout", (req, res) => {
     res.redirect("/")
 })
 
-// define logged-in resources route
-app.get("/resources-2", (req, res) => {
-    // if logged in
-    if (req.isAuthenticated()) {
-        // display page
-        res.render("resources-2")
-
-        // otherwise
-    } else {
-        // send to signup page
-        res.redirect("/signup")
-    }
-})
-
 // define motivation route
 app.get("/motivation", (req, res) => {
     // if logged in
@@ -385,6 +376,33 @@ app.get("/motivation", (req, res) => {
     } else {
         // send to signup page
         res.redirect("/signup")
+    }
+})
+
+// define logged-in resources route
+app.get("/resources-2", (req, res) => {
+    // if logged in
+    if (req.isAuthenticated()) {
+        // display page
+        res.render("resources-2")
+
+        // otherwise
+    } else {
+        // send to signup page
+        res.redirect("/resources-1")
+    }
+})
+
+// define logged-our resources route
+app.get("/resources-1", (req, res) => {
+    // if logged in
+    if (req.isAuthenticated()) {
+        // send to resources page
+        res.redirect("/resources-2")
+        // otherwise
+    } else {
+        // display resources page
+        res.render("resources-1")
     }
 })
 
@@ -404,12 +422,6 @@ app.get("/contact", (req, res) => {
 app.get("/solution", (req, res) => {
     // display solution page
     res.render("solution")
-})
-
-// define logged-our resources route
-app.get("/resources-1", (req, res) => {
-    // display resources page
-    res.render("resources-1")
 })
 
 // define miscellaneous route
