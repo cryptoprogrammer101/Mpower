@@ -81,7 +81,7 @@ const tasksStart = ["Talk to a friend",
     "Call a help center",
     "Book an appointment",
     "Go for a walk",
-    "Draw a picture of someone who you care about"]
+    "Draw a picture of someone"]
 
 // retrieve random journal title
 function getJournalTitle() {
