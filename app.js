@@ -163,7 +163,7 @@ app.post("/login", (req, res) => {
     })
 
     // log in user
-    req.login(user, (err) => {
+    req.login(user, err => {
 
         // if error
         if (err) {
@@ -182,13 +182,7 @@ app.post("/login", (req, res) => {
                     // otherwise
                 } else {
                     // log user out
-                    req.logOut(err => {
-                        // if error
-                        if (err) {
-                            // print error
-                            console.log(err)
-                        }
-                    })
+                    req.logOut(err => { })
                     // show login page
                     res.render("login", { err: true })
                 }
@@ -205,12 +199,8 @@ app.get("/journals", (req, res) => {
     if (req.isAuthenticated()) {
         // find user info
         User.findById(req.user._id, (err, user) => {
-            // if error
-            if (err) {
-                // print error
-                console.log(err)
-                // if no error
-            } else {
+            // if no error
+            if (!err) {
                 // display journals page
                 res.render("journals", {
                     journalTitle: getJournalTitle(),
@@ -246,8 +236,6 @@ app.post("/journals", (req, res) => {
     User.findById(req.user._id, (err, user) => {
         // if error
         if (err) {
-            // print error
-            console.log(err)
             // refresh page
             res.redirect("/journals")
 
@@ -273,12 +261,8 @@ app.get("/tasks", (req, res) => {
     if (req.isAuthenticated()) {
         // find user
         User.findById(req.user._id, (err, user) => {
-            // if error
-            if (err) {
-                // print error
-                console.log(err)
-                // if no error
-            } else {
+            // if no error
+            if (!err) {
                 // if user has no tasks
                 if (user.tasks.length < tasksStart.length) {
                     // add initial tasks to user's tasks
@@ -305,12 +289,8 @@ app.post("/tasks", (req, res) => {
 
     // find user
     User.findById(req.user._id, (err, user) => {
-        // if error
-        if (err) {
-            // print error
-            console.log(err)
-            // if no error
-        } else {
+        // if no error
+        if (!err) {
             // append new task to user's tasks
             user.tasks.push(newTask)
             // save user
@@ -330,13 +310,8 @@ app.get("/home", (req, res) => {
         // find user
         User.findById(req.user._id, (err, user) => {
 
-            // if error
-            if (err) {
-                // print error
-                console.log(err)
-
-                // if no error
-            } else {
+            // if no error
+            if (!err) {
                 // display home page with username
                 res.render("home", { username: user.username })
             }
@@ -354,13 +329,7 @@ app.get("/home", (req, res) => {
 // define logout process
 app.get("/logout", (req, res) => {
     // log out user
-    req.logout((err) => {
-        // if error
-        if (err) {
-            // print error
-            console.log(err)
-        }
-    })
+    req.logout(err => { })
     // send to start page
     res.redirect("/")
 })
@@ -440,6 +409,4 @@ if (port == null || port == "") {
 }
 
 // put server online
-app.listen(port, () => {
-    console.log("Server started successfully")
-})
+app.listen(port, () => { })
