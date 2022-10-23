@@ -1,6 +1,6 @@
-# Mpower is a website I made to help solve substance abuse in New Hampshire.
+# Mpower fights substance abuse in New Hampshire.
 
-<img src="public/imgs/logo.png" alt="logo" width="200">
+<img src="public/imgs/logo.png" alt="logo" width="100">
 
 ## What is Mpower?
       
