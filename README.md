@@ -1,6 +1,6 @@
 # Mpower fights substance abuse in New Hampshire.
 
-<img src="public/imgs/logo.png" alt="logo" width="100">
+<img src="public/imgs/logo.png" alt="logo" width="50">
 
 ## What is Mpower?
       
