@@ -328,6 +328,7 @@ form.task-cell {
   color: #fff;
   font-size: 2rem;
   border-width: 0;
+  margin-right: 5%;
 }
 
 .task-input {
