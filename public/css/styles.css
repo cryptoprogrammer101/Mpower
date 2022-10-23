@@ -303,7 +303,7 @@ form.task-cell {
 }
 
 .add-btn {
-  width: 12%;
+  width: 50px;
   border-radius: 100%;
   background-color: #2FA4FF;
   color: #fff;
@@ -639,4 +639,16 @@ form.task-cell {
     font-size: 2.5rem;
   }
 
+}
+
+@media (max-width: 813px) {
+  form.task-cell {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 730px) {
+  form.task-cell {
+    margin-left: 0;
+  }
 }
