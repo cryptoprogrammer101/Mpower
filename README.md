@@ -1,5 +1,7 @@
 # Mpower is a website I made to help solve substance abuse in New Hampshire.
 
+![Logo](public/imgs/logo.png)
+
 ## What is Mpower?
       
 NH youth has one of the highest rates of substance abuse in the US. Narayan Sajeev, a junior at Nashua High School South, has witnessed this issue firsthand. To help chip away at substance abuse, Narayan made Mpower. Using Mpower, Narayan hopes to do his part in fighting the growing overdose epidemic.
