@@ -176,7 +176,7 @@ p {
 
 /* Features */
 
-.features-hr {
+.hr {
   margin: 0 auto 0;
   width: 50%;
   border-top: 10px dotted #2FA4FF;
@@ -563,7 +563,7 @@ form.task-cell {
 
   /* Features */
 
-  .features-hr {
+  .hr {
     width: 70%;
     border-top: 20px dotted #2FA4FF;
   }
