@@ -217,6 +217,17 @@ hr {
   color: #3f3f3f;
 }
 
+/* About */
+
+.stats {
+  font-weight: bold;
+}
+
+.stats-info {
+  display: inline;
+  font-size: 1.2rem;
+}
+
 /* Textbox */
 
 .textbox {
