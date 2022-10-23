@@ -21,11 +21,9 @@
 
             <br>
 
-
-
             <% if (journalEntered) { %>
 
-                <div class="alert alert-success alert-dismissible fade show">
+                <div class="alert alert-success alert-dismissible">
 
                     <p>Saved journal! View it <a href="journals#<%= journalID %>" class="alert-link">here</a></p>
 
@@ -51,14 +49,14 @@
 
                 <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
                 <input type="hidden" name="journalContent" value="<%= journals[journals.length - 1].content %>">
-                <button type="submit" class="btn btn-dark btn-lg">Email journal</button>
+                <button type="submit" class="btn btn-dark btn-lg">Email last journal</button>
 
             </form>
 
             <% } %>
 
 
-                <br><br><br>
+                <br><br><br><br>
 
                 <h2 class="future-sec-heading">Saved journals:</h2>
 

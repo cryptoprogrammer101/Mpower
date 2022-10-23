@@ -76,6 +76,10 @@ p {
   padding: 0;
 }
 
+.hide-nav {
+  display: none;
+}
+
 /* Headings */
 
 .big-heading {
@@ -127,7 +131,7 @@ p {
 
 .title-img {
   width: 80%;
-  margin: 2% 0 10% 20%;
+  margin: 2% 0 5% 20%;
 }
 
 /* Problem */
@@ -137,7 +141,7 @@ p {
   margin-bottom: 2%;
 }
 
-.hidden {
+.hide-txt {
   display: none;
 }
 
@@ -242,6 +246,10 @@ hr {
   font-size: 1.5rem;
   text-align: center;
   color: gray;
+}
+
+input {
+  margin: 0 auto 2%;
 }
 
 .form-group input,
@@ -380,6 +388,24 @@ form.task-cell {
 
 /* Responsiveness */
 
+@media (max-width: 1440px) {
+
+  .hide-nav {
+    display: inline;
+  }
+
+  .show-nav {
+    display: none;
+  }
+
+  .title-img {
+    width: 90%;
+    margin-left: 10%;
+    margin-bottom: 15%;
+  }
+
+}
+
 @media (max-width: 991px) {
 
   /* Font sizes */
@@ -443,7 +469,15 @@ form.task-cell {
   }
 
   .navbar-toggler {
-    margin-bottom: 1%;
+    margin: 3% 0 2%;
+  }
+
+  .hide-nav {
+    display: none;
+  }
+
+  .show-nav {
+    display: inline;
   }
 
   /* Title section */
@@ -495,7 +529,7 @@ form.task-cell {
     font-size: 4.5rem;
   }
 
-  .hidden {
+  .hide-txt {
     display: block;
   }
 
@@ -650,16 +684,4 @@ form.task-cell {
     font-size: 2.5rem;
   }
 
-}
-
-@media (max-width: 813px) {
-  form.task-cell {
-    margin-left: 5%;
-  }
-}
-
-@media (max-width: 730px) {
-  form.task-cell {
-    margin-left: 0;
-  }
 }
