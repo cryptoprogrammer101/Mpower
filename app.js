@@ -7,6 +7,9 @@ const session = require("express-session")
 const passport = require("passport")
 const passportLocalMongoose = require("passport-local-mongoose")
 
+// suppress warning
+mongoose.set('strictQuery', true);
+
 // use express
 const app = express()
 
@@ -348,26 +351,12 @@ app.get("/motivation", (req, res) => {
     }
 })
 
-// define logged-in resources route
-app.get("/resources-2", (req, res) => {
+// define resources route
+app.get("/resources", (req, res) => {
     // if logged in
     if (req.isAuthenticated()) {
-        // display page
-        res.render("resources-2")
-
-        // otherwise
-    } else {
-        // send to signup page
-        res.redirect("/resources-1")
-    }
-})
-
-// define logged-our resources route
-app.get("/resources-1", (req, res) => {
-    // if logged in
-    if (req.isAuthenticated()) {
-        // send to resources page
-        res.redirect("/resources-2")
+        // display resources page
+        res.render("/resources-2")
         // otherwise
     } else {
         // display resources page

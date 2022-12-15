@@ -56,13 +56,6 @@ p {
   padding: 0;
 }
 
-.tagline {
-  text-align: left;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.7rem;
-  font-style: italic;
-}
-
 .nav-item {
   padding: 7px 0 0 30px;
   font-size: 1.5rem;
@@ -74,10 +67,6 @@ p {
 
 .nav-link {
   padding: 0;
-}
-
-.hide-nav {
-  display: none;
 }
 
 /* Headings */
@@ -122,11 +111,6 @@ p {
 
 .title {
   text-align: left;
-}
-
-.emphasis {
-  text-decoration: underline;
-  font-style: italic;
 }
 
 .title-img {
@@ -211,14 +195,44 @@ ol {
   font-size: 1.2rem;
 }
 
-/* Copyright */
+/* Footer */
 
-hr {
-  margin: 0;
+.footer-header,
+.footer-header a,
+.footer-p,
+.footer-link,
+.footer-link a,
+.footer-link a:hover,
+.copy-link,
+.copy-link:hover {
+  color: #5b646c;
+  text-decoration: none;
+  text-align: left;
 }
 
-.copyright {
-  color: #3f3f3f;
+
+.footer-header, .footer-header a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.footer-link {
+  margin-bottom: 5%;
+}
+
+.footer-link a {
+  font-size: 1.1rem;
+}
+
+.copy {
+  background-color: #dfdfdf;
+  padding: 3% 0 3%;
+  margin-top: 4%;
+}
+
+.copy-link {
+  font-size: 1rem;
 }
 
 /* About */
@@ -391,14 +405,6 @@ form.task-cell {
 
 @media (max-width: 1440px) {
 
-  .hide-nav {
-    display: inline;
-  }
-
-  .show-nav {
-    display: none;
-  }
-
   .title-img {
     width: 90%;
     margin-left: 10%;
@@ -421,7 +427,8 @@ form.task-cell {
 
   /* Font sizes */
 
-  p, .stats-info {
+  p,
+  .stats-info {
     font-size: 2.5rem;
   }
 
@@ -429,7 +436,8 @@ form.task-cell {
     font-size: 3.5rem;
   }
 
-  h3, .stats {
+  h3,
+  .stats {
     font-size: 3rem;
   }
 
@@ -449,11 +457,6 @@ form.task-cell {
     margin-top: 7%;
     margin-bottom: 9%;
     line-height: 1.3;
-  }
-
-  .tagline {
-    font-size: 2rem;
-    margin-bottom: 2%;
   }
 
   .subtitle {
@@ -477,14 +480,6 @@ form.task-cell {
     text-align: left;
     font-size: 4rem;
     margin-bottom: 4%;
-  }
-
-  .hide-nav {
-    display: none;
-  }
-
-  .show-nav {
-    display: inline;
   }
 
   /* Title section */
@@ -687,7 +682,7 @@ form.task-cell {
     margin-top: 5%;
   }
 
-  .copyright {
+  footer {
     margin: 5%;
     font-size: 2.5rem;
   }
