@@ -46,19 +46,19 @@ p {
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-brand {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0;
-  padding: 0;
+  padding: 15px 0 0;
 }
 
 .nav-item {
   padding: 7px 0 0 30px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .nav-item.nav-btn {
@@ -85,7 +85,7 @@ p {
 }
 
 .section-heading {
-  margin: 2% 0 2%;
+  margin: 4% 0 3%;
   font-size: 2.5rem;
 }
 
@@ -122,7 +122,7 @@ p {
 
 .blurb {
   width: 50%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
 
 .hide-txt {
@@ -196,6 +196,10 @@ ol {
 }
 
 /* Footer */
+
+hr {
+  margin: 0;
+}
 
 .footer-header,
 .footer-header a,
