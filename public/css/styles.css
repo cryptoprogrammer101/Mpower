@@ -85,7 +85,7 @@ p {
 }
 
 .section-heading {
-  margin: 4% 0 3%;
+  margin: 4% 0 0;
   font-size: 2.5rem;
 }
 
@@ -540,7 +540,7 @@ form.task-cell {
     display: block;
   }
 
-  .display {
+  .display-txt {
     display: none;
   }
 
