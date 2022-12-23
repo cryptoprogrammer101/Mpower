@@ -1,17 +1,20 @@
-# Mpower fights substance abuse in New Hampshire.
+# Welcome to Mpower <img src="public/imgs/logo.png" alt="logo" width="30" height="30">
 
-<img src="public/imgs/logo.png" alt="logo" width="50">
+Mpower is a website dedicated to helping individuals and families affected by substance abuse and the drug epidemic. We offer in-depth information, support, and resources to help individuals take control of their thoughts, emotions, and actions, and to achieve lasting recovery.
 
-## What is Mpower?
+## Who We Are
       
-NH youth has one of the highest rates of substance abuse in the US. Narayan Sajeev, a junior at Nashua High School South, has witnessed this issue firsthand. To help chip away at substance abuse, Narayan made Mpower. Using Mpower, Narayan hopes to do his part in fighting the growing overdose epidemic.
+Mpower is committed to helping individuals and families overcome substance abuse and achieve lasting recovery. We understand the challenges and struggles that individuals and families face when dealing with substance abuse, and we are here to provide support and guidance every step of the way.
 
 
-## How does Mpower work?
+## Our Approach
 
-Mpower uses strategies such as journals and quotes to help a person suffering from substance abuse regain control over their emotional wellbeing.
+At Mpower, we believe in a comprehensive approach to recovery that addresses both the physical and mental aspects of substance abuse. Our goal is to help individuals and families understand the impact of substance abuse on their lives and to provide the tools and resources they need to take control of their thoughts, emotions, and actions.
 
+## Contact Us
 
-## How can I get started on Mpower?
-      
-The great news is that getting started on Mpower is free! All you have to do is create an account with [this link](http://www.mpowernh.com/signup "Create an account at Mpower"). 
+If you or someone you know is struggling with substance abuse, we are here to help. Contact us through our website for support and guidance. Together, we can work towards defeating addiction and building a healthier, happier world.
+
+## Get Started
+
+Ready to take the first step towards recovery and start using Mpower? Great! Signing up is quick and easy, and best of all, it's completely free. Simply follow this link to create your account and get started on your journey towards lasting recovery. Don't wait any longer - take control of your life and start your journey with Mpower today!
