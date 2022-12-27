@@ -1,4 +1,4 @@
-# Welcome to Mpower <img src="public/imgs/logo.png" alt="logo" width="30" height="30">
+# <img src="public/imgs/logo.png" alt="logo" width="30" height="30"> Mpower
 
 Mpower is a website dedicated to helping individuals and families affected by substance abuse and the drug epidemic. We offer in-depth information, support, and resources to help individuals take control of their thoughts, emotions, and actions, and to achieve lasting recovery.
 
