@@ -72,7 +72,7 @@ p {
 /* Headings */
 
 .big-heading {
-  margin: 0 0 3%;
+  margin: 0 0 5%;
   font-size: 3rem;
 }
 
@@ -81,7 +81,7 @@ p {
 }
 
 .future-heading {
-  margin: 0 0 4%;
+  margin: 2% 0 4%;
 }
 
 .section-heading {
@@ -93,6 +93,10 @@ p {
   margin: 0 0 8%;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.future-sec-heading {
+  margin: 2% 0 2%;
 }
 
 /* Buttons */
@@ -160,7 +164,7 @@ p {
 
 /* Features */
 
-.hr {
+hr {
   margin: 0 auto 0;
   width: 50%;
   border-top: 10px dotted #2FA4FF;
@@ -195,11 +199,13 @@ ol {
   font-size: 1.2rem;
 }
 
-/* Footer */
+/* About */
 
-hr {
-  margin: 0;
+.about {
+  width: 70%;
 }
+
+/* Footer */
 
 .footer-header,
 .footer-header a,
@@ -212,17 +218,27 @@ hr {
   color: #5b646c;
   text-decoration: none;
   text-align: left;
+  margin: 0;
 }
 
+footer hr {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, .1) !important;
+}
 
-.footer-header, .footer-header a {
+.footer-header,
+.footer-header a {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
+.footer-p {
+  width: 80%;
+}
+
 .footer-link {
-  margin-bottom: 5%;
+  margin-bottom: 7%;
 }
 
 .footer-link a {
@@ -232,22 +248,23 @@ hr {
 .copy {
   background-color: #dfdfdf;
   padding: 3% 0 3%;
-  margin-top: 4%;
 }
 
 .copy-link {
   font-size: 1rem;
 }
 
-/* About */
+/* Resources */
 
 .stats {
+  margin-top: 5%;
   font-weight: bold;
 }
 
 .stats-info {
   display: inline;
   font-size: 1.2rem;
+  margin-bottom: 5%;
 }
 
 /* Textbox */
@@ -298,6 +315,10 @@ input {
 .alert {
   width: 50%;
   margin: auto;
+}
+
+.alert p {
+  margin-left: 55px;
 }
 
 /* Tasks */
@@ -503,10 +524,6 @@ form.task-cell {
     margin-top: 5%;
   }
 
-  .hide-btn {
-    display: none;
-  }
-
   .signup-btn,
   .login-btn,
   .save-btn {
@@ -562,7 +579,8 @@ form.task-cell {
 
   /* Features */
 
-  .hr {
+  hr {
+    margin-top: 5%;
     width: 70%;
     border-top: 20px dotted #2FA4FF;
   }
@@ -681,10 +699,6 @@ form.task-cell {
   }
 
   /* Footer */
-
-  footer hr {
-    margin-top: 5%;
-  }
 
   footer {
     margin: 5%;

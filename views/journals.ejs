@@ -10,7 +10,7 @@
                     <%= journalTitle %>
                 </h2>
 
-                <br><br>
+                <br>
 
                 <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
 
@@ -45,7 +45,7 @@
 
         <% if (showEmailBtn) { %>
 
-            <form action="mailto:username@email.com" class="inline-form" method="post" enctype="text/plain">
+            <form action="mailto:user@email.com" class="inline-form" method="post" enctype="text/plain">
 
                 <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
                 <input type="hidden" name="journalContent" value="<%= journals[journals.length - 1].content %>">
@@ -56,21 +56,19 @@
             <% } %>
 
 
-                <br><br><br><br>
+                <br><br><br>
 
                 <h2 class="future-sec-heading">Saved journals:</h2>
 
-                <% if (journals.length < 1) { %>
+                <br>
 
-                    <br><br>
+                <% if (journals.length < 1) { %>
 
                     <h3>No saved journals. Click the button above to enter new journal.</h3>
 
                     <br>
 
                     <% } else { %>
-
-                        <br><br>
 
                         <ul class="journals-ul">
                             <% journals.forEach(journal=> { %>
@@ -86,10 +84,12 @@
                                                         <%= journal.content %>
                                                     </li>
                                                 </ul>
-                                    </h3>
-                                </li>
 
-                                <br><br>
+                                                <br><br>
+
+                                    </h3>
+
+                                </li>
 
                                 <% }) %>
 
@@ -98,5 +98,7 @@
                         <% } %>
 
     </main>
+
+    <br><br><br>
 
     <%- include("partials/footer") -%>

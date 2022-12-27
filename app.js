@@ -356,7 +356,7 @@ app.get("/resources", (req, res) => {
     // if logged in
     if (req.isAuthenticated()) {
         // display resources page
-        res.render("/resources-2")
+        res.render("resources-2")
         // otherwise
     } else {
         // display resources page
