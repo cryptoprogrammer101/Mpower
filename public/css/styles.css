@@ -269,10 +269,6 @@ ul {
   margin: 0;
 }
 
-.hidden-header {
-  color: #fff;
-}
-
 footer hr {
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, .1) !important;
@@ -287,7 +283,7 @@ footer hr {
 }
 
 .footer-link {
-  margin-bottom: 7%;
+  margin-bottom: 20px;
 }
 
 .footer-link a {
@@ -295,7 +291,7 @@ footer hr {
 }
 
 #footer-btn {
-  margin-right: 8%;
+  margin-right: 2%;
 }
 
 .copy {
