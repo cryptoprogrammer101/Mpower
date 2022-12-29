@@ -391,6 +391,8 @@ displayResourcePage("drug-abuse")
 displayResourcePage("commonly-abused")
 displayResourcePage("causes")
 displayResourcePage("effects")
+displayResourcePage("society")
+displayResourcePage("history")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
