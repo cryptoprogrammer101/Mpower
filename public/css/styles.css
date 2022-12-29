@@ -225,6 +225,11 @@ i.fa-4x {
 .about,
 .resources {
   width: 70%;
+  text-align: justify;
+}
+
+.resources h1 {
+  text-align: center;
 }
 
 .recovery-img,
@@ -240,6 +245,7 @@ ul {
 
 .commonly-abused-ul li {
   margin-bottom: 7%;
+  text-align: justify;
 }
 
 .stats {
