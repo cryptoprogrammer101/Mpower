@@ -92,6 +92,24 @@ function getJournalTitle() {
     return journalTitle
 }
 
+// display corresponding resource page
+function displayResourcePage(resource) {
+
+    // define resource route
+    app.get("/" + resource, (req, res) => {
+        // if logged in
+        if (req.isAuthenticated()) {
+            // display logged-in page
+            res.render("resources/" + resource + "-2")
+            // otherwise
+        } else {
+            // display logged-out page
+            res.render("resources/" + resource + "-1")
+        }
+    })
+
+}
+
 // define main route
 app.get("/", (req, res) => {
     // if logged in
@@ -351,24 +369,6 @@ app.get("/mindfulness", (req, res) => {
     }
 })
 
-// define drug abuse route
-app.get("/drug-abuse", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("resources/drug-abuse-2")
-    } else {
-        res.render("resources/drug-abuse-1")
-    }
-})
-
-// define commonly abused route
-app.get("/commonly-abused", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("resources/commonly-abused-2")
-    } else {
-        res.render("resources/commonly-abused-1")
-    }
-})
-
 // define about route
 app.get("/about", (req, res) => {
     // display about page
@@ -386,6 +386,10 @@ app.get("/solution", (req, res) => {
     // display solution page
     res.render("solution")
 })
+
+displayResourcePage("drug-abuse")
+displayResourcePage("commonly-abused")
+displayResourcePage("causes")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
