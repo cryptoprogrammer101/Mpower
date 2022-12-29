@@ -39,7 +39,7 @@
 
                 <% } %>
 
-                    <button type="submit" class="btn btn-dark btn-lg save-btn">Save journal</button>
+                    <button type="submit" class="btn btn-dark btn-lg save-btn">Save</button>
 
         </form>
 
@@ -58,19 +58,19 @@
 
                 <br><br><br><br>
 
-                <h2 class="future-sec-heading">Saved journals:</h2>
+                <h2 class="future-sec-heading">Saved Journals</h2>
 
                 <br>
 
                 <% if (journals.length < 1) { %>
 
-                    <h3>No saved journals. Click the button above to enter new journal.</h3>
+                    <h3>No saved journals. Click the button above to enter a new journal.</h3>
 
                     <br>
 
                     <% } else { %>
 
-                        <ul class="journals-ul">
+                        <ul>
                             <% journals.forEach(journal=> { %>
 
                                 <li class="journal-title" id="<%= journal._id %>">
@@ -101,4 +101,4 @@
 
     <br><br><br>
 
-    <%- include("partials/footer") -%>
+    <%- include("partials/footer-2") -%>

@@ -46,7 +46,7 @@ const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: String,
     journals: [journalSchema],
-    tasks: [String]
+    goals: [String]
 })
 
 // use unique validator
@@ -79,8 +79,8 @@ const quotes = ["When you have a dream, you've got to grab it and never let go."
     "Be the change that you wish to see in the world.",
     "Darkness cannot drive out darkness: only light can do that."]
 
-// define initial tasks
-const tasksStart = ["Talk to a friend",
+// define initial goals
+const goalsStart = ["Talk to a friend",
     "Call a help center",
     "Book an appointment",
     "Go for a walk",
@@ -258,23 +258,23 @@ app.post("/journals", (req, res) => {
 
 })
 
-// define tasks route
-app.get("/tasks", (req, res) => {
+// define goals route
+app.get("/goals", (req, res) => {
     // if logged in
     if (req.isAuthenticated()) {
         // find user
         User.findById(req.user._id, (err, user) => {
             // if no error
             if (!err) {
-                // if user has no tasks
-                if (user.tasks.length < tasksStart.length) {
-                    // add initial tasks to user's tasks
-                    user.tasks.push(...tasksStart)
+                // if user has no goals
+                if (user.goals.length < goalsStart.length) {
+                    // add initial goals to user's goals
+                    user.goals.push(...goalsStart)
                     // save user
                     user.save()
                 }
                 // relaod page
-                res.render("tasks", { tasksList: user.tasks })
+                res.render("goals", { goalsList: user.goals })
             }
         })
         // if not logged in
@@ -284,22 +284,22 @@ app.get("/tasks", (req, res) => {
     }
 })
 
-// when user creates new task
-app.post("/tasks", (req, res) => {
+// when user creates new goal
+app.post("/goals", (req, res) => {
 
-    // retrieve task title
-    const newTask = req.body.taskTitle
+    // retrieve goal title
+    const newGoal = req.body.goalTitle
 
     // find user
     User.findById(req.user._id, (err, user) => {
         // if no error
         if (!err) {
-            // append new task to user's tasks
-            user.tasks.push(newTask)
+            // append new goal to user's goals
+            user.goals.push(newGoal)
             // save user
             user.save()
             // reload page
-            res.render("tasks", { tasksList: user.tasks })
+            res.render("goals", { goalsList: user.goals })
         }
     })
 })
@@ -337,12 +337,12 @@ app.get("/logout", (req, res) => {
     res.redirect("/")
 })
 
-// define motivation route
-app.get("/motivation", (req, res) => {
+// define mindfulness route
+app.get("/mindfulness", (req, res) => {
     // if logged in
     if (req.isAuthenticated()) {
-        // display motivation page
-        res.render("motivation", { firstQuote: quotes[0], quotes: quotes.slice(1) })
+        // display mindfulness page
+        res.render("mindfulness", { firstQuote: quotes[0], quotes: quotes.slice(1) })
 
         // otherwise
     } else {
@@ -351,16 +351,21 @@ app.get("/motivation", (req, res) => {
     }
 })
 
-// define resources route
-app.get("/resources", (req, res) => {
-    // if logged in
+// define drug abuse route
+app.get("/drug-abuse", (req, res) => {
     if (req.isAuthenticated()) {
-        // display resources page
-        res.render("resources-2")
-        // otherwise
+        res.render("resources/drug-abuse-2")
     } else {
-        // display resources page
-        res.render("resources-1")
+        res.render("resources/drug-abuse-1")
+    }
+})
+
+// define commonly abused route
+app.get("/commonly-abused", (req, res) => {
+    if (req.isAuthenticated()) {
+        res.render("resources/commonly-abused-2")
+    } else {
+        res.render("resources/commonly-abused-1")
     }
 })
 

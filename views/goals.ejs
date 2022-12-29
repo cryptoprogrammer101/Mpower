@@ -1,0 +1,31 @@
+<%- include("partials/navbar-2") -%>
+
+  <br><br>
+
+  <main>
+
+    <h1 class="future-heading">Goals</h1>
+
+    <div class="box">
+
+      <% goalsList.forEach(goal=> { %>
+        <div class="goal-cell">
+          <input class="checkbox" type="checkbox">
+          <p class="goal">
+            <%= goal %>
+          </p>
+        </div>
+
+        <% }) %>
+
+          <form class="goal-cell" action="/goals" method="post">
+            <input class="goal-input" type="text" placeholder="New Goal" name="goalTitle" autofocus required>
+            <button class="add-btn" type="submit">+</button>
+          </form>
+    </div>
+
+  </main>
+
+  <br><br><br><br><br>
+
+  <%- include("partials/footer-2") -%>

@@ -49,10 +49,6 @@ p {
   margin: 0 2% 0 0;
 }
 
-a .logo:hover {
-  color: #fff;
-}
-
 .navbar-brand {
   font-size: 1.5rem;
   margin-bottom: 0;
@@ -75,7 +71,7 @@ a .logo:hover {
 /* Headings */
 
 .big-heading {
-  margin: 0 0 5%;
+  margin: 0 0 3%;
   font-size: 3rem;
 }
 
@@ -125,6 +121,10 @@ a .logo:hover {
   margin: 2% 0 5% 20%;
 }
 
+.fa-right-to-bracket {
+  margin: 0 0 0 1%;
+}
+
 /* Problem */
 
 .blurb {
@@ -172,7 +172,7 @@ a .logo:hover {
 /* Features */
 
 hr {
-  margin: 6% auto 10%;
+  margin: 5% auto 0;
   width: 50%;
   border-top: 10px dotted #2FA4FF;
 }
@@ -196,10 +196,12 @@ ol {
 #testimonials {
   background-color: #2FA4FF;
   color: #fff;
+  margin-top: 5%;
 }
 
 #testimonials .section-heading {
   color: #fff;
+  margin-top: 2%;
 }
 
 .carousel-item p {
@@ -208,18 +210,47 @@ ol {
 
 /* Solution */
 
-i {
+i.fa-4x {
   margin-bottom: 10%;
+  color: #1363DF;
 }
 
-i:hover {
-  color:#1363DF;
+.puddle, .self-expression, .development {
+  width: 80%;
+  margin: 10% auto 10%;
 }
 
-/* About */
+/* About & Resources */
 
-.about {
+.about,
+.resources {
   width: 70%;
+}
+
+.recovery-img,
+.mental-health-img {
+  width: 60%;
+  margin: 10% auto 10%;
+}
+
+ul {
+  text-align: left;
+  margin-left: 3%;
+}
+
+.commonly-abused-ul li {
+  margin-bottom: 7%;
+}
+
+.stats {
+  margin-top: 5%;
+  font-weight: bold;
+}
+
+.stats-info {
+  display: inline;
+  font-size: 1.2rem;
+  margin-bottom: 5%;
 }
 
 /* Footer */
@@ -238,6 +269,10 @@ i:hover {
   margin: 0;
 }
 
+.hidden-header {
+  color: #fff;
+}
+
 footer hr {
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, .1) !important;
@@ -251,16 +286,16 @@ footer hr {
   margin-bottom: 30px;
 }
 
-.footer-p {
-  width: 90%;
-}
-
 .footer-link {
   margin-bottom: 7%;
 }
 
 .footer-link a {
   font-size: 1.1rem;
+}
+
+#footer-btn {
+  margin-right: 8%;
 }
 
 .copy {
@@ -271,18 +306,10 @@ footer hr {
 .copy-link {
   font-size: 1rem;
 }
+/* Home */
 
-/* Resources */
-
-.stats {
-  margin-top: 5%;
-  font-weight: bold;
-}
-
-.stats-info {
-  display: inline;
-  font-size: 1.2rem;
-  margin-bottom: 5%;
+.fa-right-from-bracket {
+  margin: 0 0 0 3%;
 }
 
 /* Textbox */
@@ -312,11 +339,6 @@ input {
 
 /* Journals */
 
-.journals-ul {
-  text-align: left;
-  margin-left: 3%;
-}
-
 .journal-content {
   margin-left: 5%;
   font-weight: 400;
@@ -339,7 +361,7 @@ input {
   margin-left: 55px;
 }
 
-/* Tasks */
+/* Goals */
 
 .box {
   width: 30%;
@@ -348,13 +370,13 @@ input {
   border: 2px #9f9f9f solid;
 }
 
-.task-cell {
+.goal-cell {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #F2F2F2;
 }
 
-.task-cell:last-child {
+.goal-cell:last-child {
   border-bottom: 0;
 }
 
@@ -367,14 +389,14 @@ input:checked+p {
   margin: 7%;
 }
 
-.task {
+.goal {
   margin: 0;
   padding: 5%;
   font-size: 1.5rem;
   text-align: left;
 }
 
-form.task-cell {
+form.goal-cell {
   margin-left: 5%;
 }
 
@@ -388,7 +410,7 @@ form.task-cell {
   margin-right: 5%;
 }
 
-.task-input {
+.goal-input {
   height: 4rem;
   border: none;
   font-size: 1.5rem;
@@ -396,12 +418,12 @@ form.task-cell {
   text-align: center;
 }
 
-.task-input:focus {
+.goal-input:focus {
   outline: none;
   box-shadow: inset 0 -3px 0 0 #1363DF;
 }
 
-/* Motivation */
+/* Mindfulness */
 
 .quote {
   font-style: italic;
@@ -662,22 +684,22 @@ form.task-cell {
     padding: 60% 0 0 0;
   }
 
-  /* Tasks */
+  /* Goals */
 
   .box {
     width: 70%;
     border-radius: 30px;
   }
 
-  .task {
+  .goal {
     font-size: 2.5rem;
   }
 
-  .task-cell {
+  .goal-cell {
     border-bottom: 2px solid #d0d0d0;
   }
 
-  .task-cell:last-child {
+  .goal-cell:last-child {
     height: 10rem;
   }
 
@@ -686,7 +708,7 @@ form.task-cell {
     width: 3rem;
   }
 
-  form.task-cell {
+  form.goal-cell {
     margin-left: 15%;
   }
 
@@ -697,7 +719,7 @@ form.task-cell {
     font-size: 3rem;
   }
 
-  .task-input {
+  .goal-input {
     font-size: 3rem;
   }
 
@@ -707,7 +729,7 @@ form.task-cell {
     width: 80%;
   }
 
-  .journals-ul {
+  ul {
     margin-left: 0;
   }
 
