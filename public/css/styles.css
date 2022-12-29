@@ -215,7 +215,9 @@ i.fa-4x {
   color: #1363DF;
 }
 
-.puddle, .self-expression, .development {
+.puddle,
+.self-expression,
+.development {
   width: 80%;
   margin: 10% auto 10%;
 }
@@ -228,14 +230,20 @@ i.fa-4x {
   text-align: justify;
 }
 
-.resources h1 {
+.resources h1,
+.about h1,
+.about h2 {
+  text-align: center;
+}
+
+.about-btn {
   text-align: center;
 }
 
 .recovery-img,
 .mental-health-img {
   width: 60%;
-  margin: 10% auto 10%;
+  margin: 10% auto;
 }
 
 ul {
@@ -308,6 +316,7 @@ footer hr {
 .copy-link {
   font-size: 1rem;
 }
+
 /* Home */
 
 .fa-right-from-bracket {
