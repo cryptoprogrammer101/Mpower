@@ -390,6 +390,7 @@ app.get("/solution", (req, res) => {
 displayResourcePage("drug-abuse")
 displayResourcePage("commonly-abused")
 displayResourcePage("causes")
+displayResourcePage("effects")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
