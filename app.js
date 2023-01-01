@@ -6,9 +6,10 @@ const uniqueValidator = require("mongoose-unique-validator")
 const session = require("express-session")
 const passport = require("passport")
 const passportLocalMongoose = require("passport-local-mongoose")
+const fs = require("fs")
 
 // suppress warning
-mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', true)
 
 // use express
 const app = express()
@@ -68,17 +69,6 @@ passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
-// define journal titles
-const journalTitles = ["What is something you like?",
-    "Describe one significant childhood memory.",
-    "Who are the most important people in your life?",
-    "Write about anything."]
-
-// define quotes
-const quotes = ["When you have a dream, you've got to grab it and never let go.",
-    "Be the change that you wish to see in the world.",
-    "Darkness cannot drive out darkness: only light can do that."]
-
 // define initial goals
 const goalsStart = ["Talk to a friend",
     "Call a help center",
@@ -88,8 +78,30 @@ const goalsStart = ["Talk to a friend",
 
 // retrieve random journal title
 function getJournalTitle() {
-    const journalTitle = journalTitles[Math.floor(Math.random() * journalTitles.length)]
-    return journalTitle
+
+    // read journal titles from file
+    const data = fs.readFileSync("journalTitles.txt", "utf8");
+
+    // split by newlines
+    const titles = data.split("\n")
+
+    // retrieve random journal title
+    const title = titles[Math.floor(Math.random() * titles.length)]
+
+    return title
+
+}
+
+// get quotes from text file
+function getQuotes() {
+
+    // read quotes from file
+    const data = fs.readFileSync("quotes.txt", "utf8");
+
+    // split by newlines
+    const quotes = data.split("\n")
+
+    return quotes
 }
 
 // display corresponding resource page
@@ -224,8 +236,9 @@ app.get("/journals", (req, res) => {
             if (!err) {
                 // display journals page
                 res.render("journals", {
-                    journalTitle: getJournalTitle(),
-                    journalEntered: false, journalID: "", journals: user.journals, showEmailBtn: false
+                    journalTitle: getJournalTitle(), lastJournalTitle: "", 
+                    journalEntered: false, journalID: "", 
+                    journals: user.journals, showEmailBtn: false
                 })
             }
         })
@@ -268,8 +281,9 @@ app.post("/journals", (req, res) => {
             user.save()
             // reload page
             res.render("journals", {
-                journalTitle: getJournalTitle(),
-                journalEntered: true, journalID: newJournal._id, journals: user.journals, showEmailBtn: true
+                journalTitle: getJournalTitle(), lastJournalTitle: req.body.journalTitle,
+                journalEntered: true, journalID: newJournal._id, 
+                journals: user.journals, showEmailBtn: true
             })
         }
     })
@@ -359,9 +373,8 @@ app.get("/logout", (req, res) => {
 app.get("/mindfulness", (req, res) => {
     // if logged in
     if (req.isAuthenticated()) {
-        // display mindfulness page
-        res.render("mindfulness", { firstQuote: quotes[0], quotes: quotes.slice(1) })
-
+        // render mindfulness page
+        res.render("mindfulness", { firstQuote: getQuotes()[0], quotes: getQuotes().slice(1) })
         // otherwise
     } else {
         // send to signup page
@@ -387,12 +400,19 @@ app.get("/solution", (req, res) => {
     res.render("solution")
 })
 
-displayResourcePage("drug-abuse")
-displayResourcePage("commonly-abused")
 displayResourcePage("causes")
+displayResourcePage("co-occurring")
+displayResourcePage("commonly-abused")
+displayResourcePage("current-work")
+displayResourcePage("drug-abuse")
 displayResourcePage("effects")
-displayResourcePage("society")
 displayResourcePage("history")
+displayResourcePage("overdose-prevention")
+displayResourcePage("prevention")
+displayResourcePage("resources")
+displayResourcePage("society")
+displayResourcePage("stats")
+displayResourcePage("treatment")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
