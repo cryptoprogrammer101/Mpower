@@ -47,8 +47,8 @@
 
             <form action="mailto:user@email.com" class="inline-form" method="post" enctype="text/plain">
 
-                <input type="hidden" name="journalTitle" value="<%= lastJournalTitle %>">
-                <input type="hidden" name="journalContent" value="<%= journals[journals.length - 1].content %>">
+                <input type="hidden" name="title" value="<%= lastJournalTitle %>">
+                <input type="hidden" name="content" value="<%= journals[journals.length - 1].content %>">
                 <button type="submit" class="btn btn-dark btn-lg">Email last journal</button>
 
             </form>
