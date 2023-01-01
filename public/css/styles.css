@@ -50,6 +50,7 @@ p {
 }
 
 .navbar-brand {
+  font-family: "Poppins";
   font-size: 1.5rem;
   margin-bottom: 0;
   padding: 15px 0 0;
