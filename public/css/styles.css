@@ -166,7 +166,7 @@ p {
   margin-right: 50%;
 }
 
-.no-margin {
+#no-margin {
   margin-bottom: 0;
 }
 
@@ -241,8 +241,7 @@ i.fa-4x {
   text-align: center;
 }
 
-.recovery-img,
-.mental-health-img {
+.img {
   width: 60%;
   margin: 10% auto;
 }
@@ -305,7 +304,7 @@ footer hr {
   font-size: 1.1rem;
 }
 
-#footer-btn {
+.footer-btn {
   margin-right: 2%;
 }
 
