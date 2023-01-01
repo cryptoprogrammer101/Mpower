@@ -246,13 +246,12 @@ i.fa-4x {
   margin: 10% auto;
 }
 
-ul {
-  text-align: left;
-  margin-left: 3%;
+li span {
+  text-decoration: underline;
 }
 
-.commonly-abused-ul li {
-  margin-bottom: 7%;
+.resources-ul li {
+  margin-bottom: 3%;
   text-align: justify;
 }
 
