@@ -38,7 +38,7 @@ p {
 }
 
 .navbar {
-  padding: 0.5% 10% 1.5%;
+  padding: 1% 10%;
   background-color: #1363DF;
 }
 
@@ -441,13 +441,7 @@ form.goal-cell {
   filter: invert(100%);
 }
 
-.vid-1 {
-  height: 20rem;
-  width: 35rem;
-  margin-right: 5%;
-}
-
-.vid-2 {
+.vid {
   height: 20rem;
   width: 35rem;
 }
