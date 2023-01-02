@@ -236,8 +236,8 @@ app.get("/journals", (req, res) => {
             if (!err) {
                 // display journals page
                 res.render("journals", {
-                    journalTitle: getJournalTitle(), lastJournalTitle: "", 
-                    journalEntered: false, journalID: "", 
+                    journalTitle: getJournalTitle(), lastJournalTitle: "",
+                    journalEntered: false, journalID: "",
                     journals: user.journals, showEmailBtn: false
                 })
             }
@@ -282,7 +282,7 @@ app.post("/journals", (req, res) => {
             // reload page
             res.render("journals", {
                 journalTitle: getJournalTitle(), lastJournalTitle: req.body.journalTitle,
-                journalEntered: true, journalID: newJournal._id, 
+                journalEntered: true, journalID: newJournal._id,
                 journals: user.journals, showEmailBtn: true
             })
         }
