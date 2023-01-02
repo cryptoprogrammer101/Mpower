@@ -53,8 +53,7 @@ p {
 .navbar-brand {
   font-family: "Poppins";
   font-size: 1.5rem;
-  margin-bottom: 0;
-  padding: 15px 0 0;
+  padding-top: 1%;
 }
 
 .nav-item {
@@ -62,12 +61,9 @@ p {
   font-size: 1.2rem;
 }
 
-.nav-item.nav-btn {
-  padding-top: 0;
-}
-
+.nav-item.nav-btn,
 .nav-link {
-  padding: 0;
+  padding-top: 0;
 }
 
 /* Headings */
@@ -86,7 +82,7 @@ p {
 }
 
 .section-heading {
-  margin: 4% 0 0;
+  margin: 3% 0 0;
   font-size: 2.5rem;
 }
 
@@ -124,7 +120,7 @@ p {
 }
 
 .fa-right-to-bracket {
-  margin: 0 0 0 1%;
+  margin-left: 1%;
 }
 
 /* Impact */
@@ -213,6 +209,10 @@ ol {
 
 /* Solution */
 
+.solution div p {
+  text-align: justify;
+}
+
 i.fa-4x {
   margin-bottom: 10%;
   color: #1363DF;
@@ -230,14 +230,10 @@ i.fa-4x {
 .about,
 .resources {
   width: 70%;
-  text-align: justify;
 }
 
-.resources .future-heading,
-.resources .future-sec-heading,
-.about .future-heading,
-.about .future-sec-heading {
-  text-align: center;
+.about p, .resources p {
+  text-align: justify;
 }
 
 .center {
@@ -251,6 +247,10 @@ i.fa-4x {
 
 li span {
   text-decoration: underline;
+}
+
+.resources-ul {
+  margin-top: 5%;
 }
 
 .resources-ul li {
