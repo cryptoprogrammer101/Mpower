@@ -280,9 +280,7 @@ li span {
 .footer-p,
 .footer-link,
 .footer-link a,
-.footer-link a:hover,
-.copy-link,
-.copy-link:hover {
+.footer-link a:hover {
   color: #5b646c;
   text-decoration: none;
   text-align: left;

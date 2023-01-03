@@ -413,6 +413,7 @@ displayResourcePage("resources")
 displayResourcePage("society")
 displayResourcePage("stats")
 displayResourcePage("treatment")
+displayResourcePage("withdrawal")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
