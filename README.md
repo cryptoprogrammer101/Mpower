@@ -17,4 +17,4 @@ If you or someone you know is struggling with drug abuse, Mpower is here to help
 
 ## Get Started
 
-Ready to take the first step towards recovery and start using Mpower? Great! Signing up is quick and easy, and best of all, it's completely free. Simply follow this link to create your account and get started on your journey towards lasting recovery. Don't wait any longer - take control of your life and start your journey with Mpower today!
+Ready to take the first step towards recovery and start using Mpower? Great! Signing up is quick and easy, and best of all, it's completely free. Simply follow [this link](http://www.mpowernh.com/signup) to create your account and get started on your journey towards lasting recovery. Don't wait any longer - take control of your life and start your journey with Mpower today!
