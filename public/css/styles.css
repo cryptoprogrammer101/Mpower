@@ -347,7 +347,10 @@ input {
 
 .journal-content {
   margin-left: 5%;
-  font-weight: 400;
+}
+
+.journal-content, textarea {
+  line-height: 1.8;
 }
 
 .journal-title h3 {

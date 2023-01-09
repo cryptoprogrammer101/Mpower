@@ -74,20 +74,24 @@
                             <% journals.forEach(journal=> { %>
 
                                 <li class="journal-title" id="<%= journal._id %>">
+
                                     <h3>
                                         <%= journal.title %> - <%= journal.date %>
-
-                                                <br><br>
-
-                                                <ul>
-                                                    <li class="journal-content">
-                                                        <%= journal.content %>
-                                                    </li>
-                                                </ul>
-
-                                                <br><br>
-
                                     </h3>
+
+                                    <br>
+
+                                    <ul>
+                                        <li class="journal-content">
+
+                                            <p>
+                                                <%= journal.content %>
+                                            </p>
+
+                                        </li>
+                                    </ul>
+
+                                    <br><br>
 
                                 </li>
 

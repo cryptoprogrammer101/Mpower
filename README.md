@@ -1,19 +1,19 @@
 # <img src="public/imgs/logo-with-bg.png" alt="logo" width="30" height="30"> Mpower
 
-Mpower is a website dedicated to helping individuals and families affected by drug abuse. We offer in-depth information, support, and resources to help individuals take control of their thoughts, emotions, and actions, and to achieve lasting recovery.
+Mpower is a website dedicated to helping individuals and families affected by drug abuse. It offers in-depth information, support, and resources to help individuals take control of their thoughts, emotions, and actions, and to achieve lasting recovery.
 
-## Who We Are
+## What It Is
       
-Mpower is committed to helping individuals and families overcome drug abuse and achieve lasting recovery. We understand the challenges and struggles that individuals and families face when dealing with drug abuse, and we are here to provide support and guidance every step of the way.
+Mpower helps individuals and families overcome drug abuse and achieve lasting recovery. Narayan understands the challenges and struggles that individuals and families face when dealing with drug abuse, and Mpower is here to provide support and guidance every step of the way.
 
 
-## Our Approach
+## About
 
-At Mpower, we believe in a comprehensive approach to recovery that addresses both the physical and mental aspects of drug abuse. Our goal is to help individuals and families understand the impact of drug abuse on their lives and to provide the tools and resources they need to take control of their thoughts, emotions, and actions.
+Mpower provides a comprehensive approach to recovery that addresses both the physical and mental aspects of drug abuse. The goal is to help individuals and families understand the impact of drug abuse on their lives and to provide the tools and resources they need to take control of their thoughts, emotions, and actions.
 
 ## Contact Us
 
-If you or someone you know is struggling with drug abuse, we are here to help. Contact us through our website for support and guidance. Together, we can work towards defeating abuse and building a healthier, happier world.
+If you or someone you know is struggling with drug abuse, Mpower is here to help. Contact Narayan through the website for support and guidance. Together, we can work towards defeating abuse and building a healthier, happier world.
 
 ## Get Started
 
