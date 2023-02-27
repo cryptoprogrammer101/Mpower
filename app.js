@@ -80,7 +80,7 @@ const goalsStart = ["Talk to a friend",
 function getJournalTitle() {
 
     // read journal titles from file
-    const data = fs.readFileSync("journalTitles.txt", "utf8");
+    const data = fs.readFileSync("journalTitles.txt", "utf8")
 
     // split by newlines
     const titles = data.split("\n")
@@ -96,7 +96,7 @@ function getJournalTitle() {
 function getQuotes() {
 
     // read quotes from file
-    const data = fs.readFileSync("quotes.txt", "utf8");
+    const data = fs.readFileSync("quotes.txt", "utf8")
 
     // split by newlines
     const quotes = data.split("\n")
