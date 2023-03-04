@@ -412,6 +412,7 @@ displayResourcePage("prevention")
 displayResourcePage("resources")
 displayResourcePage("society")
 displayResourcePage("stats")
+displayResourcePage("symptoms")
 displayResourcePage("treatment")
 displayResourcePage("withdrawal")
 
