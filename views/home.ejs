@@ -1,19 +1,26 @@
-<%- include("partials/navbar-2") -%>
+<!DOCTYPE html>
+<html lang="en">
 
-    <main class="container-fluid colored-section">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
 
-        <h2 class="section-heading">Hello <%= username %>!</h2>
+    <%- include("partials/navbar-2") -%>
 
-        <h3>Click on a link above to get started.</h3>
+        <main class="container-fluid colored-section">
 
-        <br><br>
+            <h2 class="section-heading">Hello <%= username %>!</h2>
 
-        <a href="logout" class="btn btn-dark btn-lg">
-            Log Out <i class="fa-solid fa-right-from-bracket"></i>
-        </a>
+            <h3>Click on a link above to get started.</h3>
 
-        <br><br>
+            <br><br>
 
-    </main>
+            <a href="logout" class="btn btn-dark btn-lg">
+                Log Out <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
 
-    <%- include("partials/footer") -%>
+            <br><br>
+
+        </main>
+
+        <%- include("partials/footer") -%>

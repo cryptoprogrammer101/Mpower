@@ -1,57 +1,64 @@
-<%- include("partials/navbar-1") -%>
+<!DOCTYPE html>
+<html lang="en">
 
-    <main class="colored-section container-fluid">
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
 
-        <h1 class="big-heading">Sign Up</h1>
+    <%- include("partials/navbar-1") -%>
 
-        <form action="signup" method="post">
+        <main class="colored-section container-fluid">
 
-            <div class="form-group">
+            <h1 class="big-heading">Sign Up</h1>
 
-                <label>Username</label>
-                <input class="form-control textbox username-box" name="username" placeholder="Enter username"
-                    minlength="5" maxlength="20" required autofocus>
+            <form action="signup" method="post">
 
-            </div>
+                <div class="form-group">
 
-            <br>
-
-            <div class="form-group">
-
-                <label>Password</label>
-                <input type="password" class="form-control textbox pass-box" name="password"
-                    placeholder="Enter password" minlength="5" maxlength="20" required>
-
-            </div>
-
-            <% if (err) { %>
-
-                <br>
-
-                <div class="alert alert-danger alert-dismissible fade show">
-
-                    <p>User "<%= err %>" already exists. Please enter new username or click <a href="login"
-                                class="alert-link">here</a> to log in.</p>
-
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-
-                        <span aria-hidden="true">&times;</span>
-
-                    </button>
+                    <label>Username</label>
+                    <input class="form-control textbox username-box" name="username" placeholder="Enter username"
+                        minlength="5" maxlength="20" required autofocus>
 
                 </div>
 
-                <% } %>
+                <br>
+
+                <div class="form-group">
+
+                    <label>Password</label>
+                    <input type="password" class="form-control textbox pass-box" name="password"
+                        placeholder="Enter password" minlength="5" maxlength="20" required>
+
+                </div>
+
+                <% if (err) { %>
 
                     <br>
 
-                    <button type="submit" class="btn btn-dark btn-lg signup-btn">Sign Up</button>
-                    <a class="btn btn-outline-light btn-lg" href="login">Log In</a>
+                    <div class="alert alert-danger alert-dismissible fade show">
 
-        </form>
+                        <p>User "<%= err %>" already exists. Please enter new username or click <a href="login"
+                                    class="alert-link">here</a> to log in.</p>
 
-        <br><br><br>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 
-    </main>
+                            <span aria-hidden="true">&times;</span>
 
-    <%- include("partials/footer") -%>
+                        </button>
+
+                    </div>
+
+                    <% } %>
+
+                        <br>
+
+                        <button type="submit" class="btn btn-dark btn-lg signup-btn">Sign Up</button>
+                        <a class="btn btn-outline-light btn-lg" href="login">Log In</a>
+
+            </form>
+
+            <br><br><br>
+
+        </main>
+
+        <%- include("partials/footer") -%>

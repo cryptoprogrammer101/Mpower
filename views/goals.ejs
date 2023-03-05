@@ -1,29 +1,36 @@
-<%- include("partials/navbar-2") -%>
+<!DOCTYPE html>
+<html lang="en">
 
-  <main>
+<head>
+  <meta charset="utf-8">
+  <title>Goal Setting</title>
 
-    <h1 class="big-heading">Goals</h1>
+  <%- include("partials/navbar-2") -%>
 
-    <div class="box">
+    <main>
 
-      <% goalsList.forEach(goal=> { %>
-        <div class="goal-cell">
-          <input class="checkbox" type="checkbox">
-          <p class="goal">
-            <%= goal %>
-          </p>
-        </div>
+      <h1 class="big-heading">Goals</h1>
 
-        <% }) %>
+      <div class="box">
 
-          <form class="goal-cell" action="/goals" method="post">
-            <input class="goal-input" type="text" placeholder="New Goal" name="goalTitle" required>
-            <button class="add-btn" type="submit">+</button>
-          </form>
-    </div>
+        <% goalsList.forEach(goal=> { %>
+          <div class="goal-cell">
+            <input class="checkbox" type="checkbox">
+            <p class="goal">
+              <%= goal %>
+            </p>
+          </div>
 
-  </main>
+          <% }) %>
 
-  <br><br><br><br><br>
+            <form class="goal-cell" action="/goals" method="post">
+              <input class="goal-input" type="text" placeholder="New Goal" name="goalTitle" required>
+              <button class="add-btn" type="submit">+</button>
+            </form>
+      </div>
 
-  <%- include("partials/footer") -%>
+    </main>
+
+    <br><br><br><br><br>
+
+    <%- include("partials/footer") -%>

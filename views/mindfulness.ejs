@@ -1,110 +1,117 @@
-<%- include("partials/navbar-2") -%>
+<!DOCTYPE html>
+<html lang="en">
 
-    <main class="container-fluid">
+<head>
+    <meta charset="utf-8">
+    <title>Mindfulness</title>
 
-        <h2 class="big-heading">Quotes</h2>
+    <%- include("partials/navbar-2") -%>
 
-        <div class="carousel slide" id="quote-carousel">
+        <main class="container-fluid">
 
-            <div class="carousel-inner">
+            <h2 class="big-heading">Quotes</h2>
 
-                <div class="carousel-item active">
-                    <h3 class="quote">
-                        <%= firstQuote %>
-                    </h3>
-                </div>
+            <div class="carousel slide" id="quote-carousel">
 
-                <% quotes.forEach(quote=> { %>
+                <div class="carousel-inner">
 
-                    <div class="carousel-item container-fluid">
-
-                        <h3 class="quote section-heading">
-                            <%= quote %>
+                    <div class="carousel-item active">
+                        <h3 class="quote">
+                            <%= firstQuote %>
                         </h3>
-
                     </div>
 
-                    <% }) %>
+                    <% quotes.forEach(quote=> { %>
+
+                        <div class="carousel-item container-fluid">
+
+                            <h3 class="quote section-heading">
+                                <%= quote %>
+                            </h3>
+
+                        </div>
+
+                        <% }) %>
+
+                </div>
+
+                <a class="carousel-control-prev quote-arrow" href="#quote-carousel" data-slide="prev"><span
+                        class="carousel-control-prev-icon"></span></a>
+                <a class="carousel-control-next quote-arrow" href="#quote-carousel" data-slide="next"><span
+                        class="carousel-control-next-icon"></span></a>
 
             </div>
 
-            <a class="carousel-control-prev quote-arrow" href="#quote-carousel" data-slide="prev"><span
-                    class="carousel-control-prev-icon"></span></a>
-            <a class="carousel-control-next quote-arrow" href="#quote-carousel" data-slide="next"><span
-                    class="carousel-control-next-icon"></span></a>
+            <br><br>
 
-        </div>
+            <h2 class="big-heading">Videos</h2>
 
-        <br><br>
+            <div class="row">
 
-        <h2 class="big-heading">Videos</h2>
+                <div class="col-lg-6">
 
-        <div class="row">
+                    <iframe src="https://www.youtube.com/embed/mgmVOuLgFB0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="vid"></iframe>
 
-            <div class="col-lg-6">
+                </div>
 
-                <iframe src="https://www.youtube.com/embed/mgmVOuLgFB0" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen class="vid"></iframe>
+                <div class="col-lg-6">
 
-            </div>
+                    <iframe src="https://www.youtube.com/embed/O-6f5wQXSu8" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="vid"></iframe>
 
-            <div class="col-lg-6">
-
-                <iframe src="https://www.youtube.com/embed/O-6f5wQXSu8" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen class="vid"></iframe>
+                </div>
 
             </div>
 
-        </div>
+            <br><br>
 
-        <br><br>
+            <div class="row">
 
-        <div class="row">
+                <div class="col-lg-6">
 
-            <div class="col-lg-6">
+                    <iframe src="https://www.youtube.com/embed/9DtcSCFwDdw" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="vid"></iframe>
 
-                <iframe src="https://www.youtube.com/embed/9DtcSCFwDdw" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen class="vid"></iframe>
+                </div>
 
-            </div>
+                <div class="col-lg-6">
 
-            <div class="col-lg-6">
+                    <iframe src="https://www.youtube.com/embed/SYMsBN_DkfY" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="vid"></iframe>
 
-                <iframe src="https://www.youtube.com/embed/SYMsBN_DkfY" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen class="vid"></iframe>
-
-            </div>
-
-        </div>
-
-        <br><br>
-
-        <div class="row">
-
-            <div class="col-lg-6">
-
-                <iframe src="https://www.youtube.com/embed/wnHW6o8WMas" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen class="vid"></iframe>
+                </div>
 
             </div>
 
-            <div class="col-lg-6">
+            <br><br>
 
-                <iframe src="https://www.youtube.com/embed/1ZYbU82GVz4" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen class="vid"></iframe>
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <iframe src="https://www.youtube.com/embed/wnHW6o8WMas" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="vid"></iframe>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <iframe src="https://www.youtube.com/embed/1ZYbU82GVz4" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="vid"></iframe>
+
+                </div>
 
             </div>
 
-        </div>
+        </main>
 
-    </main>
+        <br><br><br>
 
-    <br><br><br>
-
-    <%- include("partials/footer") -%>
+        <%- include("partials/footer") -%>

@@ -1,103 +1,110 @@
-<%- include("partials/navbar-2") -%>
+<!DOCTYPE html>
+<html lang="en">
 
-    <main class="container-fluid">
+<head>
+    <meta charset="utf-8">
+    <title>Journaling</title>
 
-        <form action="journals" class="inline-form" method="post">
+    <%- include("partials/navbar-2") -%>
 
-            <div class="form-group">
+        <main class="container-fluid">
 
-                <h2 class="section-heading">
-                    <%= journalTitle %>
-                </h2>
+            <form action="journals" class="inline-form" method="post">
 
-                <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
+                <div class="form-group">
 
-                <textarea class="form-control textbox" placeholder="Enter journal" name="journal" minlength="5" required
-                    autofocus></textarea>
+                    <h2 class="section-heading">
+                        <%= journalTitle %>
+                    </h2>
 
-            </div>
+                    <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
 
-            <br>
-
-            <% if (journalEntered) { %>
-
-                <div class="alert alert-success alert-dismissible">
-
-                    <p>Saved journal! View it <a href="journals#<%= journalID %>" class="alert-link">here</a></p>
-
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-
-                        <span aria-hidden="true">&times;</span>
-
-                    </button>
+                    <textarea class="form-control textbox" placeholder="Enter journal" name="journal" minlength="5"
+                        required autofocus></textarea>
 
                 </div>
 
                 <br>
 
-                <% } %>
+                <% if (journalEntered) { %>
 
-                    <button type="submit" class="btn btn-dark btn-lg save-btn">Save</button>
+                    <div class="alert alert-success alert-dismissible">
 
-        </form>
+                        <p>Saved journal! View it <a href="journals#<%= journalID %>" class="alert-link">here</a></p>
 
-        <% if (showEmailBtn) { %>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 
-            <form action="mailto:user@email.com" class="inline-form" method="post" enctype="text/plain">
+                            <span aria-hidden="true">&times;</span>
 
-                <input type="hidden" name="title" value="<%= lastJournalTitle %>">
-                <input type="hidden" name="content" value="<%= journals[journals.length - 1].content %>">
-                <button type="submit" class="btn btn-dark btn-lg">Email last journal</button>
+                        </button>
 
-            </form>
-
-            <% } %>
-
-            <br><br><br>
-
-                <h2 class="section-heading">Saved Journals</h2>
-
-                <% if (journals.length < 1) { %>
-
-                    <h3>No saved journals. Click the button above to enter a new journal.</h3>
+                    </div>
 
                     <br>
 
-                    <% } else { %>
+                    <% } %>
 
-                        <ul class="journals-ul">
-                            <% journals.forEach(journal=> { %>
+                        <button type="submit" class="btn btn-dark btn-lg save-btn">Save</button>
 
-                                <li class="journal-title" id="<%= journal._id %>">
+            </form>
 
-                                    <h3>
-                                        <%= journal.title %> - <%= journal.date %>
-                                    </h3>
+            <% if (showEmailBtn) { %>
 
-                                    <br>
+                <form action="mailto:user@email.com" class="inline-form" method="post" enctype="text/plain">
 
-                                    <ul>
-                                        <li class="journal-content">
+                    <input type="hidden" name="title" value="<%= lastJournalTitle %>">
+                    <input type="hidden" name="content" value="<%= journals[journals.length - 1].content %>">
+                    <button type="submit" class="btn btn-dark btn-lg">Email last journal</button>
 
-                                            <p>
-                                                <%= journal.content %>
-                                            </p>
+                </form>
 
-                                        </li>
-                                    </ul>
+                <% } %>
 
-                                    <br><br>
+                    <br><br><br>
 
-                                </li>
+                    <h2 class="section-heading">Saved Journals</h2>
 
-                                <% }) %>
+                    <% if (journals.length < 1) { %>
 
-                        </ul>
+                        <h3>No saved journals. Click the button above to enter a new journal.</h3>
 
-                        <% } %>
+                        <br>
 
-    </main>
+                        <% } else { %>
 
-    <br><br><br>
+                            <ul class="journals-ul">
+                                <% journals.forEach(journal=> { %>
 
-    <%- include("partials/footer") -%>
+                                    <li class="journal-title" id="<%= journal._id %>">
+
+                                        <h3>
+                                            <%= journal.title %> - <%= journal.date %>
+                                        </h3>
+
+                                        <br>
+
+                                        <ul>
+                                            <li class="journal-content">
+
+                                                <p>
+                                                    <%= journal.content %>
+                                                </p>
+
+                                            </li>
+                                        </ul>
+
+                                        <br><br>
+
+                                    </li>
+
+                                    <% }) %>
+
+                            </ul>
+
+                            <% } %>
+
+        </main>
+
+        <br><br><br>
+
+        <%- include("partials/footer") -%>
