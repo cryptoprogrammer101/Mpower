@@ -34,7 +34,7 @@ img {
 
 .colored-section {
   background-color: #1363DF;
-  color: #fff;
+  color: white;
 }
 
 /* Navigation Bar */
@@ -188,12 +188,12 @@ ol {
 
 #testimonials {
   background-color: #2FA4FF;
-  color: #fff;
+  color: white;
   margin-top: 5%;
 }
 
 #testimonials .section-heading {
-  color: #fff;
+  color: white;
   margin-top: 2%;
 }
 
@@ -424,7 +424,7 @@ form.goal-cell {
   width: 50px;
   border-radius: 100%;
   background-color: #2FA4FF;
-  color: #fff;
+  color: white;
   font-size: 2rem;
   border-width: 0;
   margin-right: 5%;
