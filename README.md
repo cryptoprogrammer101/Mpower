@@ -13,7 +13,7 @@ Mpower provides a comprehensive approach to recovery that addresses both the phy
 
 ## Contact Us
 
-If you or someone you know is struggling with drug abuse, Mpower is here to help. Contact Narayan through the website for support and guidance. Together, we can work towards defeating abuse and building a healthier, happier world.
+If you or someone you know is struggling with drug abuse, Mpower is here to help. Contact Narayan at [mpowernh1@gmail.com](mailto:mpowernh1@gmail.com) through the website for support and guidance. Together, we can work towards defeating abuse and building a healthier, happier world.
 
 ## Get Started
 
