@@ -1,5 +1,9 @@
 /* General */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat";
   text-align: center;
@@ -27,11 +31,15 @@ img {
 }
 
 img, i {
-  transition: filter 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 img:hover, i:hover {
-  filter: brightness(80%);
+  transform: scale(1.05);
+}
+
+.logo:hover {
+  transform: scale(1);
 }
 
 /* Containers */
