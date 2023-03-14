@@ -24,6 +24,11 @@ p {
 
 img {
   border-radius: 30px;
+  transition: filter 0.3s ease-in-out;
+}
+
+img:hover {
+  filter: brightness(80%);
 }
 
 /* Containers */
