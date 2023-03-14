@@ -24,10 +24,13 @@ p {
 
 img {
   border-radius: 30px;
+}
+
+img, i {
   transition: filter 0.3s ease-in-out;
 }
 
-img:hover {
+img:hover, i:hover {
   filter: brightness(80%);
 }
 
