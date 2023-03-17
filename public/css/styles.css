@@ -284,6 +284,12 @@ li span {
   margin-bottom: 5%;
 }
 
+.arcgis {
+  height: 50rem;
+  width: 80%;
+  border: 5px solid #1363DF;
+}
+
 /* Call-to-action */
 
 .cta .big-heading {
