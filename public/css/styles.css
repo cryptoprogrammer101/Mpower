@@ -38,7 +38,7 @@ img:hover, i:hover {
   transform: scale(1.05);
 }
 
-.logo:hover {
+.fa-hand-fist:hover {
   transform: scale(1);
 }
 
@@ -69,7 +69,7 @@ img:hover, i:hover {
   margin-top: 1%;
 }
 
-.logo {
+.navbar-brand i {
   margin: 0 2% 0 0;
 }
 
