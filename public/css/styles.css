@@ -525,7 +525,7 @@ iframe {
 
 /* Responsiveness */
 
-@media (max-width: 2000px) {
+@media (max-width: 1000px) {
 
   #login-btn {
     display: none;
@@ -538,6 +538,7 @@ iframe {
 
   .blurb {
     text-align: left;
+    width: 90%;
   }
 
 }
