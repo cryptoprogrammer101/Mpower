@@ -531,6 +531,8 @@ iframe {
     display: none;
   }
 
-  
+  .title-img {
+    margin: 5% 0 5%;
+  }
 
 }
