@@ -578,7 +578,7 @@ textarea {
 
   .img-l,
   .img-r {
-    margin: 5% 0;
+    margin: 7% 0;
     width: 50%;
   }
 
@@ -600,9 +600,11 @@ textarea {
   }
 
   .colored-hr {
-    margin: 10% auto 5%;
+    margin: 15% auto 10%;
   }
 
-
+  .features div {
+    margin-top: 10%;
+  }  
 
 }
