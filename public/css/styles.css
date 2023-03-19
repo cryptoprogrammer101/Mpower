@@ -122,7 +122,7 @@ input {
   margin-right: 2%;
 }
 
-/* Navigation Bar */
+/* Nav Bar */
 
 .nav-div {
   padding-top: 1%;
@@ -538,6 +538,18 @@ textarea {
 
 @media (max-width: 1000px) {
 
+  .navbar-brand {
+    margin: 2% 0;
+  }
+
+  .nav-item {
+    margin-bottom: 3%;
+  }
+
+  .dropdown-item {
+    margin: 0 0 1%;
+  }
+
   .title {
     padding-top: 10%;
   }
@@ -562,7 +574,7 @@ textarea {
 
   .img-l,
   .img-r {
-    margin: 2% auto 2%;
+    margin: 2% 0;
     width: 50%;
   }
 
