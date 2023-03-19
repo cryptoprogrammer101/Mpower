@@ -563,8 +563,12 @@ textarea {
     width: 90%;
   }
 
+  .big-heading {
+    margin: 3% 0 8%;
+  }
+
   .section-heading {
-    margin: 3% 0 7%;
+    margin: 7% 0 10%;
   }
 
   .blurb {
@@ -588,7 +592,7 @@ textarea {
 
   .header {
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
   }
 
   .impact-text {
