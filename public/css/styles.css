@@ -537,11 +537,11 @@ textarea {
   /* Headings */
 
   .big-heading {
-    margin: 3% 0 8%;
+    margin: 3% 0 10%;
   }
 
   .section-heading {
-    margin: 7% 0 10%;
+    margin: 7% 0 12%;
   }
 
   .blurb {
@@ -696,7 +696,7 @@ textarea {
 
   .solution-img {
     width: 100%;
-    margin: 10% auto 25%;
+    margin: 10% auto 35%;
   }
 
   /* Contact */
