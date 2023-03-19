@@ -588,10 +588,17 @@ textarea {
 
   .header {
     text-align: center;
+    margin-bottom: 2%;
   }
 
   .impact-text {
     text-align: left;
   }
+
+  .colored-hr {
+    margin: 10% auto 5%;
+  }
+
+
 
 }
