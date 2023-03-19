@@ -533,6 +533,11 @@ iframe {
 
   .title-img {
     margin: 5% 0 5%;
+    width: 90%;
+  }
+
+  .blurb {
+    text-align: left;
   }
 
 }
