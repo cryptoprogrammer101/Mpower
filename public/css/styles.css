@@ -551,7 +551,7 @@ textarea {
   }
 
   .title {
-    padding-top: 10%;
+    padding-top: 15%;
   }
 
   #login-btn {
@@ -574,7 +574,7 @@ textarea {
 
   .img-l,
   .img-r {
-    margin: 2% 0;
+    margin: 5% 0;
     width: 50%;
   }
 
@@ -588,7 +588,7 @@ textarea {
 
   .header {
     text-align: center;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
   }
 
   .impact-text {
