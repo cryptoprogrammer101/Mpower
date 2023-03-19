@@ -352,7 +352,7 @@ li span {
   margin-bottom: 2%;
 }
 
-.solutions li::marker {
+.solution-ol li::marker {
   font-weight: bold;
   color: #1363DF;
   font-size: 4.5rem;
@@ -559,12 +559,16 @@ textarea {
   section,
   .title,
   .about,
+  .solutions,
+  .contact,
   .resources {
     width: 100%;
     padding-top: 15%;
   }
 
   .about,
+  .solutions,
+  .contact,
   .resources {
     padding-top: 25%;
   }
@@ -692,8 +696,17 @@ textarea {
     margin-bottom: 7%;
   }
 
-  /* About & Resources */
+  /* Solution */
 
+  .solution-img {
+    width: 100%;
+    margin: 10% auto 25%;
+  }
 
+  /* Contact */
+
+  .contact {
+    text-align: left;
+  }
 
 }
