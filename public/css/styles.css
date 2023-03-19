@@ -557,7 +557,12 @@ textarea {
   /* Containers */
 
   .title, .about, .resources {
-    padding-top: 20%;
+    
+  }
+
+  section, .title {
+    width: 100%;
+    padding-top: 15%;
   }
 
   /* Navbar */
@@ -582,7 +587,7 @@ textarea {
 
   .title-img {
     margin: 10% 0;
-    width: 90%;
+    width: 100%;
   }
 
   /* Impact */
@@ -630,8 +635,12 @@ textarea {
 
   /* Testimonials */
 
+  #testimonials {
+    padding-top: 3%;
+  }
+
   #testimonials .section-heading {
-    padding-top: 10%;
+    padding-top: 0;
   }
 
   .carousel-item h3 {
@@ -662,5 +671,7 @@ textarea {
   footer .container-fluid, .footer-header, .footer-p {
     padding-top: 5%;
   }
+
+  /* About & Resources */
 
 }
