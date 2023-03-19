@@ -527,12 +527,12 @@ iframe {
 
 @media (max-width: 2000px) {
 
-  .nav-item {
-    text-align: left;
-  }
-
   #login-btn {
     display: none;
+  }
+
+  .big-heading {
+    margin-top: 5%;
   }
 
 }
