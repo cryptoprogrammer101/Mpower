@@ -609,7 +609,7 @@ textarea {
   }
 
   .features div {
-    margin-top: 20%;
+    margin-top: 30%;
   }
   
   .features div h3 {
@@ -642,7 +642,7 @@ textarea {
   }
 
   footer .container-fluid, .footer-header, .footer-p {
-    padding-top: 8%;
+    padding-top: 5%;
   }
 
 }
