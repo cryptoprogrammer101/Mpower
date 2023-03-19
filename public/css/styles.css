@@ -537,11 +537,11 @@ textarea {
   /* Headings */
 
   .big-heading {
-    margin: 3% 0 10%;
+    margin: 3% 0 12%;
   }
 
   .section-heading {
-    margin: 7% 0 12%;
+    margin: 7% 0 14%;
   }
 
   .blurb {
@@ -593,6 +593,10 @@ textarea {
   }
 
   /* Title */
+
+  .title .big-heading {
+    margin-bottom: 8%;
+  }
 
   #login-btn {
     display: none;
