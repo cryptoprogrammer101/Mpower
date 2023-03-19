@@ -184,6 +184,10 @@ input {
   margin: 5% 0 3%;
 }
 
+.hidden {
+  display: none;
+}
+
 .row-l,
 .row-r {
   margin: 10% 0 12%;
@@ -534,12 +538,16 @@ textarea {
 
 @media (max-width: 1000px) {
 
+  .title {
+    padding-top: 5%;
+  }
+
   #login-btn {
     display: none;
   }
 
   .title-img {
-    margin: 5% 0 5%;
+    margin: 10% 0 10%;
     width: 90%;
   }
 
@@ -550,9 +558,24 @@ textarea {
 
   .img-l,
   .img-r {
-    margin: 0;
+    margin: 2% auto 2%;
+    width: 50%;
   }
 
+  .hidden {
+    display: inline;
+  }
 
+  .shown {
+    display: none;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .impact-text {
+    text-align: left;
+  }
 
 }
