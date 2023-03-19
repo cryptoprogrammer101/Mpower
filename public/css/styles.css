@@ -604,7 +604,15 @@ textarea {
   }
 
   .features div {
-    margin-top: 10%;
+    margin-top: 20%;
   }  
+
+  #testimonials .section-heading {
+    padding-top: 10%;
+  }
+
+  .carousel-item h3, .carousel-item p {
+    margin-bottom: 5%;
+  }
 
 }
