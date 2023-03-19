@@ -703,6 +703,10 @@ textarea {
     margin: 10% auto 35%;
   }
 
+  .solution-ol li::marker {
+    font-size: 3.5rem;
+  }
+
   /* Contact */
 
   .contact {
