@@ -27,6 +27,17 @@ p {
   margin: auto;
 }
 
+/* Containers */
+
+.container-fluid {
+  padding: 3% 10%;
+}
+
+.colored-section {
+  background-color: #1363DF;
+  color: white;
+}
+
 /* Images */
 
 img {
@@ -52,15 +63,26 @@ i:hover {
   margin: 2% 0 5% 20%;
 }
 
-/* Containers */
+/* Headings */
 
-.container-fluid {
-  padding: 3% 10%;
+.big-heading {
+  margin: 1% 0 5%;
+  font-size: 3rem;
 }
 
-.colored-section {
-  background-color: #1363DF;
-  color: white;
+.title .big-heading {
+  margin-top: 0;
+}
+
+.section-heading {
+  margin: 1% 0 4%;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  margin: 0 0 8%;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 /* Textbox */
@@ -133,28 +155,6 @@ input {
 .nav-item.nav-btn,
 .nav-link {
   padding-top: 0;
-}
-
-/* Headings */
-
-.big-heading {
-  margin: 1% 0 5%;
-  font-size: 3rem;
-}
-
-.title .big-heading {
-  margin-top: 0;
-}
-
-.section-heading {
-  margin: 1% 0 4%;
-  font-size: 2.5rem;
-}
-
-.subtitle {
-  margin: 0 0 8%;
-  font-size: 1.5rem;
-  font-weight: 400;
 }
 
 /* Title */
@@ -539,7 +539,7 @@ textarea {
 @media (max-width: 1000px) {
 
   .title {
-    padding-top: 5%;
+    padding-top: 10%;
   }
 
   #login-btn {
@@ -549,6 +549,10 @@ textarea {
   .title-img {
     margin: 10% 0 10%;
     width: 90%;
+  }
+
+  .section-heading {
+    margin: 3% 0 7%;
   }
 
   .blurb {
