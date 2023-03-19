@@ -549,7 +549,7 @@ textarea {
   }
 
   .blurb {
-    text-align: left;
+    text-align: justify;
     width: 90%;
     margin-bottom: 20%;
   }
@@ -562,6 +562,15 @@ textarea {
   .resources {
     width: 100%;
     padding-top: 15%;
+  }
+
+  /* Images */
+
+  .title-img,
+  .about img,
+  .resources img {
+    margin: 10% 0;
+    width: 100%;
   }
 
   /* Navbar */
@@ -582,11 +591,6 @@ textarea {
 
   #login-btn {
     display: none;
-  }
-
-  .title-img {
-    margin: 10% 0;
-    width: 100%;
   }
 
   /* Impact */
@@ -611,7 +615,7 @@ textarea {
   }
 
   .impact-text {
-    text-align: left;
+    text-align: justify;
   }
 
   /* Features */
@@ -653,6 +657,7 @@ textarea {
   .carousel-item h3,
   .carousel-item p {
     margin-bottom: 5%;
+    text-align: justify;
   }
 
   /* CTA */
@@ -674,10 +679,12 @@ textarea {
     padding-top: 5%;
   }
 
+  .footer-p {
+    margin-bottom: 7%;
+  }
+
   /* About & Resources */
 
-  .about p, .resources p {
-    text-align: left;
-  }
+
 
 }
