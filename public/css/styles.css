@@ -554,6 +554,12 @@ textarea {
     margin-bottom: 20%;
   }
 
+  /* Containers */
+
+  .title, .about, .resources {
+    padding-top: 20%;
+  }
+
   /* Navbar */
 
   .navbar-brand {
@@ -569,10 +575,6 @@ textarea {
   }
 
   /* Title */
-
-  .title {
-    padding-top: 15%;
-  }
 
   #login-btn {
     display: none;
