@@ -564,6 +564,11 @@ textarea {
     padding-top: 15%;
   }
 
+  .about,
+  .resources {
+    padding-top: 25%;
+  }
+
   /* Images */
 
   .title-img,
@@ -658,6 +663,10 @@ textarea {
   .carousel-item p {
     margin-bottom: 5%;
     text-align: justify;
+  }
+
+  .carousel-item p {
+    text-align: center;
   }
 
   /* CTA */
