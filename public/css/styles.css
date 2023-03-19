@@ -713,4 +713,8 @@ textarea {
     text-align: left;
   }
 
+  .map, .map-container {
+    margin: 5% 0 0;
+  }
+
 }
