@@ -567,7 +567,7 @@ textarea {
   /* Navbar */
 
   .navbar-brand {
-    margin: 2% 0;
+    margin: 5% 0;
   }
 
   .nav-item {
@@ -675,5 +675,9 @@ textarea {
   }
 
   /* About & Resources */
+
+  .about p, .resources p {
+    text-align: left;
+  }
 
 }
