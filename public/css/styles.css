@@ -612,11 +612,21 @@ textarea {
   }
   
   .features div h3 {
+    text-align: left;
     margin-bottom: 5%;
   }
 
   #testimonials .section-heading {
     padding-top: 10%;
+  }
+
+  .carousel-item h3 {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .carousel-item p {
+    font-size: 1rem;
   }
 
   .carousel-item h3, .carousel-item p {
