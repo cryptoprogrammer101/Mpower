@@ -559,7 +559,7 @@ textarea {
   }
 
   .title-img {
-    margin: 10% 0 10%;
+    margin: 10% 0;
     width: 90%;
   }
 
@@ -574,12 +574,13 @@ textarea {
   .blurb {
     text-align: left;
     width: 90%;
+    margin-bottom: 20%;
   }
 
   .img-l,
   .img-r {
     margin: 7% 0;
-    width: 50%;
+    width: 70%;
   }
 
   .hidden {
@@ -612,7 +613,6 @@ textarea {
   }
   
   .features div h3 {
-    text-align: left;
     margin-bottom: 5%;
   }
 
@@ -621,7 +621,6 @@ textarea {
   }
 
   .carousel-item h3 {
-    text-align: left;
     font-size: 1.2rem;
   }
 
@@ -631,6 +630,23 @@ textarea {
 
   .carousel-item h3, .carousel-item p {
     margin-bottom: 5%;
+  }
+
+  .cta .big-heading {
+    text-align: left;
+    margin: 20% 0;
+  }
+
+  .cta .btn {
+    margin-bottom: 10%;
+  }
+
+  footer .container-fluid{
+    padding-top: 10%;
+  }
+
+  .footer-header, .footer-p {
+    margin-bottom: 10%; 
   }
 
 }
