@@ -624,7 +624,7 @@ textarea {
   }
 
   .impact-text {
-    text-align: justify;
+    text-align: left;
   }
 
   /* Features */
@@ -666,7 +666,7 @@ textarea {
   .carousel-item h3,
   .carousel-item p {
     margin-bottom: 5%;
-    text-align: justify;
+    text-align: left;
   }
 
   .carousel-item p {
