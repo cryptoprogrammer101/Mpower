@@ -395,8 +395,8 @@ li span {
 
 /* Signup & Login */
 
-.signup,
-.login {
+.signup-form,
+.login-form {
   margin-top: 3%;
 }
 
@@ -557,7 +557,9 @@ textarea {
   .about,
   .solutions,
   .contact,
-  .resources {
+  .resources,
+  .signup,
+  .login {
     width: 100%;
     padding-top: 15%;
   }
@@ -565,7 +567,9 @@ textarea {
   .about,
   .solutions,
   .contact,
-  .resources {
+  .resources,
+  .signup,
+  .login {
     padding-top: 25%;
   }
 
@@ -713,8 +717,15 @@ textarea {
     text-align: left;
   }
 
-  .map, .map-container {
+  .map,
+  .map-container {
     margin: 5% 0 0;
+  }
+
+  /* Signup & Login */
+
+  .signup, .login {
+    padding-bottom: 10%;
   }
 
 }
