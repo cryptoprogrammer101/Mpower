@@ -561,6 +561,9 @@ textarea {
   .signup,
   .login {
     width: 100%;
+  }
+  
+  section, .title {
     padding-top: 15%;
   }
 
