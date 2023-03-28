@@ -545,7 +545,7 @@ textarea {
   }
 
   .blurb {
-    text-align: justify;
+    text-align: left;
     width: 90%;
     margin-bottom: 20%;
   }
@@ -594,6 +594,10 @@ textarea {
 
   .dropdown-item {
     margin: 0 0 1%;
+  }
+
+  .navbar {
+    background-color: #2FA4FF;
   }
 
   /* Title */
@@ -724,7 +728,8 @@ textarea {
 
   /* Signup & Login */
 
-  .signup, .login {
+  .signup,
+  .login {
     padding-bottom: 10%;
   }
 
