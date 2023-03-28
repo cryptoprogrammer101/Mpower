@@ -572,8 +572,7 @@ textarea {
   /* Images */
 
   .title-img,
-  .about img,
-  .resources img {
+  .img {
     margin: 10% 0;
     width: 100%;
   }
@@ -733,6 +732,22 @@ textarea {
 
   .logout {
     margin: 10% 0 8%;
+  }
+
+  /* Resources */
+
+  .about p,
+  .resources p {
+    text-align: left;
+  }
+
+  .resources-ul {
+    margin-top: 10%;
+  }
+
+  .resources-ul li {
+    margin-bottom: 7%;
+    text-align: left;
   }
 
 }
