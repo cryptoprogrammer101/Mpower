@@ -552,7 +552,6 @@ textarea {
 
   /* Containers */
 
-  section,
   .title,
   .about,
   .solutions,
@@ -562,21 +561,12 @@ textarea {
   .login,
   .home {
     width: 100%;
-  }
-
-  section,
-  .title {
-    padding-top: 15%;
-  }
-
-  .about,
-  .solutions,
-  .contact,
-  .resources,
-  .signup,
-  .login,
-  .home {
     padding-top: 25%;
+  }
+
+  section {
+    width: 100%;
+    padding-top: 15%;
   }
 
   /* Images */
