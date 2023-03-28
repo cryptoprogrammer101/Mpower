@@ -559,11 +559,13 @@ textarea {
   .contact,
   .resources,
   .signup,
-  .login {
+  .login,
+  .home {
     width: 100%;
   }
-  
-  section, .title {
+
+  section,
+  .title {
     padding-top: 15%;
   }
 
@@ -572,7 +574,8 @@ textarea {
   .contact,
   .resources,
   .signup,
-  .login {
+  .login,
+  .home {
     padding-top: 25%;
   }
 
