@@ -729,4 +729,10 @@ textarea {
     padding-bottom: 10%;
   }
 
+  /* Home */
+
+  .logout {
+    margin: 7% 0 5%;
+  }
+
 }
