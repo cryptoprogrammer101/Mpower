@@ -573,8 +573,15 @@ textarea {
 
   .title-img,
   .img {
-    margin: 10% 0;
     width: 100%;
+  }
+
+  .title-img {
+    margin: 10% 0;
+  }
+
+  .img {
+    margin: 20% auto;
   }
 
   /* Navbar */
