@@ -300,7 +300,7 @@ app.get("/goals", (req, res) => {
             if (!err) {
                 // if user has no goals
                 if (user.goals.length < goalsStart.length) {
-                    // add initial goals to user"s goals
+                    // add initial goals to user's goals
                     user.goals.push(...goalsStart)
                     // save user
                     user.save()
@@ -326,7 +326,7 @@ app.post("/goals", (req, res) => {
     User.findById(req.user._id, (err, user) => {
         // if no error
         if (!err) {
-            // append new goal to user"s goals
+            // append new goal to user's goals
             user.goals.push(newGoal)
             // save user
             user.save()
@@ -415,6 +415,7 @@ displayResourcePage("stats")
 displayResourcePage("symptoms")
 displayResourcePage("treatment")
 displayResourcePage("withdrawal")
+displayResourcePage("info")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
