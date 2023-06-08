@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>Log In</title>
 
-    <%- include("partials/navbar-1") -%>
+    <%- include('partials/navbar-1') -%>
 
-        <main class="colored-section container-fluid login">
+        <main class='colored-section container-fluid login'>
 
-            <h1 class="big-heading">Log In</h1>
+            <h1 class='big-heading'>Log In</h1>
 
-            <form action="login" method="post">
+            <form action='login' method='post'>
 
-                <div class="form-group">
+                <div class='form-group'>
 
                     <label>Username</label>
-                    <input class="form-control textbox username-box" name="username" placeholder="Enter username"
-                        minlength="5" maxlength="20" required autofocus>
+                    <input class='form-control textbox username-box' name='username' placeholder='Enter username'
+                        minlength='5' maxlength='20' required autofocus>
 
                 </div>
 
-                <div class="form-group login-form">
+                <div class='form-group login-form'>
 
                     <label>Password</label>
-                    <input type="password" class="form-control textbox pass-box" name="password"
-                        placeholder="Enter password" minlength="5" maxlength="20" required>
+                    <input type='password' class='form-control textbox pass-box' name='password'
+                        placeholder='Enter password' minlength='5' maxlength='20' required>
 
                 </div>
 
@@ -33,13 +33,13 @@
 
                     <br>
 
-                    <div class="alert alert-danger alert-dismissible fade show">
+                    <div class='alert alert-danger alert-dismissible fade show'>
 
                         <p>Incorrect username or password. Please try again.</p>
 
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
 
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden='true'>&times;</span>
 
                         </button>
 
@@ -49,11 +49,11 @@
 
                         <br>
 
-                        <button type="submit" class="btn btn-dark btn-lg login-btn">Log In</button>
-                        <a class="btn btn-outline-light btn-lg" href="signup">Sign Up</a>
+                        <button type='submit' class='btn btn-dark btn-lg login-btn'>Log In</button>
+                        <a class='btn btn-outline-light btn-lg' href='signup'>Sign Up</a>
 
             </form>
 
         </main>
 
-        <%- include("partials/footer") -%>
+        <%- include('partials/footer') -%>

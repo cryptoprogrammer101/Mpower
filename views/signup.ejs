@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>Sign Up</title>
 
-    <%- include("partials/navbar-1") -%>
+    <%- include('partials/navbar-1') -%>
 
-        <main class="colored-section container-fluid signup">
+        <main class='colored-section container-fluid signup'>
 
-            <h1 class="big-heading">Sign Up</h1>
+            <h1 class='big-heading'>Sign Up</h1>
 
-            <form action="signup" method="post">
+            <form action='signup' method='post'>
 
-                <div class="form-group">
+                <div class='form-group'>
 
                     <label>Username</label>
-                    <input class="form-control textbox username-box" name="username" placeholder="Enter username"
-                        minlength="5" maxlength="20" required autofocus>
+                    <input class='form-control textbox username-box' name='username' placeholder='Enter username'
+                        minlength='5' maxlength='20' required autofocus>
 
                 </div>
 
-                <div class="form-group signup-form">
+                <div class='form-group signup-form'>
 
                     <label>Password</label>
-                    <input type="password" class="form-control textbox pass-box" name="password"
-                        placeholder="Enter password" minlength="5" maxlength="20" required>
+                    <input type='password' class='form-control textbox pass-box' name='password'
+                        placeholder='Enter password' minlength='5' maxlength='20' required>
 
                 </div>
 
@@ -33,14 +33,14 @@
 
                     <br>
 
-                    <div class="alert alert-danger alert-dismissible fade show">
+                    <div class='alert alert-danger alert-dismissible fade show'>
 
-                        <p>User "<%= err %>" already exists. Please enter new username or click <a href="login"
-                                    class="alert-link">here</a> to log in.</p>
+                        <p>User '<%= err %>' already exists. Please enter new username or click <a href='login'
+                                    class='alert-link'>here</a> to log in.</p>
 
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
 
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden='true'>&times;</span>
 
                         </button>
 
@@ -50,11 +50,11 @@
 
                         <br>
 
-                        <button type="submit" class="btn btn-dark btn-lg signup-btn">Sign Up</button>
-                        <a class="btn btn-outline-light btn-lg" href="login">Log In</a>
+                        <button type='submit' class='btn btn-dark btn-lg signup-btn'>Sign Up</button>
+                        <a class='btn btn-outline-light btn-lg' href='login'>Log In</a>
 
             </form>
 
         </main>
 
-        <%- include("partials/footer") -%>
+        <%- include('partials/footer') -%>

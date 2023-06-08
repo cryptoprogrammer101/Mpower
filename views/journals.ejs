@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>Journaling</title>
 
-    <%- include("partials/navbar-2") -%>
+    <%- include('partials/navbar-2') -%>
 
-        <main class="container-fluid">
+        <main class='container-fluid'>
 
-            <form action="journals" class="inline-form" method="post">
+            <form action='journals' class='inline-form' method='post'>
 
-                <div class="form-group">
+                <div class='form-group'>
 
-                    <h2 class="section-heading">
+                    <h2 class='section-heading'>
                         <%= journalTitle %>
                     </h2>
 
-                    <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
+                    <input type='hidden' name='journalTitle' value='<%= journalTitle %>'>
 
-                    <textarea class="form-control textbox" placeholder="Enter journal" name="journal" minlength="5"
+                    <textarea class='form-control textbox' placeholder='Enter journal' name='journal' minlength='5'
                         required autofocus></textarea>
 
                 </div>
@@ -28,13 +28,13 @@
 
                 <% if (journalEntered) { %>
 
-                    <div class="alert alert-success alert-dismissible">
+                    <div class='alert alert-success alert-dismissible'>
 
-                        <p>Saved journal! View it <a href="journals#<%= journalID %>" class="alert-link">here</a></p>
+                        <p>Saved journal! View it <a href='journals#<%= journalID %>' class='alert-link'>here</a></p>
 
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
 
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden='true'>&times;</span>
 
                         </button>
 
@@ -44,17 +44,17 @@
 
                     <% } %>
 
-                        <button type="submit" class="btn btn-dark btn-lg save-btn">Save</button>
+                        <button type='submit' class='btn btn-dark btn-lg save-btn'>Save</button>
 
             </form>
 
             <% if (showEmailBtn) { %>
 
-                <form action="mailto:user@email.com" class="inline-form" method="post" enctype="text/plain">
+                <form action='mailto:user@email.com' class='inline-form' method='post' enctype='text/plain'>
 
-                    <input type="hidden" name="title" value="<%= lastJournalTitle %>">
-                    <input type="hidden" name="content" value="<%= journals[journals.length - 1].content %>">
-                    <button type="submit" class="btn btn-dark btn-lg">Email last journal</button>
+                    <input type='hidden' name='title' value='<%= lastJournalTitle %>'>
+                    <input type='hidden' name='content' value='<%= journals[journals.length - 1].content %>'>
+                    <button type='submit' class='btn btn-dark btn-lg'>Email last journal</button>
 
                 </form>
 
@@ -62,7 +62,7 @@
 
                     <br><br><br><br>
 
-                    <h2 class="section-heading">Saved Journals</h2>
+                    <h2 class='section-heading'>Saved Journals</h2>
 
                     <% if (journals.length < 1) { %>
 
@@ -72,17 +72,17 @@
 
                         <% } else { %>
 
-                            <ul class="journals-ul">
+                            <ul class='journals-ul'>
                                 <% journals.forEach(journal=> { %>
 
-                                    <li class="journal-title" id="<%= journal._id %>">
+                                    <li class='journal-title' id='<%= journal._id %>'>
 
                                         <h3>
                                             <%= journal.title %> - <%= journal.date %>
                                         </h3>
 
                                         <ul>
-                                            <li class="journal-content">
+                                            <li class='journal-content'>
 
                                                 <p>
                                                     <%= journal.content %>
@@ -103,4 +103,4 @@
 
         <br><br><br>
 
-        <%- include("partials/footer") -%>
+        <%- include('partials/footer') -%>

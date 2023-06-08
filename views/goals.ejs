@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <title>Goal Setting</title>
 
-  <%- include("partials/navbar-2") -%>
+  <%- include('partials/navbar-2') -%>
 
     <main>
 
-      <h1 class="big-heading">Goals</h1>
+      <h1 class='big-heading'>Goals</h1>
 
-      <div class="box">
+      <div class='box'>
 
         <% goalsList.forEach(goal=> { %>
-          <div class="goal-cell">
-            <input class="checkbox" type="checkbox">
-            <p class="goal">
+          <div class='goal-cell'>
+            <input class='checkbox' type='checkbox'>
+            <p class='goal'>
               <%= goal %>
             </p>
           </div>
 
           <% }) %>
 
-            <form class="goal-cell" action="/goals" method="post">
-              <input class="goal-input" type="text" placeholder="New Goal" name="goalTitle" required>
-              <button class="add-btn" type="submit">+</button>
+            <form class='goal-cell' action='/goals' method='post'>
+              <input class='goal-input' type='text' placeholder='New Goal' name='goalTitle' required>
+              <button class='add-btn' type='submit'>+</button>
             </form>
       </div>
 
@@ -33,4 +33,4 @@
 
     <br><br><br><br><br>
 
-    <%- include("partials/footer") -%>
+    <%- include('partials/footer') -%>

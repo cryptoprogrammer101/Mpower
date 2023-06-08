@@ -1,4 +1,4 @@
-# <img src="public/imgs/logo.png" alt="logo" width="30" height="30" style="margin-right: 1%;"> Mpower
+# <img src='public/imgs/logo.png' alt='logo' width='30' height='30' style='margin-right: 1%;'> Mpower
 
 Mpower is a website dedicated to helping individuals and families affected by drug abuse. It offers in-depth information, support, and resources to help individuals take control of their thoughts, emotions, and actions, and to achieve lasting recovery.
 
