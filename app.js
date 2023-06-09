@@ -74,7 +74,7 @@ const goalsStart = ["Talk to a friend",
     "Call a help center",
     "Book an appointment",
     "Go for a walk",
-    "Draw a picture of someone"]
+    "Draw a picture of a loved one"]
 
 // retrieve random journal title
 function getJournalTitle() {
