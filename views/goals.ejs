@@ -14,19 +14,29 @@
       <div class="box">
 
         <% goalsList.forEach(goal=> { %>
+
           <div class="goal-cell">
+
             <input class="checkbox" type="checkbox">
+
             <p class="goal">
+
               <%= goal %>
+
             </p>
+
           </div>
 
           <% }) %>
 
             <form class="goal-cell" action='/goals' method='post'>
+
               <input class='goal-input' type='text' placeholder='New Goal' name='goalTitle' required>
+
               <button class='add-btn' type='submit'>+</button>
+
             </form>
+
       </div>
 
     </main>
