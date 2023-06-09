@@ -31,13 +31,33 @@
 
             <form class="goal-cell" action='/goals' method='post'>
 
-              <input class='goal-input' type='text' placeholder='New Goal' name='goalTitle' required>
+              <input class='goal-input' type='text' placeholder='New Goal' name='goalTitle' required autofocus>
 
               <button class='add-btn' type='submit'>+</button>
 
             </form>
 
       </div>
+
+      <br>
+
+      <% if (goalEntered) { %>
+
+        <div class="alert alert-success alert-dismissible">
+
+          <p>Entered goal!</p>
+
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+
+          </button>
+
+        </div>
+
+        <br>
+
+        <% } %>
 
     </main>
 

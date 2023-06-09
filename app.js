@@ -306,7 +306,7 @@ app.get("/goals", (req, res) => {
                     user.save()
                 }
                 // relaod page
-                res.render("goals", { goalsList: user.goals })
+                res.render("goals", { goalsList: user.goals, goalEntered: false })
             }
         })
         // if not logged in
@@ -331,7 +331,7 @@ app.post("/goals", (req, res) => {
             // save user
             user.save()
             // reload page
-            res.render("goals", { goalsList: user.goals })
+            res.render("goals", { goalsList: user.goals, goalEntered: true })
         }
     })
 })
