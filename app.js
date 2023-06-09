@@ -69,13 +69,6 @@ passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
-// define initial goals
-const goalsStart = ["Talk to a friend",
-    "Call a help center",
-    "Book an appointment",
-    "Go for a walk",
-    "Draw a picture of a loved one"]
-
 // retrieve random journal title
 function getJournalTitle() {
 
@@ -298,14 +291,7 @@ app.get("/goals", (req, res) => {
         User.findById(req.user._id, (err, user) => {
             // if no error
             if (!err) {
-                // if user has no goals
-                if (user.goals.length < goalsStart.length) {
-                    // add initial goals to user's goals
-                    user.goals.push(...goalsStart)
-                    // save user
-                    user.save()
-                }
-                // relaod page
+                // load page
                 res.render("goals", { goalsList: user.goals, goalEntered: false })
             }
         })
