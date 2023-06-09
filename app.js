@@ -102,45 +102,60 @@ function displayResourcePage(resource) {
 
     // define resource route
     app.get("/" + resource, (req, res) => {
+
         // if logged in
         if (req.isAuthenticated()) {
+
             // display logged-in page
             res.render("resources/" + resource + "-2")
+
             // otherwise
         } else {
+
             // display logged-out page
             res.render("resources/" + resource + "-1")
+
         }
+
     })
 
 }
 
 // define main route
 app.get("/", (req, res) => {
+
     // if logged in
     if (req.isAuthenticated()) {
+
         // send to home page
         res.redirect("/home")
 
         // otherwise
     } else {
+
         // show start page
         res.render("index")
+
     }
+
 })
 
 // define signup route
 app.get("/signup", (req, res) => {
+
     // if logged in
     if (req.isAuthenticated()) {
+
         // send to home page
         res.redirect("/home")
 
         // otherwise
     } else {
+
         // send to signup page
         res.render("signup", { err: "" })
     }
+
 })
 
 // when user signs up
@@ -155,6 +170,7 @@ app.post("/signup", (req, res) => {
             res.render("signup", { err: req.body.username })
 
             // if no error
+
         } else {
             // log in user
             passport.authenticate("local")(req, res, () => {
@@ -285,21 +301,30 @@ app.post("/journals", (req, res) => {
 
 // define goals route
 app.get("/goals", (req, res) => {
+
     // if logged in
     if (req.isAuthenticated()) {
+
         // find user
         User.findById(req.user._id, (err, user) => {
+
             // if no error
             if (!err) {
+
                 // load page
                 res.render("goals", { goalsList: user.goals, goalEntered: false })
             }
+
         })
+
         // if not logged in
     } else {
+
         // send to signup page
         res.redirect("/signup")
+
     }
+
 })
 
 // when user creates new goal
@@ -310,16 +335,23 @@ app.post("/goals", (req, res) => {
 
     // find user
     User.findById(req.user._id, (err, user) => {
+
         // if no error
         if (!err) {
+
             // append new goal to user's goals
             user.goals.push(newGoal)
+
             // save user
             user.save()
+
             // reload page
             res.render("goals", { goalsList: user.goals, goalEntered: true })
+
         }
+
     })
+
 })
 
 // define home route
@@ -349,41 +381,56 @@ app.get("/home", (req, res) => {
 
 // define logout process
 app.get("/logout", (req, res) => {
+
     // log out user
     req.logout(err => { })
+
     // send to start page
     res.redirect("/")
+
 })
 
 // define mindfulness route
 app.get("/mindfulness", (req, res) => {
+
     // if logged in
     if (req.isAuthenticated()) {
+
         // render mindfulness page
         res.render("mindfulness", { firstQuote: getQuotes()[0], quotes: getQuotes().slice(1) })
+
         // otherwise
     } else {
+
         // send to signup page
         res.redirect("/signup")
+
     }
+
 })
 
 // define about route
 app.get("/about", (req, res) => {
+
     // display about page
     res.render("about")
+
 })
 
 // define contact route
 app.get("/contact", (req, res) => {
+
     // display contact page
     res.render("contact")
+
 })
 
 // define solution route
 app.get("/solution", (req, res) => {
+
     // display solution page
     res.render("solution")
+
 })
 
 displayResourcePage("causes")
@@ -405,6 +452,7 @@ displayResourcePage("info")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
+
     // send to start page
     res.redirect("/")
 })
@@ -414,6 +462,7 @@ let port = process.env.PORT
 
 // if port does not exist
 if (port == null || port == "") {
+
     // use standard port
     port = 3000
 }
