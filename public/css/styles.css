@@ -441,7 +441,7 @@ iframe {
 }
 
 .box {
-  width: 30%;
+  width: 40%;
   margin: auto;
   border-radius: 20px;
   border: 2px #9f9f9f solid;
@@ -451,10 +451,6 @@ iframe {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #F2F2F2;
-}
-
-.goal-cell:last-child {
-  border-bottom: 0;
 }
 
 input:checked+p {
@@ -474,7 +470,8 @@ input:checked+p {
 }
 
 form.goal-cell {
-  margin-left: 5%;
+  margin: 1% 0 1% 5%;
+  border-bottom: 0;
 }
 
 .add-btn {

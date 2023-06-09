@@ -42,12 +42,18 @@ const journalSchema = new mongoose.Schema({
     date: String
 })
 
+// define goal schema
+const goalSchema = new mongoose.Schema({
+    title: String,
+    completed: Boolean
+})
+
 // define user schema
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: String,
     journals: [journalSchema],
-    goals: [String]
+    goals: [goalSchema]
 })
 
 // use unique validator
@@ -61,6 +67,9 @@ const User = mongoose.model("User", userSchema)
 
 // create journal model
 const Journal = mongoose.model("Journal", journalSchema)
+
+// create goal model
+const Goal = mongoose.model("Goal", goalSchema)
 
 // use passport to verify user
 passport.use(User.createStrategy())
@@ -331,7 +340,10 @@ app.get("/goals", (req, res) => {
 app.post("/goals", (req, res) => {
 
     // retrieve goal title
-    const newGoal = req.body.goalTitle
+    const newGoal = new Goal({
+        title: req.body.goalTitle,
+        completed: false
+    })
 
     // find user
     User.findById(req.user._id, (err, user) => {
