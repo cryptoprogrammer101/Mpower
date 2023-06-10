@@ -436,12 +436,8 @@ iframe {
 
 /* Goals */
 
-.goal-section {
-  margin-top: 3%;
-}
-
 .box {
-  width: 40%;
+  width: 50%;
   margin: auto;
   border-radius: 20px;
   border: 2px #9f9f9f solid;
