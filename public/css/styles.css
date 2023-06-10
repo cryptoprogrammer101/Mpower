@@ -593,14 +593,15 @@ textarea {
 
   .nav-item {
     margin-bottom: 3%;
+    text-align: left;
+  }
+
+  .nav-btn {
+    padding-bottom: 500%;
   }
 
   .dropdown-item {
     margin: 0 0 1%;
-  }
-
-  .navbar {
-    background-color: #2FA4FF;
   }
 
   /* Title */
