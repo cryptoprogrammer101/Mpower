@@ -758,7 +758,7 @@ textarea {
     margin: 0 auto 10%;
   }
 
-  .textbox {
+  .textbox, .box {
     width: 90%;
   }
 
@@ -810,6 +810,7 @@ textarea {
 
   .alert {
     padding-right: 1.25rem;
+    width: 100%;
   }
 
   .alert button {
@@ -818,6 +819,12 @@ textarea {
 
   .journal-content {
     margin: 10% 0 30% 5%;
+  }
+
+  /* Goals */
+
+  .goal-input {
+    width: 90%;
   }
 
 }
