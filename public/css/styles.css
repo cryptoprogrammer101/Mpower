@@ -382,6 +382,10 @@ li span {
   margin-top: 0;
 }
 
+.mobile-address {
+  display: none;
+}
+
 .map-container {
   padding-top: 60%;
   position: relative;
@@ -555,7 +559,8 @@ textarea {
   .resources,
   .signup,
   .login,
-  .home {
+  .home,
+  .info {
     width: 100%;
     padding-top: 25%;
   }
@@ -718,9 +723,13 @@ textarea {
     text-align: left;
   }
 
-  .map,
+  .orig-address,
   .map-container {
-    margin: 5% 0 0;
+    display: none;
+  }
+
+  .mobile-address {
+    display: block;
   }
 
   /* Signup & Login */
