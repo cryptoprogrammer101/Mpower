@@ -26,11 +26,16 @@
 
                 <br>
 
+                <p>Each time you reload this page, a new journal prompt will be randomly selected for you.</p>
+
+                <br>
+
                 <% if (journalEntered) { %>
 
                     <div class="alert alert-success alert-dismissible">
 
-                        <p>Saved journal! View it <a href="journals#<%= journalID %>" class="alert-link">here</a></p>
+                        <p>Congrats on your journal! View it <a href="journals#<%= journalID %>"
+                                class="alert-link">here</a></p>
 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 
@@ -54,7 +59,7 @@
 
                     <input type="hidden" name="title" value="<%= lastJournalTitle %>">
                     <input type="hidden" name="content" value="<%= journals[journals.length - 1].content %>">
-                    <button type="submit" class="btn btn-dark btn-lg">Email last journal</button>
+                    <button type="submit" class="btn btn-dark btn-lg">Email previous journal</button>
 
                 </form>
 
