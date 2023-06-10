@@ -746,6 +746,19 @@ textarea {
     padding-bottom: 10%;
   }
 
+  .signup-btn, .login-btn {
+    display: block;
+    margin: 0 auto 10%;
+  }
+
+  .textbox {
+    width: 90%;
+  }
+
+  ::placeholder {
+    font-size: 1.2rem;
+  }
+
   /* Home */
 
   .logout {
