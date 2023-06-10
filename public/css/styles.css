@@ -816,4 +816,8 @@ textarea {
     display: none;
   }
 
+  .journal-content {
+    margin: 10% 0 30% 5%;
+  }
+
 }
