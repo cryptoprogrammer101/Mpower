@@ -472,22 +472,22 @@ app.get("/solution", (req, res) => {
 
 })
 
-displayResourcePage("causes")
-displayResourcePage("co-occurring")
-displayResourcePage("commonly-abused")
-displayResourcePage("current-work")
+displayResourcePage("info")
 displayResourcePage("drug-abuse")
+displayResourcePage("commonly-abused")
+displayResourcePage("causes")
+displayResourcePage("symptoms")
 displayResourcePage("effects")
-displayResourcePage("get-help")
+displayResourcePage("withdrawal")
 displayResourcePage("history")
 displayResourcePage("overdose")
+displayResourcePage("treatment")
 displayResourcePage("prevention")
 displayResourcePage("resources")
 displayResourcePage("stats")
-displayResourcePage("symptoms")
-displayResourcePage("treatment")
-displayResourcePage("withdrawal")
-displayResourcePage("info")
+displayResourcePage("co-occurring")
+displayResourcePage("current-work")
+displayResourcePage("get-help")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
