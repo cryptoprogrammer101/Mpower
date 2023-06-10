@@ -453,11 +453,6 @@ iframe {
   border-bottom: 2px solid #F2F2F2;
 }
 
-input:checked+p {
-  text-decoration: line-through;
-  text-decoration-color: #1363DF;
-}
-
 .checkbox {
   margin: 7%;
 }

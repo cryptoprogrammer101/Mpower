@@ -13,17 +13,17 @@
 
       <div class="box">
 
-        <% goalsList.forEach(goal=> { %>
+        <% for (i = 0; i < goals.length; i++) { %>
 
-          <form>
+          <form action="/complete" method="post">
 
             <div class="goal-cell">
 
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" type="checkbox" onChange="this.form.submit()" name="goalNum" value="<%= i %>">
 
               <p class="goal">
 
-                <%= goal.title %>
+                <%= goals[i] %>
 
               </p>
 
@@ -31,7 +31,7 @@
 
           </form>
 
-          <% }) %>
+          <% } %>
 
             <form class="goal-cell" action="/goals" method="post">
 
@@ -49,7 +49,7 @@
 
         <div class="alert alert-success alert-dismissible">
 
-          <p>Entered goal!</p>
+          <p><strong>Entered goal!</strong> <%= goal %></p>
 
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 
@@ -62,6 +62,24 @@
         <br>
 
         <% } %>
+
+          <% if (goalCompleted) { %>
+
+            <div class="alert alert-success alert-dismissible">
+
+              <p><strong>Congrats</strong> on completing your goal!</p>
+
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                <span aria-hidden="true">&times;</span>
+
+              </button>
+
+            </div>
+
+            <br>
+
+            <% } %>
 
     </main>
 

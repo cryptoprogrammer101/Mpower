@@ -42,18 +42,12 @@ const journalSchema = new mongoose.Schema({
     date: String
 })
 
-// define goal schema
-const goalSchema = new mongoose.Schema({
-    title: String,
-    completed: Boolean
-})
-
 // define user schema
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: String,
     journals: [journalSchema],
-    goals: [goalSchema]
+    goals: [String]
 })
 
 // use unique validator
@@ -67,9 +61,6 @@ const User = mongoose.model("User", userSchema)
 
 // create journal model
 const Journal = mongoose.model("Journal", journalSchema)
-
-// create goal model
-const Goal = mongoose.model("Goal", goalSchema)
 
 // use passport to verify user
 passport.use(User.createStrategy())
@@ -321,7 +312,7 @@ app.get("/goals", (req, res) => {
             if (!err) {
 
                 // load page
-                res.render("goals", { goalsList: user.goals, goalEntered: false })
+                res.render("goals", { goals: user.goals, goalEntered: false, goal: false, goalCompleted: false })
             }
 
         })
@@ -340,10 +331,7 @@ app.get("/goals", (req, res) => {
 app.post("/goals", (req, res) => {
 
     // retrieve goal title
-    const newGoal = new Goal({
-        title: req.body.goalTitle,
-        completed: false
-    })
+    const newGoal = req.body.goalTitle
 
     // find user
     User.findById(req.user._id, (err, user) => {
@@ -358,7 +346,31 @@ app.post("/goals", (req, res) => {
             user.save()
 
             // reload page
-            res.render("goals", { goalsList: user.goals, goalEntered: true })
+            res.render("goals", { goals: user.goals, goalEntered: true, goal: newGoal, goalCompleted: false })
+
+        }
+
+    })
+
+})
+
+// when user completes goal
+app.post("/complete", (req, res) => {
+
+    // find user
+    User.findById(req.user._id, (err, user) => {
+
+        // if no error
+        if (!err) {
+
+            // remove goal from user's goals
+            user.goals.splice(req.body.goalNum, 1)
+
+            // save user
+            user.save()
+
+            // reload page
+            res.render("goals", { goals: user.goals, goalEntered: false, goal: false, goalCompleted: true })
 
         }
 
@@ -467,6 +479,7 @@ app.get("/:page", (req, res) => {
 
     // send to start page
     res.redirect("/")
+
 })
 
 // retrieve heroku port number
@@ -477,6 +490,7 @@ if (port == null || port == "") {
 
     // use standard port
     port = 3000
+
 }
 
 // put server online
