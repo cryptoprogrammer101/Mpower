@@ -426,7 +426,8 @@ li span {
   margin: 3% 0 0;
 }
 
-.home-link, .home-link:hover {
+.home-link,
+.home-link:hover {
   color: #3f3f3f;
 }
 
@@ -503,7 +504,7 @@ form.goal-cell {
   height: 4rem;
   border: none;
   font-size: 1.5rem;
-  width: 350px;
+  width: 70%;
   text-align: center;
 }
 
@@ -766,7 +767,8 @@ textarea {
     margin: 0 auto 10%;
   }
 
-  .textbox, .box {
+  .textbox,
+  .box {
     width: 90%;
   }
 
@@ -827,12 +829,6 @@ textarea {
 
   .journal-content {
     margin: 10% 0 30% 5%;
-  }
-
-  /* Goals */
-
-  .goal-input {
-    width: 90%;
   }
 
 }
