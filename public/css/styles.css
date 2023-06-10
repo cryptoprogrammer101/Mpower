@@ -117,9 +117,12 @@ input {
 }
 
 .signup-btn,
-.login-btn,
-.save-btn {
+.login-btn {
   margin-right: 2%;
+}
+
+.email-btn {
+  margin-left: 2%;
 }
 
 /* Nav Bar */
@@ -793,6 +796,24 @@ textarea {
 
   .info-row .col-lg-4 {
     margin: 6% 0;
+  }
+
+  /* Journal */
+
+  .email-btn {
+    margin-top: 10%;
+  }
+
+  .alert p {
+    margin: 0;
+  }
+
+  .alert {
+    padding-right: 1.25rem;
+  }
+
+  .alert button {
+    display: none;
   }
 
 }
