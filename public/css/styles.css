@@ -621,6 +621,10 @@ textarea {
     padding-bottom: 500%;
   }
 
+  .nav-btn a {
+    width: 100%;
+  }
+
   .dropdown-item {
     margin: 0 0 1%;
   }
@@ -724,8 +728,8 @@ textarea {
     padding-top: 5%;
   }
 
-  .footer-p a {
-    margin-bottom: 7%;
+  .footer-p {
+    margin-top: 3%;
   }
 
   /* Solution */
@@ -770,6 +774,11 @@ textarea {
   .textbox,
   .box {
     width: 90%;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .signup-form, .login-form {
+    margin-top: 10%;
   }
 
   ::placeholder {
