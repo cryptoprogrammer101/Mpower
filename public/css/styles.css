@@ -802,7 +802,7 @@ textarea {
     margin: 0;
   }
 
-  .info-row .col-lg-4 {
+  .info-row div {
     margin: 6% 0;
   }
 
