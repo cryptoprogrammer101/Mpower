@@ -566,7 +566,10 @@ textarea {
   .signup,
   .login,
   .home,
-  .info {
+  .info,
+  .goals,
+  .mindfulness,
+  .journals {
     width: 100%;
     padding-top: 25%;
   }
@@ -746,7 +749,8 @@ textarea {
     padding-bottom: 10%;
   }
 
-  .signup-btn, .login-btn {
+  .signup-btn,
+  .login-btn {
     display: block;
     margin: 0 auto 10%;
   }
