@@ -89,12 +89,27 @@ function getJournalTitle() {
 function getQuotes() {
 
     // read quotes from file
-    const data = fs.readFileSync("quotes.txt", "utf8")
+    const text = fs.readFileSync("quotes.txt", "utf8")
 
     // split by newlines
-    const quotes = data.split("\n")
+    const lines = text.split("\n")
+
+    // create empty array
+    const quotes = []
+
+    // for each quote
+    lines.forEach(line => {
+
+        // shuffle quotes
+        const index = Math.floor(Math.random() * quotes.length)
+
+        // insert quote at random index
+        quotes.splice(index, 0, line)
+
+    })
 
     return quotes
+
 }
 
 // display corresponding resource page
