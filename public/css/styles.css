@@ -288,7 +288,7 @@ i.fa-4x {
 
 .footer-header,
 .footer-header a,
-.footer-p {
+.footer-p a {
   color: #5b646c;
   text-decoration: none;
   margin: 0;
@@ -720,11 +720,11 @@ textarea {
 
   footer .container-fluid,
   .footer-header,
-  .footer-p {
+  .footer-p a {
     padding-top: 5%;
   }
 
-  .footer-p {
+  .footer-p a {
     margin-bottom: 7%;
   }
 
