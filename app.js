@@ -73,7 +73,7 @@ passport.deserializeUser(User.deserializeUser())
 function getJournalTitle() {
 
     // read journal titles from file
-    const data = fs.readFileSync("journalTitles.txt", "utf8")
+    const data = fs.readFileSync("journals.txt", "utf8")
 
     // split by newlines
     const titles = data.split("\n")
