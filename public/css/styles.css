@@ -303,6 +303,12 @@ hr {
   margin-bottom: 1%;
 }
 
+/* Info */
+
+.info-row {
+  margin: 6% 0;
+}
+
 /* About & Resources */
 
 .about,
@@ -760,6 +766,16 @@ textarea {
   .resources-ul li {
     margin-bottom: 7%;
     text-align: left;
+  }
+
+  /* Info */
+
+  .info-row {
+    margin: 0;
+  }
+
+  .info-row .col-lg-4 {
+    margin: 6% 0;
   }
 
 }
