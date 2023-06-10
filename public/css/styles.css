@@ -152,6 +152,10 @@ input {
   font-size: 1.2rem;
 }
 
+.nav-btn {
+  margin-top: 0.3%;
+}
+
 .nav-item.nav-btn,
 .nav-link {
   padding-top: 0;
