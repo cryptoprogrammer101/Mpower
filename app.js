@@ -314,6 +314,40 @@ app.post("/journals", (req, res) => {
 
 })
 
+// when user selects free writing
+app.get("/free-write", (req, res) => {
+
+    // if logged in
+    if (req.isAuthenticated()) {
+
+        // find user info
+        User.findById(req.user._id, (err, user) => {
+
+            // if no error
+            if (!err) {
+
+                // display journals page with free write prompt
+                res.render("journals", {
+                    journalTitle: "Write about anything.", lastJournalTitle: "",
+                    journalEntered: false, journalID: "",
+                    journals: user.journals, showEmailBtn: false
+                })
+
+            }
+
+        })
+
+        // if user is not logged in
+    } else {
+
+        // send to signup page
+        res.redirect("/signup")
+
+    }
+
+
+})
+
 // define goals route
 app.get("/goals", (req, res) => {
 
@@ -370,7 +404,7 @@ app.post("/goals", (req, res) => {
 })
 
 // when user completes goal
-app.post("/complete", (req, res) => {
+app.post("/complete-goal", (req, res) => {
 
     // find user
     User.findById(req.user._id, (err, user) => {

@@ -124,7 +124,7 @@ input {
   margin-right: 2%;
 }
 
-.email-btn {
+.email-btn, .write-btn {
   margin-left: 2%;
 }
 
@@ -819,7 +819,7 @@ textarea {
 
   /* Journal */
 
-  .email-btn {
+  .email-btn, .write-btn {
     margin-top: 10%;
   }
 

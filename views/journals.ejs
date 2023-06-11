@@ -19,14 +19,18 @@
 
                     <input type="hidden" name="journalTitle" value="<%= journalTitle %>">
 
-                    <textarea class="form-control textbox" placeholder="Write about anything you want..." name="journal" minlength="5"
-                        required autofocus></textarea>
+                    <textarea class="form-control textbox" placeholder="Write about anything you want..." name="journal"
+                        minlength="5" required autofocus></textarea>
 
                 </div>
 
                 <br>
 
                 <p>Each time you reload this page, a new journal prompt will be randomly selected for you.</p>
+
+                <br>
+
+                <p>Click "Free Write" to write without a prompt.</p>
 
                 <br>
 
@@ -53,13 +57,19 @@
 
             </form>
 
+            <a href="free-write">
+
+                <button class="btn btn-outline-dark btn-lg write-btn">Free Write</button>
+
+            </a>
+
             <% if (showEmailBtn) { %>
 
                 <form action="mailto:user@email.com" class="inline-form" method="post" enctype="text/plain">
 
                     <input type="hidden" name="title" value="<%= lastJournalTitle %>">
                     <input type="hidden" name="content" value="<%= journals[journals.length - 1].content %>">
-                    <button type="submit" class="btn btn-dark btn-lg email-btn">Email previous journal</button>
+                    <button type="submit" class="btn btn-outline-dark btn-lg email-btn">Email previous journal</button>
 
                 </form>
 
@@ -78,7 +88,7 @@
                         <% } else { %>
 
                             <ul class="journals-ul">
-                                
+
                                 <% journals.forEach(journal=> { %>
 
                                     <li class="journal-title" id="<%= journal._id %>">
