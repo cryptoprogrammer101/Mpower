@@ -820,7 +820,7 @@ textarea {
   /* Journal */
 
   .email-btn, .write-btn {
-    margin-top: 10%;
+    margin: 10% 0 0;
   }
 
   .alert p {

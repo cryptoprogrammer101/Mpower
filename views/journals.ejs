@@ -24,16 +24,6 @@
 
                 </div>
 
-                <br>
-
-                <p>Each time you reload this page, a new journal prompt will be randomly selected for you.</p>
-
-                <br>
-
-                <p>Click "Free Write" to write without a prompt.</p>
-
-                <br>
-
                 <% if (journalEntered) { %>
 
                     <div class="alert alert-success alert-dismissible">
@@ -53,9 +43,13 @@
 
                     <% } %>
 
+                        <br>
+
                         <button type="submit" class="btn btn-dark btn-lg">Save</button>
 
             </form>
+
+            <br class="hidden">
 
             <a href="free-write">
 
@@ -75,7 +69,15 @@
 
                 <% } %>
 
-                    <br><br><br><br>
+                    <br><br><br>
+
+                    <p>Each time you reload this page, a new journal prompt will be randomly selected for you.</p>
+
+                    <br>
+
+                    <p>Click "Free Write" to write without a prompt.</p>
+
+                    <br><br><br>
 
                     <h2 class="section-heading">Saved Journals</h2>
 
