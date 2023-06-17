@@ -521,7 +521,6 @@ displayResourcePage("resources")
 displayResourcePage("stats")
 displayResourcePage("co-occurring")
 displayResourcePage("current-work")
-displayResourcePage("get-help")
 
 // define miscellaneous route
 app.get("/:page", (req, res) => {
