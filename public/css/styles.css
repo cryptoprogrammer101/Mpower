@@ -354,6 +354,10 @@ li span {
   margin-top: 0;
 }
 
+.resources-p {
+  margin-bottom: 5%;
+}
+
 .arcgis {
   height: 50rem;
   width: 80%;
