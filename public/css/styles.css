@@ -354,11 +354,16 @@ li span {
   margin-top: 0;
 }
 
-.resources-p {
-  margin-bottom: 5%;
+.resources-header {
+  margin: 10% 0 2%;
+}
+
+.resources-header+p {
+  text-align: left;
 }
 
 .arcgis {
+  margin-top: 2%;
   height: 50rem;
   width: 80%;
   border: 5px solid #1363DF;
@@ -731,7 +736,7 @@ textarea {
   }
 
   .footer-p {
-    margin-top: 3%;
+    margin: 10% 0;
   }
 
   /* Solution */
@@ -807,6 +812,10 @@ textarea {
   .resources-ul li {
     margin-bottom: 7%;
     text-align: left;
+  }
+
+  .resources-header {
+    margin: 20% 0 10% !important;
   }
 
   /* Info */
