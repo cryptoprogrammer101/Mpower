@@ -3,7 +3,7 @@
 Mpower is a website dedicated to helping individuals and families affected by drug abuse. It offers in-depth information, support and resources to help individuals take control of their thoughts, emotions and actions and to achieve lasting recovery.
 
 ## What It Is
-      
+
 Mpower helps individuals and families overcome drug abuse and achieve lasting recovery. Narayan understands the challenges and struggles that individuals and families face when dealing with drug abuse and Mpower is here to provide support and guidance every step of the way.
 
 
