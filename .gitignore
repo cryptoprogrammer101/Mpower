@@ -1,4 +1,4 @@
-# Compiled Object files, Static & Dynamic libs (Shared Objects)
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
 *.a
 *.so
@@ -138,18 +138,18 @@ dist
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby & not Next.js
+# Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
 # vuepress build output
 .vuepress/dist
 
-# vuepress v2.x temp & cache directory
+# vuepress v2.x temp and cache directory
 .temp
 .cache
 
-# Docusaurus cache & generated files
+# Docusaurus cache and generated files
 .docusaurus
 
 # Serverless directories
